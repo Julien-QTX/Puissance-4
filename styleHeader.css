@@ -8,14 +8,18 @@ html{
     font-size: 62,5%;
 }
 
-
+/* Header */
+body{
+    background-image: url("./images/téléchargement.jpeg");
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    image-resolution: 100%;
+}
 nav{
     align-items: center;
 }
 header{
-    background-color: blueviolet;
     color: black;
-    height: 10vh;
 }
 a{
     color: black;
@@ -33,33 +37,39 @@ nav{
     justify-content: center;
 }
 
-.banniere{
+.banniere {
+    display: inline-block;
     position: relative;
-    color: aliceblue;
 }
 
-.imgBanniere{
-    position: absolute;
+.banniere, img{
+    width: 100%;
+    height: 35vh;
+}
+.banniere .text {
     z-index: 1;
-}
-
-.nomPage{ 
     position: absolute;
-    z-index:2;
+    text-align: center;
+    font-family: Georgia;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    color: black;
+    width: 70%;
 }
 
+/* Body Inscription */
 
 form{
     width: 40%;
-    margin: auto;
+    margin: 5vh auto;
 }
 
 .pseudo, .email, .password{
-    display: flex;
-    justify-content: baseline;
     width: 100%;
     height: 3vh;
-    margin: 3vh 0;
+    margin-bottom: 3vh;
 }
 
 button{
