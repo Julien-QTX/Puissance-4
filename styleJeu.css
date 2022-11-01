@@ -10,10 +10,7 @@ html{
 
 /* Header */
 body{
-    background-image: url("./images/observation-cosmos-étude-astronomie-planète-fond-d-écran-stylé-photo-wallpaper-ordinateur-cosmos-planètes-terre.jpg");
-    background-attachment:fixed;
-    background-repeat:no-repeat;
-    background-position:50% 50%;
+    background-color: blueviolet;
 }
 nav{
     align-items: center;
@@ -69,11 +66,17 @@ nav{
 
 .Jeu{
     border-collapse: collapse;
-    width: 80%;
-    height: 30vh;
+    width: 50%;
+    height: 15vh;
     margin: 10vh auto;
     text-align: center;
 }
+
+.cartes{
+    width: 50%;
+    height: auto;
+}
+
 td{
     border: 2px solid black;
 }

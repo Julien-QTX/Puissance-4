@@ -10,10 +10,11 @@ html{
 
 /* Header */
 body{
-    background-image: url("./images/téléchargement.jpeg");
+    /* background-image: url("./images/téléchargement.jpeg");
     background-attachment:fixed;
     background-repeat:no-repeat;
-    image-resolution: 100%;
+    image-resolution: 100%;*/
+    background-color: blueviolet;
 }
 nav{
     align-items: center;
