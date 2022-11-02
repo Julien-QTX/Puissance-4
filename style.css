@@ -74,6 +74,15 @@ h3 {
     }
 
 
+#photo4 {
+    margin-top: 471px;
+    margin-left: 50px;
+    font-size: 90%;
+    width: 1000px;
+    }
+
+
+
 #photo1 {
     margin-top: 300px;
     position: relative; top: 300px;
@@ -224,8 +233,6 @@ h3 {
 .nom {
     font-size: 30px;
 }
-
-
 
 
 
