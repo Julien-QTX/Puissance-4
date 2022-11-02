@@ -1,0 +1,252 @@
+.power {
+    position: absolute;
+	left: 0;
+    top: 0;
+    margin: 30px;
+    font-size: 25px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: orange;
+
+}
+
+nav {
+    display: flex;
+    position: absolute;
+	right: 0;
+    top: 0;
+    margin: 30px;
+    justify-content: space-between;
+    font-size: 15px;
+    color: aliceblue;
+}
+
+ul {
+    list-style-type: none;
+    margin: 40px;
+    color: aliceblue;
+  }
+
+body {
+    width: 100%;
+    background-color: rgb(29, 1, 56);
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 1.7cm;
+    position: relative; top: 40px;
+    color: aliceblue;
+    margin-top: 150px;
+}
+
+h2 {
+    font-size: 1cm;
+    text-align: center;
+    color: aliceblue;
+}
+
+h3 {
+    text-align: center;
+    font-size: 16px;
+    color: rgb(169, 171, 173);
+}
+
+.boutonjouer{
+    margin:0 auto;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    
+    width: 120px;
+    padding: 7px 10px;
+    
+    color: #333;
+    background: #ffb709;
+    }
+    .boutonjouer:hover{
+    background: #1971a9;
+    color: #fff;
+    }
+
+
+
+
+
+
+#photo1 {
+    margin-top: 300px;
+    position: relative; top: 300px;
+    position: relative; left: 100px;
+    height: 500px;
+    width: 500px;
+}
+
+#photo2 {
+    margin-top: 300px;
+    position: relative; top: 300px;
+    position: relative; left: 200px;
+    height: 500px;
+    width: 500px;
+}
+
+#photo3 {
+    margin-top: 300px;
+    position: relative; top: 300px;
+    position: relative; left: 300px;
+    height: 500px;
+    width: 500px;
+}
+
+.textebody {
+    display: flex;
+    font-size: 20px;
+    position: relative; left: 100px;
+    position: relative; top: 350px; 
+    color: aliceblue; 
+    width: 90%; 
+}
+
+.texte2 {
+    margin: 0 100px;
+}
+
+
+
+
+
+#photo4 {
+    margin: 500px 150px 150px 150px;
+    font-size: 90%;
+    width: 800px;
+    
+}
+
+
+
+.separation {
+    text-align: center;
+    position: relative; bottom: 200px;
+}
+
+#texteequipe {
+    text-align: center;
+    color: rgb(174, 176, 178);
+
+}
+
+.boxequipe1, .boxequipe2, .boxequipe3 {
+    color: rgb(169, 171, 173);
+    display: inline-block;
+    width: 400px;
+    height: 600px;
+    background-color: rgb(45, 7, 76);
+    text-align: center;
+}
+
+.boxequipe {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 150px;
+    position: relative; bottom: 250px;
+}
+
+.pdp {
+    margin: 40px 0 0 0;
+}
+
+.icone {
+    display: contents;
+    width: 60%;
+    height: 150px;
+    margin: 50px 0;
+}
+
+.logo {
+    width: 20%;
+}
+
+
+.carres {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%
+}
+    
+
+
+
+
+.carrerouge {
+    background-color: red;
+    width: 225px;
+    height: 225px;
+    margin: 30px;
+}
+
+.carrevert {
+    
+    background-color: green;
+    width: 225px;
+    height: 225px;
+    margin: 30px;
+}
+
+.carreorange {
+    width: 225px;
+    height: 225px;
+    background-color: orange;
+    margin: 30px;
+
+}
+
+.carrebleu {
+    width: 225px;
+    height: 225px;
+    background-color: blue;
+    margin: 30px;
+}
+
+.carres {
+    margin: 500px 150px;
+    width: 700px;
+    height: 500px;
+}
+
+.blocinfo {
+    display: flex;
+}
+
+
+
+
+
+
+#photocontact1 {
+    display: flex;
+    width: 10%;
+    height: 10%;
+}
+
+
+
+.nom {
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
