@@ -10,17 +10,20 @@ body{
     width: 46%;
     height: 15px;
     /*paramétre qui permet aligner et de paramétré les deux bloc du même nom */
+    color: white;
 }
 .sujet{
     width: 98.5%;
     height: 15px;
     margin: 20px 0 20px;
+    color: white;
     /* les paramètre du bloc sujet dans le formulaire */
 
 }
 .message{
     width: 99%;
     height: 150px;
+    color: white;
     /* gros blocs de texte avec marqué message */
 }
 .icone{
