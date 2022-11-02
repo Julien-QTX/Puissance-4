@@ -1,17 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 62,5%;
-}
-
 /* Header */
 body{
     background-color: blueviolet;
 }
+
 header{
     color: black;
 }
@@ -37,7 +28,7 @@ nav{
     position: relative;
 }
 
-.banniere, img{
+.banniere, .Banniere{
     width: 100%;
     height: 35vh;
 }
@@ -54,21 +45,32 @@ nav{
     width: 70%;
 }
 
-/* Body Inscription */
-
-form{
-    width: 40%;
-    margin: 5vh auto;
+.center{
+    text-align: center;
 }
-
-.pseudo, .email, .password{
+.name, .email{
+    width: 47%;
+    height: 15px;
+}
+.sujet{
     width: 100%;
-    height: 3vh;
-    margin-bottom: 3vh;
+    height: 15px;
 }
-
-button{
-    margin: 0 30vh;
-    width: 15%;
+.message{
+    width: 100%;
+    height: 150px;
 }
+.icone{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.contact{
+    margin :auto;
+    width: 50%;
+}
+.PE{
+    display: flex ;
+    justify-content: space-between;
 
+}
