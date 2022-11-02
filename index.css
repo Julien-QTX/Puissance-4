@@ -32,7 +32,7 @@ body{
 }
 /* les trois image plus le texte en dessous */
 .contact{
-    margin : 20px auto;
+    margin : 20px 20px 0 0;
     width: 60%;
 }
 /*formulaire en entier*/
