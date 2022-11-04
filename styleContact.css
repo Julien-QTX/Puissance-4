@@ -8,21 +8,25 @@ html{
     font-size: 62,5%;
 }
 
-/* Header */
-
-body{
-    background-color: #110728;
-    color: white;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navlien{
-    display: flex;
-    justify-content: space-between;
+html{
+    font-size: 62,5%;
+}
+
+/* Header */
+body{
+    background-color: #110728;
+    color: #eee;
 }
 
 a{
-    color: white;
     text-decoration: none;
+    color: #eee;
 }
 
 nav{
@@ -61,9 +65,6 @@ nav{
 
 /* Body */
 
-.center{
-    text-align: center;
-}
 .name, .email{
     width: 47%;
     height: 15px;
@@ -80,6 +81,13 @@ nav{
     display: flex;
     justify-content: center;
     width: 50%;
+    margin: 5vh auto;
+}
+.img{
+    width: 33%;
+    color: white;
+    margin: auto;
+    text-align: center;
 }
 .contact{
     margin :auto;
