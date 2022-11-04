@@ -69,6 +69,32 @@ nav{
     width: 70%;
 }
 
+.hypertext {
+    color: #efeeef;
+}
+
+
+table{
+    border-collapse: collapse;
+  
+}
+
+td{
+    border: 2.1px solid rgb(166, 161, 161) ;
+    
+
+}
+
+.texte{
+    text-align: center;
+   
+}
+
+.element{
+
+    display: inline-block;
+}
+
 /*
   bas de la page
 */

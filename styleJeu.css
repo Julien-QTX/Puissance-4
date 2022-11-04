@@ -15,8 +15,8 @@ body{
 }
 
 a{
+    color: white;
     text-decoration: none;
-    color: #eee;
 }
 
 nav{
@@ -26,9 +26,25 @@ nav{
     align-items: center;
 }
 
+.Hheader{
+    width: 50%;
+    margin: auto;
+}
+
+.Llien{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .nomSite{
     display: flex;
     justify-content: center;
+}
+
+.text h1{
+    color: white;
 }
 
 .banniere {
@@ -52,6 +68,7 @@ nav{
     color: black;
     width: 70%;
 }
+
 
 /* Body Jeux */
 
@@ -94,22 +111,12 @@ footer{
     height: 40vh;
 
 }
- footer .iconlien{
+footer .iconlien{
     width: 50%;
  }
 
- .Coordonne{
+.Coordonne{
     margin: auto;
     width: 50%;
     padding: 0 10vh;
 }
-
-.b{
-
-    color: #8f8aa7;
-    
- }
-
- .info{
-    color: orange;
- }

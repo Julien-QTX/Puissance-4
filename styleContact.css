@@ -8,16 +8,6 @@ html{
     font-size: 62,5%;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 62,5%;
-}
-
 /* Header */
 body{
     background-color: #110728;
@@ -25,8 +15,8 @@ body{
 }
 
 a{
+    color: white;
     text-decoration: none;
-    color: #eee;
 }
 
 nav{
@@ -36,9 +26,25 @@ nav{
     align-items: center;
 }
 
+.Hheader{
+    width: 50%;
+    margin: auto;
+}
+
+.Llien{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .nomSite{
     display: flex;
     justify-content: center;
+}
+
+.text h1{
+    color: white;
 }
 
 .banniere {
@@ -62,6 +68,7 @@ nav{
     color: black;
     width: 70%;
 }
+
 
 /* Body */
 
@@ -99,6 +106,7 @@ nav{
 
 }
 
+
 /*
   bas de la page
 */
@@ -112,21 +120,12 @@ footer{
     height: 40vh;
 
 }
- footer div{
-
+footer .iconlien{
     width: 50%;
  }
 
- .Coordonne{
+.Coordonne{
     margin: auto;
- }
-
- .b{
-
-    color: #8f8aa7;
-    
- }
-
- .info{
-    color: orange;
- }
+    width: 50%;
+    padding: 0 10vh;
+}
