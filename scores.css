@@ -1,14 +1,19 @@
-/* Header */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html{
+    font-size: 62,5%;
+}
+
+/* Header */
 body{
     background-color: #110728;
     color: #eee;
-    margin: 0;
-    padding: 0;
 }
-header{
-    color: black;
-}
+
 a{
     color: white;
     text-decoration: none;
@@ -21,9 +26,25 @@ nav{
     align-items: center;
 }
 
+.Hheader{
+    width: 50%;
+    margin: auto;
+}
+
+.Llien{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .nomSite{
     display: flex;
     justify-content: center;
+}
+
+.text h1{
+    color: white;
 }
 
 .banniere {
@@ -46,36 +67,6 @@ nav{
     top: 40%;
     color: black;
     width: 70%;
-}
-.hypertext {
-    color: #efeeef;
-}
-
-
-table{
-    border-collapse: collapse;
-  
-}
-
-td{
-    border: 2.1px solid rgb(166, 161, 161) ;
-    
-
-}
-
-.texte{
-    text-align: center;
-   
-}
-
-.element{
-
-    display: inline-block;
-}
-.black{
-    background-color: rgba(38, 11, 73, 0.8);
-    color: rgb(187, 187, 187);
-
 }
 
 /*
