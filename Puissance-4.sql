@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : jeu. 03 nov. 2022 à 17:57
+-- Généré le : ven. 04 nov. 2022 à 08:32
 -- Version du serveur :  5.7.34
 -- Version de PHP : 7.4.21
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `jeu` (
   `id` int(11) NOT NULL,
-  `nom du jeu` varchar(255) NOT NULL
+  `nom_du_jeu` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -54,10 +54,10 @@ CREATE TABLE `message` (
 
 CREATE TABLE `scrore` (
   `id` int(11) NOT NULL,
-  `id_utulisateur` int(11) NOT NULL,
+  `id_utilisateur` int(11) NOT NULL,
   `id_jeu` int(11) NOT NULL,
   `scrore` int(11) NOT NULL,
-  `date/heure de la partie` datetime NOT NULL
+  `date/heure_partie` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -71,8 +71,8 @@ CREATE TABLE `utilisateur` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `pseudo` varchar(255) NOT NULL,
-  `date/heure inscription` datetime NOT NULL,
-  `date/heure derniere co` datetime NOT NULL
+  `date/heure_inscription` datetime NOT NULL,
+  `date/heure_derniere_co` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
