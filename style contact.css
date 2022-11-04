@@ -1,0 +1,71 @@
+body{
+    background-color: blueviolet;
+}
+/*sert a  coloré le font écran */
+.center{
+    text-align: center;
+}
+/* sert a centré l'entièreté de la page */
+.name, .email{
+    width: 46%;
+    height: 15px;
+    background-color: gray;
+    /*paramétre qui permet aligner et de paramétré les deux bloc du même nom */
+    
+}
+.sujet{
+    width: 98.5%;
+    height: 15px;
+    margin: 20px 0 20px;
+    background-color: gray;
+    /* les paramètre du bloc sujet dans le formulaire */
+
+}
+.message{
+    width: 99%;
+    height: 150px;
+    background-color: gray;
+    /* gros blocs de texte avec marqué message */
+}
+.icone{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+/* les trois image plus le texte en dessous */
+.contact{
+    margin : 20px 20px 0 0;
+    width: 45%;
+}
+/*formulaire en entier*/
+.PE{
+    display: flex ;
+    justify-content: space-between;
+    /* Prénom + contact dans le formulaire */
+
+}
+.bouton{
+    width: 30%;
+    height: 30px;
+    margin : 10px 0 0 0 ;
+    background-color: gray;
+    /* bouton = envoyer */
+
+}
+.img{
+    border-radius: 50%;
+}
+/* arrondie sur image */
+
+::placeholder{
+    color: white;   
+}
+/* met tous le texte du formulaire en blanc*/
+img{
+    background-color: white;
+
+}
+
+
