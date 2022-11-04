@@ -10,7 +10,7 @@ html{
 
 /* Header */
 body{
-    background-color: blueviolet;
+    background-color: #110728;
 }
 
 header{
@@ -55,67 +55,8 @@ nav{
     color: black;
     width: 70%;
 }
-/*
-  bas de la page
-*/
-
-
-footer{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15vh;
-    background: rgba(28, 23, 72, 0.8);
-    height: 40vh;
-
-}
- footer div{
-
-    width: 50%;
- }
-
- .Coordonne{
-    margin: auto;
- }
-
- .b{
-
-    color: #8f8aa7;
-    
- }
-
- .info{
-    color: orange;
- }
-
-.nomSite{
-    display: flex;
-    justify-content: center;
-}
-
-.banniere {
-    display: inline-block;
-    position: relative;
-}
-
-.banniere, .Banniere{
-    width: 100%;
-    height: 35vh;
-}
-.banniere .text {
-    z-index: 1;
-    position: absolute;
-    text-align: center;
-    font-family: Georgia;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 40%;
-    color: black;
-    width: 70%;
-}
 
 /* Body Jeux */
-
 
 .NiveauJeu{
     text-decoration: none;
@@ -156,21 +97,17 @@ footer{
     height: 40vh;
 
 }
- footer div{
-    width: 17%;
-    height: 4vh;
- }
-
- .Rsociaux{
-    display: flex;
-    flex-direction: row;
+ footer .iconlien{
+    width: 50%;
  }
 
  .Coordonne{
     margin: auto;
- }
+    width: 50%;
+    padding: 0 10vh;
+}
 
- .b{
+.b{
 
     color: #8f8aa7;
     
