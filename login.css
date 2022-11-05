@@ -77,9 +77,7 @@ nav{
     color: #eee;
 }
 
-
-
-
+/* Body */
 
 .log{
     display: flex;
@@ -91,12 +89,10 @@ nav{
   
     background: rgba(28, 23, 72, 0.8);
 }
-.color{
 
+.color{
     background-color: #110728;
     color: #eee;
-
-
 }
 
 .tete{
