@@ -76,6 +76,7 @@ nav{
 /* Body */
 table{
     border-collapse: collapse;
+    margin: auto;
   
 }
 
@@ -87,7 +88,7 @@ td{
 
 .texte{
     text-align: center;
-   
+   margin: 5vh auto;
 }
 
 .element{
