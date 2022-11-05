@@ -68,13 +68,18 @@ h3 {
     color: #333;
     background: #ffb709;
     }
-    .boutonjouer:hover{
+.boutonjouer:hover{
     background: #1971a9;
     color: #fff;
     }
 
 
-
+#photo4 {
+    margin-top: 471px;
+    margin-left: 50px;
+    font-size: 90%;
+    width: 1000px;
+    }
 
 
 
@@ -116,15 +121,6 @@ h3 {
 }
 
 
-
-
-
-#photo4 {
-    margin: 500px 150px 150px 150px;
-    font-size: 90%;
-    width: 800px;
-    
-}
 
 
 
@@ -179,7 +175,7 @@ h3 {
     
 .carrerouge {
     background-color: red;
-    width: 225px;
+    width: 275px;
     height: 225px;
     margin: 30px;
 }
@@ -187,13 +183,13 @@ h3 {
 .carrevert {
     
     background-color: green;
-    width: 225px;
+    width: 275px;
     height: 225px;
     margin: 30px;
 }
 
 .carreorange {
-    width: 225px;
+    width: 275px;
     height: 225px;
     background-color: orange;
     margin: 30px;
@@ -201,7 +197,7 @@ h3 {
 }
 
 .carrebleu {
-    width: 225px;
+    width: 275px;
     height: 225px;
     background-color: blue;
     margin: 30px;
@@ -214,7 +210,7 @@ h3 {
 }
 
 .blocinfo {
-    display: flex;
+    display: inline-flex
 }
 
 
