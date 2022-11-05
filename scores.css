@@ -1,6 +1,5 @@
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -69,31 +68,28 @@ nav{
     width: 70%;
 }
 
-.hypertext {
-    color: #efeeef;
-}
-
 /* Body */
+
 table{
     border-collapse: collapse;
-    margin: auto;
-  
 }
 
 td{
     border: 2.1px solid rgb(166, 161, 161) ;
-    
-
 }
 
 .texte{
     text-align: center;
-   margin: 5vh auto;
+    margin: 10vh auto;
 }
 
 .element{
-
     display: inline-block;
+}
+
+.back{
+    background-color: rgb(36, 36, 72);
+    color: rgb(187, 187, 187);
 }
 
 .tete{
@@ -101,11 +97,10 @@ td{
     justify-content: space-around;
     margin-top: 1vh;
 }
-    
+
 /*
   bas de la page
 */
-
 
 footer{
     display: flex;
@@ -115,23 +110,20 @@ footer{
     height: 40vh;
 
 }
- footer div{
-
+footer .iconlien{
     width: 50%;
  }
 
- .Coordonne{
+.Coordonne{
     margin: auto;
     width: 50%;
     padding: 0 10vh;
 }
 
- .b{
-
+.b{
     color: #8f8aa7;
-    
- }
+}
 
- .info{
+.info{
     color: orange;
- }
+}
