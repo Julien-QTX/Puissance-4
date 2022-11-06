@@ -84,10 +84,6 @@ body {
     width: 33%;
 }
 
-#photo4 {
-    width: 100%;
-}
-
 .textebody {
     display: flex;
     font-size: 20px;
@@ -181,7 +177,8 @@ body {
 }
 
 .blocinfo {
-    display: inline-flex
+    display: flex;
+    flex-direction: row;
 }
 
 
