@@ -1,0 +1,30 @@
+/*
+  bas de la page
+*/
+
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15vh;
+    background: rgba(28, 23, 72, 0.8);
+    height: 40vh;
+
+}
+footer .iconlien{
+    width: 50%;
+ }
+
+.Coordonne{
+    margin: auto;
+    width: 50%;
+    padding: 0 10vh;
+}
+
+.b{
+    color: #8f8aa7;
+}
+
+.info{
+    color: orange;
+}
