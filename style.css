@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .power {
     margin: 30px;
     font-size: 25px;
@@ -31,6 +35,10 @@ body {
     background-color: rgb(29, 1, 56);
 }
 
+.container{
+    width: 80%;
+    margin: auto;
+}
 
 .H1 {
     text-align: center;
@@ -71,44 +79,18 @@ body {
     }
 
 
+.imag {
+    margin-top: 3vh;
+    width: 33%;
+}
+
 #photo4 {
-    margin-top: 471px;
-    margin-left: 50px;
-    font-size: 90%;
-    width: 1000px;
-    }
-
-
-
-#photo1 {
-    margin-top: 300px;
-    position: relative; top: 300px;
-    position: relative; left: 100px;
-    height: 500px;
-    width: 500px;
-}
-
-#photo2 {
-    margin-top: 300px;
-    position: relative; top: 300px;
-    position: relative; left: 200px;
-    height: 500px;
-    width: 500px;
-}
-
-#photo3 {
-    margin-top: 300px;
-    position: relative; top: 300px;
-    position: relative; left: 300px;
-    height: 500px;
-    width: 500px;
+    width: 100%;
 }
 
 .textebody {
     display: flex;
     font-size: 20px;
-    position: relative; left: 100px;
-    position: relative; top: 350px; 
     color: aliceblue; 
     width: 90%; 
 }
@@ -116,10 +98,6 @@ body {
 .texte2 {
     margin: 0 100px;
 }
-
-
-
-
 
 .separation {
     text-align: center;
@@ -172,30 +150,26 @@ body {
     
 .carrerouge {
     background-color: red;
-    width: 275px;
-    height: 225px;
+    width: 25;
     margin: 30px;
 }
 
 .carrevert {
     
     background-color: green;
-    width: 275px;
-    height: 225px;
+    width: 25%;
     margin: 30px;
 }
 
 .carreorange {
-    width: 275px;
-    height: 225px;
+    width: 25%;
     background-color: orange;
     margin: 30px;
 
 }
 
 .carrebleu {
-    width: 275px;
-    height: 225px;
+    width: 25%;
     background-color: blue;
     margin: 30px;
 }
