@@ -67,7 +67,7 @@ body {
     font-weight: 700;
     text-decoration: none;
     
-    width: 120px;
+    width: 50%;
     padding: 7px 10px;
     
     color: #333;
@@ -109,7 +109,7 @@ body {
 .boxequipe1, .boxequipe2, .boxequipe3 {
     color: rgb(169, 171, 173);
     display: inline-block;
-    width: 400px;
+    width: 40%;
     height: 600px;
     background-color: rgb(45, 7, 76);
     text-align: center;
@@ -141,12 +141,12 @@ body {
 .carres {
     display: flex;
     flex-wrap: wrap;
-    width: 40%
+    width: 40%;
 }
     
 .carrerouge {
     background-color: red;
-    width: 25;
+    width: 25%;
     margin: 30px;
 }
 
@@ -170,29 +170,16 @@ body {
     margin: 30px;
 }
 
-.carres {
-    margin: 500px 150px;
-    width: 700px;
-    height: 500px;
-}
-
 .blocinfo {
     display: flex;
     flex-direction: row;
 }
-
-
-
-
-
 
 #photocontact1 {
     display: flex;
     width: 10%;
     height: 10%;
 }
-
-
 
 .nom {
     font-size: 30px;
