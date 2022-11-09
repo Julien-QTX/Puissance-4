@@ -11,7 +11,7 @@
 </body>
 </html>
 <?php
-require 'Header.php';
+require 'Header.inc.php';
 ?>
 </head>
 
@@ -34,7 +34,7 @@ require 'Header.php';
 </body>
 
     <?php
-    require 'Footer.php'
+    require 'Footer.inc.php'
     ?>
 
 </html>

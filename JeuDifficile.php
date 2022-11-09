@@ -1,16 +1,15 @@
 <link rel="stylesheet" href="styleJeu.css">
     <?php
-    require 'Header.php';
+    require 'Header.inc.php';
     ?>
     <article class="arti">
         <p>Niveau de difficulté</p>
 
         <table>
             <tr class="NiveauJeu">
-                <th><a href="JeuFacile.html">Facile</a></th>
-                <th><a href="JeuInter.html">Intermediére</a></th>
-                <th><a href="JeuDifficile.html">Difficile</a></th>
-                <th><a href="JeuExpert.html">Expert</a></th>
+                <th><a href="JeuFacile.php">Facile</a></th>
+                <th><a href="JeuInter.php">Intermediére</a></th>
+                <th><a href="JeuExpert.php">Expert</a></th>
             </tr>
         </table>
 
@@ -207,7 +206,7 @@
     </section>
 
     <?php
-    require 'Footer.php'
+    require 'Footer.inc.php'
     ?>
 </body>
 </html>
