@@ -5,37 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style contact.css"/>
-    <link rel="stylesheet" href="styleHeaderFooter.css">
-    <title>Contact</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="Hheader">
-                <h1 class="nomSite">The Power Of Memory</h1>
-            </div>
-            <div class="Hheader">
-                <ul class="Llien">
-                    <a href="index.html">Accueil</a>
-                    <a href="JeuFacile.html">Jeu</a>
-                    <a href="Scores.html">Score</a>
-                    <a href="Contact.html">Contact</a>
-                </ul>
-            </div>
-        </nav>
+    <style>
         
-        <div class="banniere">
-            <img class="Banniere" src="./images/banniere.png" alt="">
-            <div class="text">
-            <h1>Nous Contacter</h1>
-            </div>
+    </style>
+    <title>Contacte</title>
+</head>
+<?php
+require 'Header.html'
+?>
+<body>
+    <div class="center">
+        <h1>nous contacter</h1>
+    </div> 
+    <!--au dessus ce situe le titre plus la balise permetant de tous centrer-->
+    <div class="icone">
+        <div>
+            <img class="img" src="../image/telephone.jpeg" width="25%" alt="phone">
+            <p style="color: white;">numéro de téléphone</p>
         </div>
         <div>
-            <img class="img" src="../image/lettre.jpeg" width="20%" alt="">
+            <img class="img" src="../image/lettre.jpeg" width="20%" alt="emaill">
             <p style="color: white;">email</p>
         </div>
         <div>
-            <img class="img" src="../image/point.jpeg" width="30%" alt="">
+            <img class="img" src="../image/point.jpeg" width="30%" alt="ocalisation">
             <p style="color: white;">Localisation</p>
         </div>
     </div>
@@ -46,12 +39,12 @@
                 <input class="name" type="name" name="prenom" placeholder="Prenom et Nom">
                 <input class="email" type="email" name="email" placeholder="email">
             </div>
-            <input class="sujet" type="text" name="sujet" placeholder="sujet">
+            <input class="sujet" typze="text" name="sujet" placeholder="sujet">
             <textarea class="message" type="text" name="message" placeholder="message "></textarea>
             <button style="color: white;" class="bouton">Envoyer</button>
         </form>
     </div>
-
-</footer>
+  <!--au dessus ce situe le formulaire de remplisage avec le bouton envoyer -->
+    
 </body>
 </html>

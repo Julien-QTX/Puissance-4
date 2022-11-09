@@ -1,0 +1,75 @@
+/* Body */
+
+.log{
+    display: flex;
+    
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  
+    background: rgba(28, 23, 72, 0.8);
+}
+
+.color{
+    background-color: #110728;
+    color: #eee;
+}
+
+.tete{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1vh;
+}
+
+
+/*
+  Le div directement sous la section nous permet 
+  de créer une boite avec une couleur d’arrière-plan
+  et une bordure.
+*/
+.log div{
+    width: 450px;
+  
+    margin: auto;
+  
+    padding: 20px;
+
+    text-align: center;
+
+    
+    border-radius: 5px;
+
+}
+
+/*
+    Nous plaçons les éléments à l’intérieur du formulaire
+    en « flexbox » sur une seule colonne.
+*/
+  .log form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+form input[type="password"], 
+form input[type="text"], 
+form button[type="submit"] {
+    width: 100%;
+  
+    margin-bottom: 32px;
+    padding: 10px;
+    border-radius: 12px;
+
+}
+
+
+/*
+    Mises-en forme du bouton pour l’envoi du formulaire.
+*/
+form button[type="submit"] {
+    font-weight: bold;
+    color: #eee;
+
+    background-color: #e67e22;
+}
