@@ -121,8 +121,6 @@ form button[type="submit"] {
 }
 
 
-
-
 /*
   bas de la page
 */
@@ -132,12 +130,17 @@ footer{
     display: flex;
     justify-content: space-around;
     margin-top: 15vh;
-
+    background: rgba(28, 23, 72, 0.8);
+    height: 40vh;
 
 }
  footer div{
 
     width: 50%;
+ }
+
+ .Coordonne{
+    margin: auto;
  }
 
  .b{
@@ -150,8 +153,6 @@ footer{
     color: orange;
  }
 
-
-
-
-
-
+ .info{
+    color: orange;
+ }
