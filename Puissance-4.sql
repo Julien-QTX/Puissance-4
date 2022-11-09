@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : ven. 04 nov. 2022 à 08:32
+-- Généré le : mer. 09 nov. 2022 à 15:04
 -- Version du serveur :  5.7.34
 -- Version de PHP : 7.4.21
 
@@ -32,6 +32,13 @@ CREATE TABLE `jeu` (
   `nom_du_jeu` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `jeu`
+--
+
+INSERT INTO `jeu` (`id`, `nom_du_jeu`) VALUES
+(1, 'The_power_of_memory');
+
 -- --------------------------------------------------------
 
 --
@@ -43,22 +50,38 @@ CREATE TABLE `message` (
   `id_jeu` int(11) NOT NULL,
   `id_expediteur` int(11) NOT NULL,
   `message` text NOT NULL,
-  `date/heure du message` datetime NOT NULL
+  `date/heure_message` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `message`
+--
+
+INSERT INTO `message` (`id`, `id_jeu`, `id_expediteur`, `message`, `date/heure_message`) VALUES
+(1, 1, 1, 'salut mon gars', '2022-11-04 10:30:57');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `scrore`
+-- Structure de la table `Scrores`
 --
 
-CREATE TABLE `scrore` (
+CREATE TABLE `Scrores` (
   `id` int(11) NOT NULL,
   `id_utilisateur` int(11) NOT NULL,
   `id_jeu` int(11) NOT NULL,
+  `difficulty` varchar(255) NOT NULL,
   `scrore` int(11) NOT NULL,
   `date/heure_partie` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `Scrores`
+--
+
+INSERT INTO `Scrores` (`id`, `id_utilisateur`, `id_jeu`, `difficulty`, `scrore`, `date/heure_partie`) VALUES
+(1, 3, 1, '1', 200, '2022-12-08 03:21:12'),
+(2, 3, 1, 'facile', 200, '2022-12-08 03:21:12');
 
 -- --------------------------------------------------------
 
@@ -72,8 +95,15 @@ CREATE TABLE `utilisateur` (
   `password` varchar(255) NOT NULL,
   `pseudo` varchar(255) NOT NULL,
   `date/heure_inscription` datetime NOT NULL,
-  `date/heure_derniere_co` datetime NOT NULL
+  `date/heure_derniere_co` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id`, `email`, `password`, `pseudo`, `date/heure_inscription`, `date/heure_derniere_co`) VALUES
+(3, 'tib@gmail.com', 'test2', 'joueur2', '2022-11-04 10:30:57', NULL);
 
 --
 -- Index pour les tables déchargées
@@ -92,9 +122,9 @@ ALTER TABLE `message`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `scrore`
+-- Index pour la table `Scrores`
 --
-ALTER TABLE `scrore`
+ALTER TABLE `Scrores`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -111,25 +141,25 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `jeu`
 --
 ALTER TABLE `jeu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `scrore`
+-- AUTO_INCREMENT pour la table `Scrores`
 --
-ALTER TABLE `scrore`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `Scrores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
