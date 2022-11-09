@@ -30,6 +30,11 @@ require 'Header.php';
         </form>
     </div>
 
-</footer>
+
 </body>
+
+    <?php
+    require 'Footer.php'
+    ?>
+
 </html>
