@@ -12,7 +12,17 @@
     <?php
     require "Header.inc.php"
     ?>
-    
+
+<div class="selecavatar">
+            <label for="avatar">Choisir votre photo de profil :</label>
+
+            <input type="file"
+                id="avatar" name="avatar"
+                accept="image/png, image/jpeg"
+                class="avatar">
+        </div>
+            
+        <img class="" src="" alt="">
 
     <?php
     require "Footer.inc.php"
