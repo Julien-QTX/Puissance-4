@@ -86,7 +86,7 @@
     <label for="pseudo"> Votre Mot de passe :</label>
     <input type="password" name="mpd" class="password" placeholder="Mot de Passe">
     <label for="pseudo"> Confirmer votre Mot de passe :</label>
-    <input type="password" name="confirmmpd" class="password" placeholder="Confirmer Mot de Passe">
+    <input type="password" name="confmpd" class="password" placeholder="Confirmer Mot de Passe">
     <div>
         <button>Bouton</button>
     </div>
