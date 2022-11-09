@@ -1,7 +1,4 @@
-<?php
 
-include_once
-?>
 
 <!DOCTYPE html>
 <html lang="fr">
