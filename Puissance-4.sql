@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : ven. 04 nov. 2022 à 15:46
+-- Généré le : mer. 09 nov. 2022 à 15:04
 -- Version du serveur :  5.7.34
 -- Version de PHP : 7.4.21
 
@@ -50,8 +50,15 @@ CREATE TABLE `message` (
   `id_jeu` int(11) NOT NULL,
   `id_expediteur` int(11) NOT NULL,
   `message` text NOT NULL,
-  `date/heure du message` datetime NOT NULL
+  `date/heure_message` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `message`
+--
+
+INSERT INTO `message` (`id`, `id_jeu`, `id_expediteur`, `message`, `date/heure_message`) VALUES
+(1, 1, 1, 'salut mon gars', '2022-11-04 10:30:57');
 
 -- --------------------------------------------------------
 
@@ -140,7 +147,7 @@ ALTER TABLE `jeu`
 -- AUTO_INCREMENT pour la table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `Scrores`
