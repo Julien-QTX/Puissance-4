@@ -10,12 +10,12 @@
 <body>
 
     <?php
-    require "Header.php"
+    require "Header.inc.php"
     ?>
     
 
     <?php
-    require "Footer.php"
+    require "Footer.inc.php"
     ?>
 
 </body>

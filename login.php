@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php
-    require "Header.php"
+    require "Header.inc.php"
     ?>
     
     <section class="log">
@@ -30,7 +30,7 @@
     </section>
 
     <?php
-    require "Footer.php"
+    require "Footer.inc.php"
     ?>
 
 </body>

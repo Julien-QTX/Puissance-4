@@ -11,7 +11,7 @@
 <body>
 
     <?php
-    require "Header.php"
+    require "Header.inc.php"
     ?>
 
     <div class="texte">
@@ -157,7 +157,7 @@
     </div>
 
     <?php
-    require "Footer.php"
+    require "Footer.inc.php"
     ?>
 
 </body>
