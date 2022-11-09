@@ -28,7 +28,9 @@
         <div class="banniere">
             <img class="Banniere" src="./images/banniere.png" alt="">
             <div class="text">
-            <h1>Nom de Page</h1>
+            <h1><?php 
+                
+            ?></h1>
             </div>
         </div>
     </header>
