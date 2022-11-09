@@ -1,6 +1,5 @@
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -10,13 +9,12 @@ html{
 
 /* Header */
 body{
-    background-color: blueviolet;
+    background-color: #110728;
+    color: #eee;
 }
-header{
-    color: black;
-}
+
 a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -27,9 +25,25 @@ nav{
     align-items: center;
 }
 
+.Hheader{
+    width: 50%;
+    margin: auto;
+}
+
+.Llien{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .nomSite{
     display: flex;
     justify-content: center;
+}
+
+.text h1{
+    color: white;
 }
 
 .banniere {
@@ -37,7 +51,7 @@ nav{
     position: relative;
 }
 
-.banniere, img{
+.banniere, .Banniere{
     width: 100%;
     height: 35vh;
 }
@@ -54,23 +68,7 @@ nav{
     width: 70%;
 }
 
-/* Body Inscription */
 
-form{
-    width: 40%;
-    margin: 5vh auto;
-}
-
-.pseudo, .email, .password{
-    width: 100%;
-    height: 3vh;
-    margin-bottom: 3vh;
-}
-
-button{
-    margin: 0 30vh;
-    width: 15%;
-}
 /*
   bas de la page
 */
@@ -84,22 +82,20 @@ footer{
     height: 40vh;
 
 }
- footer div{
-
+footer .iconlien{
     width: 50%;
  }
 
- .Coordonne{
+.Coordonne{
     margin: auto;
- }
+    width: 50%;
+    padding: 0 10vh;
+}
 
- .b{
-
+.b{
     color: #8f8aa7;
-    
- }
+}
 
- .info{
+.info{
     color: orange;
- }
-
+}

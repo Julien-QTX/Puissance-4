@@ -1,86 +1,28 @@
-/* Header */
-
-body{
-    background-color: blueviolet;
-}
-header{
-    color: black;
-}
-a{
-    color: black;
-    text-decoration: none;
-}
-
-nav{
-    min-height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.nomSite{
-    display: flex;
-    justify-content: center;
-}
-
-.banniere {
-    display: inline-block;
-    position: relative;
-}
-
-.banniere, img{
-    width: 100%;
-    height: 35vh;
-}
-.banniere .text {
-    z-index: 1;
-    position: absolute;
-    text-align: center;
-    font-family: Georgia;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 40%;
-    color: black;
-    width: 70%;
-}
-.hypertext {
-    color: #efeeef;
-}
-
+/* Body */
 
 table{
     border-collapse: collapse;
-  
 }
 
 td{
     border: 2.1px solid rgb(166, 161, 161) ;
-    
-
 }
 
 .texte{
     text-align: center;
-   
+    margin: 10vh auto;
 }
 
 .element{
-
     display: inline-block;
 }
-.black{
-    background-color: rgba(38, 11, 73, 0.8);
-    color: rgb(187, 187, 187);
 
+.back{
+    background-color: rgb(36, 36, 72);
+    color: rgb(187, 187, 187);
 }
 
-/*
-  bas de la page
-*/
-
-
-footer{
+.tete{
     display: flex;
     justify-content: space-around;
     margin-top: 15vh;

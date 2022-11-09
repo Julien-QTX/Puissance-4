@@ -1,54 +1,56 @@
 <!DOCTYPE html>
-<html>
-    <head>
-	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-	    <title>Acceuil</title>
-    </head>
-    <div id="blocpage">
-    <body>
-        <header>
-                <h1>BIENVENUE DANS <br> NOTRE STUDIO !</h1>
-                    <h3>Venez challenger les cerveaux les plus agiles !</h3>
-                        <h2 class ="power">The Power Of Memory</h2>
-        
-    
-    
-    
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Acceuil</title>
+</head>
+<body>
+    <header class="banniere">
+        <img class="Banniere" src="./images/setup-gamer-4-conseils-pour-installer-le-parfait-equipement-gaming.jpeg" alt="">
         <nav>
-            <ul>
-                 <a href="index.html">  ACCEUIL</a> 
-                 <a href="JeuFacile.html"> JEU </a>
-                 <a href="scores.html"> SCORES </a>
-                 <a href="contact.html">NOUS CONTACTER </a>
-            </ul>
-
+            <div class="Hheader">
+                <h1 class="nomSite">The Power Of Memory</h1>
+            </div>
+            <div class="Hheader">
+                <ul class="Llien">
+                    <a href="index.html">Accueil</a>
+                    <a href="JeuFacile.html">Jeu</a>
+                    <a href="Scores.html">Score</a>
+                    <a href="Contact.html">Contact</a>
+                </ul>
+            </div>
         </nav>
+    
+    
         
-        <p class="boutonjouer">Jouer !</p>
+        <div class="text">
+            <h1 class="H1">BIENVENUE DANS <br> NOTRE STUDIO !</h1>
+            <h3 class="H3">Venez challenger les cerveaux les plus agiles !</h3>
+            Bouton pour acceder au jeu
+            <p class="boutonjouer">Jouer !</p>
+        </div>
+    </header>
 
-        </header>
-           
+    <div class="container">
         
-        <img src="../img/Photodejeux1.jpeg" alt="Photojeux1" id="photo1">
+        <!--images de plusieurs jeux avec description-->
+        <div class="imaage">
+            <img class="imag" src="img/Photodejeux1.jpeg" alt="Photojeux1">
         
-        <img src="../img/Photodejeux2.png" alt="Photojeux2" id="photo2">
+            <img class="imag" src="img/Photodejeux2.png" alt="Photojeux2">
+            
+            <img class="imag" src="img/Photodejeux3.png" alt="Photojeux2">
+
+        </div>
+
         
-        <img src="../img/Photodejeux3.png" alt="Photojeux2" id="photo3">
 
         <div class="textebody">
-            <div class = "texte1">   
-                <p> <strong> Lorem ipsum </strong> <br> <br> amet consectetur adipisicing elit. 
-                    Totam consequatur mollitia reprehenderit dolorum corrupti id quia, 
-                    odio illum debitis a reiciendis libero itaque dolorem iusto 
-                    cupiditate ab, pariatur animi autem. Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Beatae aliquam voluptas facere quasi eligendi qui, 
-                    dolor magnam cupiditate repellat consequuntur deleniti et minus ipsa quaerat
-                    nemo eos incidunt in! Doloribus.</p>
-            </div> 
-            <div class = "texte2"> 
-                <p> <strong> Lorem ipsum </strong> <br> <br> sit amet consectetur adipisicing elit. 
+            <div class = "textee">
+                <h1 class="Chiffre">01</h1>   
+                <p class="txt"> <strong> Lorem ipsum </strong> <br> <br> amet consectetur adipisicing elit. 
                     Totam consequatur mollitia reprehenderit dolorum corrupti id quia, 
                     odio illum debitis a reiciendis libero itaque dolorem iusto 
                     cupiditate ab, pariatur animi autem. Lorem ipsum dolor sit amet consectetur, 
@@ -56,8 +58,21 @@
                     dolor magnam cupiditate repellat consequuntur deleniti et minus ipsa quaerat
                     nemo eos incidunt in! Doloribus.</p>
             </div>
-            <div class= "texte3"> 
-                <p> <strong> Lorem ipsum </strong> <br> <br> sit amet consectetur adipisicing elit. 
+
+            <div class = "textee">
+                <h1 class="Chiffre">02</h1>    
+                <p class="txt"> <strong> Lorem ipsum </strong> <br> <br> sit amet consectetur adipisicing elit. 
+                    Totam consequatur mollitia reprehenderit dolorum corrupti id quia, 
+                    odio illum debitis a reiciendis libero itaque dolorem iusto 
+                    cupiditate ab, pariatur animi autem. Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Beatae aliquam voluptas facere quasi eligendi qui, 
+                    dolor magnam cupiditate repellat consequuntur deleniti et minus ipsa quaerat
+                    nemo eos incidunt in! Doloribus.</p>
+            </div>
+            
+            <div class= "textee"> 
+                <h1 class="Chiffre">03</h1>   
+                <p class="txt"> <strong> Lorem ipsum </strong> <br> <br> sit amet consectetur adipisicing elit. 
                     Totam consequatur mollitia reprehenderit dolorum corrupti id quia, 
                     odio illum debitis a reiciendis libero itaque dolorem iusto 
                     cupiditate ab, pariatur animi autem. Lorem ipsum dolor sit amet consectetur, 
@@ -67,72 +82,84 @@
             </div>
         </div>
 
-
-            <div class="blocinfo">
-                <div>
-                    <img src="../img/image4.png" alt="jeuvideo" id="photo4">
-                </div>    
-                <div class = "carres">
-                    <div class = carrerouge></div>
-                    <div class = carrevert></div>
-                    <div class = carreorange></div>
-                    <div class = carrebleu></div>
+        <!--Creation de blocs répertoriant des infos sur l'utilisateur-->
+        <div class="blocinfo">
+            <div class="Immag">
+                <img src="img/image4.png" width="100%" alt="jeuvideo">
+            </div>    
+            <div class = "carres">
+                <div class="Haut">
+                    <div class = carrerouge>
+                        <h2 class="H2">310 Parties Jouées</h2>
+                    </div>
+                    <div class = carrevert>
+                        <h2 class="H2">1020 Joueurs connectés</h2>
+                    </div>
+                </div>
+                <div class="Bas">
+                    <div class = carreorange>
+                        <h2 class="H2">10 sec Temps Record</h2>
+                    </div>
+                    <div class = carrebleu>
+                        <h2 class="H2">21 300 Joeurs inscrits</h2>
+                    </div>
                 </div>
             </div>
-
-        <h2>Notre Équipe</h2>
-        <p id="texteequipe">Quisque commodo facilisis purus, interdum volutpat arcu viverra sed.</p>
-            <div class="separation">
-                <img src="../img/separation.png" alt="separation">
-            </div>
-            
+        </div>
+        <!--liste des differentes personnes sur le projet avec lien vers les réseauw-->
+        <div class="separation">
+            <h2 class="H2">Notre Équipe</h2>
+            <p id="texteequipe">Quisque commodo facilisis purus, interdum volutpat arcu viverra sed.</p>
+            <img src="img/separation.png" alt="separation">
+        
             <div class="boxequipe">
-                <div class = boxequipe1>
-                    <img class = "pdp" src="../img/contactaccueil/photocontact.png" alt="" width="60%">
-                    <h2 class="nom">HAMILTON</h2> 
+                <div class = boxequipeT>
+                    <img class = "pdp" src="img/contactaccueil/photocontact.png" alt="" width="60%">
+                    <h2 class="nom">Bastien</h2> 
                     <p>Games Developer</p>
                     <div class = icone>
-                        <img class = "logo" src="../img/contactaccueil/facebook.png" alt="">
-                        <img class = "logo" src="../img/contactaccueil/twitter.png" alt="">
-                        <img class = "logo" src="../img/contactaccueil/pinterest.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/facebook.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/twitter.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/pinterest.png" alt="">
                     </div>
                 </div>    
                 
-                <div class = boxequipe2>
-                    <img class = "pdp" src="../img/contactaccueil/photocontact.png" alt="" width="60%">
-                    <h2 class="nom">MICKAEL</h2>
+                <div class = boxequipeT>
+                    <img class = "pdp" src="img/contactaccueil/photocontact.png" alt="" width="60%">
+                    <h2 class="nom">Adam</h2>
                     <p>Games Designer</p>
                     <div class="icone">
-                        <img class = "logo" src="../img/contactaccueil/facebook.png" alt="">
-                        <img class = "logo" src="../img/contactaccueil/twitter.png" alt="">
-                        <img class = "logo" src="../img/contactaccueil/pinterest.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/facebook.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/twitter.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/pinterest.png" alt="">
                     </div>
                 </div>
 
-                <div class = boxequipe3>
-                    <img class = "pdp" src="../img/contactaccueil/photocontact.png" alt="" width="60%">
-                    <h2 class="nom">MICKAEL</h2>
+                <div class = boxequipeT>
+                    <img class = "pdp" src="img/contactaccueil/photocontact.png" alt="" width="60%">
+                    <h2 class="nom">Guillaume</h2>
                     <p>Games Developer</p>
                     <div class="icone">
-                        <img class = "logo" src="../img/contactaccueil/facebook.png" alt="">
-                        <img class = "logo" src="../img/contactaccueil/twitter.png" alt="">
-                        <img class = "logo" src="../img/contactaccueil/pinterest.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/facebook.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/twitter.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/pinterest.png" alt="">
+                    </div>
+                </div>
+
+                <div class = boxequipeT>
+                    <img class = "pdp" src="img/contactaccueil/photocontact.png" alt="" width="60%">
+                    <h2 class="nom">Julien</h2>
+                    <p>Games Developer</p>
+                    <div class="icone">
+                        <img class = "logo" src="img/contactaccueil/facebook.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/twitter.png" alt="">
+                        <img class = "logo" src="img/contactaccueil/pinterest.png" alt="">
                     </div>
                 </div>
             </div>
-
-            
-            
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <hr>
-
-     
-    </body>
+        </div>
     </div>
+
     <footer>
 
         <div class="Coordonne">
@@ -146,7 +173,7 @@
     
             </ul>
     
-            <div>
+            <div class="iconlien">
                 <a href="https://fr-fr.facebook.com/"><img src="./image/facebook.png" alt="" width="10%"></a>
                 <a href="https://twitter.com/?lang=fr"><img src="./image/tweeter.png" alt=""width="10%"></a>
                 <a href="https://www.pinterest.fr/"><img src="./image/pinterest.png" alt=""width="10%"></a>
@@ -169,5 +196,5 @@
         </div>
     
     </footer>
-
+</body>
 </html>
