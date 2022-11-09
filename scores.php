@@ -10,28 +10,9 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="Hheader">
-                <h1 class="nomSite">The Power Of Memory</h1>
-            </div>
-            <div class="Hheader">
-                <ul class="Llien">
-                    <a href="index.html">Accueil</a>
-                    <a href="JeuFacile.html">Jeu</a>
-                    <a href="Scores.html">Score</a>
-                    <a href="Contact.html">Contact</a>
-                </ul>
-            </div>
-        </nav>
-        
-        <div class="banniere">
-            <img class="Banniere" src="./images/banniere.png" alt="">
-            <div class="text">
-            <h1>Scoreboard</h1>
-            </div>
-        </div>
-    </header>
+    <?php
+    require "Header.php"
+    ?>
 
     <div class="texte">
         <div class="element">
@@ -175,42 +156,9 @@
             
     </div>
 
-    <footer>
-
-        <div class="Coordonne">
-            <h1> Information</h1>
-            <p> quisque commodo facilisis purus, interdum volutpat arcu viverra sed</p>
-            <ul class="b">
-    
-                <li> <span class="info">Tel :</span> 07 69 50 51 70</li>
-                <li> <span class="info">Email:</span>  jeuxmemo@gmail.com</li>
-                <li> <span class="info">Location:</span>  Paris Montparnasse </li>
-    
-            </ul>
-    
-            <div class="iconlien">
-                <a href="https://fr-fr.facebook.com/"><img src="./image/facebook.png" alt="" width="10%"></a>
-                <a href="https://twitter.com/?lang=fr"><img src="./image/tweeter.png" alt=""width="10%"></a>
-                <a href="https://www.pinterest.fr/"><img src="./image/pinterest.png" alt=""width="10%"></a>
-                <a href="https://www.google.fr/"><img src="./image/google.png" alt=""width="10%"></a>
-                <a href="https://www.instagram.com/?hl=fr"><img src="./image/insta.png" alt=""width="10%"></a>
-    
-            </div>
-            
-        </div>
-    
-        <div class="Coordonne">
-            <h1> Power Of Memory</h1>
-    
-            <ul class="b">
-                <li>Jouer!</li>
-                <li>Les scores</li>
-                <li> Nous contacter</li>
-            </ul>
-    
-        </div>
-    
-    </footer>
+    <?php
+    require "Footer.php"
+    ?>
 
 </body>
 </html>
