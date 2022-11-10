@@ -1,6 +1,7 @@
 <?php
     require 'Header.inc.php';
-    include('include/sqlconnect.php');
+    session_start();
+    include('includes/sqlconnect.php');
 
 
     // S'il y a une session alors on ne retourne plus sur cette page
@@ -22,32 +23,32 @@
         $mdp = trim($mdp); // On récupère le mot de passe 
         $confmdp = trim($confmdp); //  On récupère la confirmation du mot de passe
          
-            //  Vérification du nom
-            if(empty($nom)){
+            //  Vérification du pseudo
+            if(empty($pseudo)){
                 $valid = false;
-                $er_nom = ("Le nom d' utilisateur ne peut pas être vide");
+                $er_pseudo = ("Le Pseudo de utilisateur ne peut pas être vide");
             }
          
-            // Vérification du mail
-            if(empty($mail)){
+            // Vérification du Email
+            if(empty($email)){
                 $valid = false;
-                $er_mail = "Le mail ne peut pas être vide";
+                $er_email = "Le Email ne peut pas être vide";
          
-            // On vérifit que le mail est dans le bon format
-            }elseif(!preg_match("/^[a-z0-9\-_.]+@[a-z]+\.[a-z]{2,3}$/i", $mail)){
+                // On vérifit que le Email est dans le bon format
+            }elseif(!preg_match("/^[a-z0-9\-_.]+@[a-z]+\.[a-z]{2,3}$/i", $email)){
                 $valid = false;
-                $er_mail = "Le mail n'est pas valide";
+                $er_email = "Le Email n'est pas valide";
          
             }else{
-                // On vérifit que le mail est disponible
-                $req_mail = $DB->query("SELECT mail FROM utilisateur WHERE mail = ?",
-                array($mail));
+                // On vérifit que le Email est disponible
+                $req_email = $DB->query("SELECT Email FROM utilisateur WHERE Email = ?",
+                array($email));
          
-                $req_mail = $req_mail->fetch();
+                $req_email = $req_email->fetch();
          
-                if ($req_mail['mail'] <> ""){
+                if ($req_email['email'] <> ""){
                     $valid = false;
-                    $er_mail = "Ce mail existe déjà";
+                    $er_email = "Ce Email existe déjà";
                 }
             }
          
@@ -68,7 +69,7 @@
                 $date_creation_compte = date('Y-m-d H:i:s');
             
                 // On insert nos données dans la table utilisateur
-                $DB->insert("INSERT INTO utilisateur (nom, prenom, mail, mdp, date_creation_compte) VALUES (?, ?, ?, ?, ?)", array($nom, $prenom, $mail, $mdp, $date_creation_compte));
+                $DB->insert("INSERT INTO utilisateur (Pseudo, Email, PassWord, date_creation_compte) VALUES (?, ?, ?, ?, ?)", array($pseudo, $email, $mdp, $date_creation_compte));
             
                 header('Location: index.php');
                 exit;
@@ -78,20 +79,46 @@
 ?>
 <link rel="stylesheet" href="styleInscription.css">
 
-<form action="" class="" method="">
-    <label for="pseudo"> Entrer votre Pseudo :</label>
-    <input type="text" name="pseudo" class="pseudo" placeholder="Pseudo">
-    <label for="email"> Votre E-mail :</label>
-    <input type="text" name="email" class="email" placeholder="Email">
+<form method="post">
+    <?php
+        //S'il y a une erreur sur le pseudo alors on affiche
+        if (isset($er_pseudo)){ 
+        ?>
+           <div><?= $er_pseudo ?></div>
+        <?php
+        }
+        ?>
+        <label for="pseudo"> Entrer votre Pseudo :</label>
+        <input type="text" class="pseudo"placeholder="Votre Pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
+        <?php
+
+        if (isset($er_email)){
+        ?>
+            <div><?= $er_email ?></div>
+            <?php
+        }
+        ?>
+        <label for="email"> Votre E-mail :</label>
+        <input type="email" class="email" placeholder="Adresse Email" name="email" value="<?php if(isset($email)){ echo $email; }?>" required>
+        <?php
+
+        if (isset($er_mdp)){
+        ?>
+            <div><?= $er_mdp ?></div>
+            <?php
+        }
+    ?>
+
     <label for="pseudo"> Votre Mot de passe :</label>
-    <input type="password" name="mpd" class="password" placeholder="Mot de Passe">
+    <input type="password" class="password" placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+
     <label for="pseudo"> Confirmer votre Mot de passe :</label>
-    <input type="password" name="confmpd" class="password" placeholder="Confirmer Mot de Passe">
+    <input type="password" class="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
+    
     <div>
-        <button>Bouton</button>
+        <button type="submit" name="inscription">Envoyer</button>
     </div>
     
-
 </form>
 
 <?php
