@@ -1,7 +1,7 @@
 <?php
     require 'Header.inc.php';
     session_start();
-    include('includes/sqlconnect.php');
+    include ('includes/sqlconnect.php');
 
 
     // S'il y a une session alors on ne retourne plus sur cette page
@@ -41,7 +41,7 @@
          
             }else{
                 // On vérifit que le Email est disponible
-                $req_email = $DB->query("SELECT Email FROM utilisateur WHERE Email = ?",
+                $req_email = $DB->query("SELECT Email FROM utilisateur WHERE email = ?",
                 array($email));
          
                 $req_email = $req_email->fetch();
@@ -69,7 +69,7 @@
                 $date_creation_compte = date('Y-m-d H:i:s');
             
                 // On insert nos données dans la table utilisateur
-                $DB->insert("INSERT INTO utilisateur (Pseudo, Email, PassWord, date_creation_compte) VALUES (?, ?, ?, ?, ?)", array($pseudo, $email, $mdp, $date_creation_compte));
+                $DB->insert("INSERT INTO utilisateur (Pseudo, Email, PassWord, date_creation_compte) VALUES (?, ?, ?, ?)", array($pseudo, $email, $mdp, $date_creation_compte));
             
                 header('Location: index.php');
                 exit;
