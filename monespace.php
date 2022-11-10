@@ -15,14 +15,14 @@
 
                 <label for="avatar">Choisir votre photo de profil :</label>
 
-                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" class="avatar">
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" class="avatarFile">
 
             </div>
         </div>
 
         <div class="Score">
             <h1 class="Titre">Meilleur Scores</h1>
-            
+
             <table>
                 <thead>
                     <th>scores</th>
