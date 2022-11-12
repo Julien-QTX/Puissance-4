@@ -1,6 +1,5 @@
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -10,14 +9,12 @@ html{
 
 /* Header */
 body{
-    background-color: blueviolet;
+    background-color: #110728;
+    color: #eee;
 }
 
-header{
-    color: black;
-}
 a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -28,9 +25,26 @@ nav{
     align-items: center;
 }
 
+.Hheader{
+    width: 50%;
+    margin: auto;
+}
+
+.Llien{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .nomSite{
     display: flex;
     justify-content: center;
+    color: #eee;
+}
+
+.text h1{
+    color: white;
 }
 
 .banniere {
@@ -38,7 +52,7 @@ nav{
     position: relative;
 }
 
-.banniere, .bannierehead{
+.banniere, .Banniere{
     width: 100%;
     height: 35vh;
 }
@@ -55,22 +69,36 @@ nav{
     width: 70%;
 }
 
-/* Body Inscription */
 
-form{
-    width: 40%;
-    margin: 5vh auto;
+/*
+  bas de la page
+*/
+
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15vh;
+    background: rgba(28, 23, 72, 0.8);
+    height: 40vh;
+
+}
+footer .iconlien{
+    width: 50%;
+ }
+
+.Coordonne{
+    margin: auto;
+    width: 50%;
+    padding: 0 10vh;
 }
 
-.pseudo, .email, .password{
-    width: 100%;
-    height: 3vh;
-    margin-bottom: 3vh;
+.b{
+    color: #8f8aa7;
 }
 
-button{
-    margin: 0 30vh;
-    width: 15%;
+.info{
+    color: orange;
 }
 
 label {
