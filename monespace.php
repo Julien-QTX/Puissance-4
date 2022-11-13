@@ -1,10 +1,18 @@
 <link rel="stylesheet" href="styleProfil.css">
 <?php
-    require "Header.inc.php"
+    require "Header.inc.php";
+    session_start();
+    include ('includes/sqlconnect.php');
+
+    if(isset($_GET['id']) AND $_GET['id'] > 0) {
+        $getid = intval($_GET['id']);
+        $requser = $bdd->prepare('SELECT * FROM membres WHERE id = ?');
+        $requser->execute(array($getid));
+        $userinfo = $requser->fetch();
 ?>
 <div class="container">
 
-    <h1 class="Titre">Bienvenue <?php $pseudo ?>. Julien</h1>
+    <h1 class="Titre">Bienvenue <?php echo $userinfo['pseudo']; ?> Julien</h1>
 
     <div class="AvaScore">
 
