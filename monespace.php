@@ -1,33 +1,118 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style2.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace</title>
-</head>
-<body>
+<link rel="stylesheet" href="styleProfil.css">
+<?php
+    require "Header.inc.php";
+    session_start();
+    include ('includes/sqlconnect.php');
+    if (!isset($_SESSION['email'])) {
+        header('Location: monespace.php');
+        die();
+    }
+    else {
+        echo $_SESSION['email'] .'<br>';
+    }
 
-    <?php
-    require "Header.inc.php"
-    ?>
 
-<div class="selecavatar">
-            <label for="avatar">Choisir votre photo de profil :</label>
+    ?> 
 
-            <input type="file"
-                id="avatar" name="avatar"
-                accept="image/png, image/jpeg"
-                class="avatar">
+<div class="container">
+
+    <h1 class="Titre">Bienvenue  Julien</h1>
+
+    <div class="AvaScore">
+
+        <div class="Avatar">
+            <img class="AvaPro" src="./images/Champignon Bleu.jpg"alt="">
+
+            <div class="selecavatar">
+
+                <label for="avatar">Choisir votre photo de profil :</label>
+
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" class="avatarFile">
+
+            </div>
         </div>
-            
-        <img class="" src="" alt="">
 
-    <?php
+        <ul>
+       
+    
+        <li>
+            <a href="logout.php">
+                Se deconnecter
+            </a>
+        </li>
+    </ul>   
+
+        <div class="Score">
+            <h1 class="Titre">Meilleur Scores</h1>
+
+            <table>
+                <thead>
+                    <th>scores</th>
+                    <th>Nbr de Coups</th>
+                    <th>Difficulté</th>
+                    <th>Date</th>
+                </thead>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>        
+
+<?php
     require "Footer.inc.php"
-    ?>
-
-</body>
-
-</html>
+?>

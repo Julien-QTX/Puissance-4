@@ -1,9 +1,10 @@
 <?php
 
 $dsn = 'mysql:dbname=Puissance-4;host=localhost';
-$user = 'root';
+$utilisateur = 'root';
 $password = 'root';
 
-$dbh = new PDO($dsn, $user, $password);
+
+$dbh = new PDO($dsn, $utilisateur, $password);
 
 ?>

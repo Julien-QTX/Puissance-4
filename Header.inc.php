@@ -17,7 +17,7 @@
                 <ul class="Llien">
                     <a href="index.html">Accueil</a>
                     <a href="JeuFacile.html">Jeu</a>
-                    <a href="Scores.html">Score</a>
+                    <a href="Scores.php">Score</a>
                     <a href="Contact.html">Contact</a>
                 </ul>
             </div>
