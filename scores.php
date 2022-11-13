@@ -11,7 +11,7 @@
 <body>
 
     <?php
-    require "Header.inc.php"
+        require "Header.inc.php"
     ?>
 
     <div class="texte">
