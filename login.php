@@ -64,6 +64,7 @@
                 // On insert nos données dans la table utilisateur
                 $DB->insert("INSERT INTO utilisateur (pseudo, email, mdp, date_creation_compte) VALUES
                     (?, ?, ?, ?, ?)", array($pseudo, $email, $mdp, $date_creation_compte));
+                    
          
                 header('Location: index.php');
                 exit;
