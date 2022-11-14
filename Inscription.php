@@ -6,7 +6,7 @@
 
     // S'il y a une session alors on ne retourne plus sur cette page
     if (isset($_SESSION['id'])){
-        header('Location: index.php');
+        header('Location: login.php');
         exit;
     }
          
@@ -68,10 +68,10 @@
                 $date_creation_compte = date('Y-m-d H:i:s');
          
                 // On insert nos données dans la table utilisateur
-                $DB->insert("INSERT INTO utilisateur (pseudo, email, mdp, date_creation_compte) VALUES
-                    (?, ?, ?, ?, ?)", array($pseudo, $email, $mdp, $date_creation_compte));
+                $DB->insert("INSERT INTO utilisateur (id, email, password, pseudo, date_heure_inscription) VALUES
+                    (NULL,?, ?, ?, ?)", array($id, $email, $pseudo, $password, $date_heure_inscription));
          
-                header('Location: index.php');
+                header('Location: login.php');
                 exit;
             }
         }
@@ -79,7 +79,7 @@
 
     ?>
     
-    <form method="post">
+    <form action ="login.php" method="post">
         <?php
 
         if (isset($er_pseudo)){

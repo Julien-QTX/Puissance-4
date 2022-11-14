@@ -4,11 +4,12 @@
     session_start();
     include ('includes/sqlconnect.php');
 
-    if(isset($_GET['id']) AND $_GET['id'] > 0) {
-        $getid = intval($_GET['id']);
-        $requser = $bdd->prepare('SELECT * FROM membres WHERE id = ?');
-        $requser->execute(array($getid));
+    if(isset($_GET['pseudo'])) {
+        $getpseudo = intval($_GET['pseudo']);
+        $requser = $bdd->prepare('SELECT pseudo FROM utilisateur WHERE pseudo = ?');
+        $requser->execute(array($getpseudo));
         $userinfo = $requser->fetch();
+        }
 ?>
 <div class="container">
 
