@@ -25,7 +25,7 @@
             //  Vérification du pseudo
             if(empty($pseudo)){
                 $valid = false;
-                $er_pseudo = ("Le pseudo d' utilisateur ne peut pas être vide");
+                $er_pseudo = ("Le pseudo d'utilisateur ne peut pas être vide");
             }
          
             // Vérification du email
@@ -40,7 +40,7 @@
          
             }else{
                 // On vérifit que le email est disponible
-                $req_email = $DB->query("SELECT email FROM utilisateur WHERE mail = ?",
+                $req_email = $dbh->query("SELECT email FROM utilisateur WHERE mail = ?",
                 array($email));
             
                 $req_email = $req_email->fetch();
@@ -68,7 +68,7 @@
                 $date_creation_compte = date('Y-m-d H:i:s');
          
                 // On insert nos données dans la table utilisateur
-                $DB->insert("INSERT INTO utilisateur (id, email, password, pseudo, date_heure_inscription) VALUES
+                $dbh->execute("INSERT INTO utilisateur (id, email, password, pseudo, date_heure_inscription) VALUES
                     (NULL,?, ?, ?, ?)", array($id, $email, $pseudo, $password, $date_heure_inscription));
          
                 header('Location: login.php');
@@ -109,7 +109,7 @@
         <input class="password" type="password" placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
         <input class="password" type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
         <div>
-            <button type="submit" name="inscription">Envoyer</button>
+            <button type="submit" name="Inscription">Envoyer</button>
         </div>
         
     </form>
