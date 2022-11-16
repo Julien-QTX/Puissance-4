@@ -11,7 +11,8 @@
 <body>
 
     <?php
-        require "Header.inc.php"
+        require "Header.inc.php";
+        require 'includes/sqlconnect.php';
     ?>
 
     <div class="texte">
@@ -22,111 +23,44 @@
                 <tr>
                     <td>Nom du jeu</td>
                     <td> pseudo du joueur</td>
-                    <td>  Niveau de difficulté</td>
-                    <td>score</td>
+                    <td>score </td>
+                    <td> Niveau de difficulté</td>
                     <td> date/heure</td>        
                 </tr>
             
-                <tr> 
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                <?php
 
-                </tr>
+                   $scores = $dbh->prepare ('SELECT jeu.nom_du_jeu, pseudo, scrore, difficulty, `date/heure_partie` FROM Scrores
+                    INNER JOIN utilisateur ON Scrores.id_utilisateur = utilisateur.id
+                    INNER JOIN jeu ON Scrores.id_jeu = jeu.id
+                    ORDER BY id_jeu , difficulty DESC , scrore ');
+
+                    $scores->execute();
+                    $scores = $scores-> fetchAll();
+
+                    foreach($scores as $score) { ?>
+
+                        <tr>
+
+                        <td> <?php echo $score['nom_du_jeu'] ?> </td>
+                        <td> <?php echo $score['pseudo'] ?></td>
+                        <td> <?php echo $score['scrore'] ?></td>
+                        <td> <?php echo $score['difficulty']?></td>
+                        <td> <?php echo $score['date/heure_partie'] ?> </td>
+                            
+                        </tr>
+
+
+                 <?php   }
+
+
+
+
+                ?>
+
+               
                 
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td>  </td>
-                    <td> </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr> 
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-
-                </tr>
-                
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td>  </td>
-                    <td> </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr> 
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-
-                </tr>
-                
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td>  </td>
-                    <td> </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr> 
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-
-                </tr>
-                
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td>  </td>
-                    <td> </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
+               
               
             </table>
         </div>    
