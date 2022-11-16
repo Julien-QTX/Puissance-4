@@ -17,8 +17,7 @@
 
     <div class="texte">
         <div class="element">
-
-            
+ 
             <table border="3" cellpadding="25" >
                 <tr>
                     <td>Nom du jeu</td>
@@ -50,17 +49,9 @@
                             
                         </tr>
 
-
                  <?php   }
 
-
-
-
-                ?>
-
-               
-                
-               
+                ?>  
               
             </table>
         </div>    
