@@ -6,41 +6,36 @@
     require "Header.inc.php";
     session_start();
     include ('includes/sqlconnect.php');
-    $error = false;
-    $error2 = 0;
-
+    $username = mysqli_real_escape_string($db,htmlspecialchars($_POST['username'])); 
+    $password = mysqli_real_escape_string($db,htmlspecialchars($_POST['password']));
+ 
+ if($username !== "" && $password !== "")
+ {
+    $requete = "SELECT email, password FROM utilisateur where 
+    peudo = '".$username."' and password = '".$password."' ";
+    $exec_requete = mysqli_query($db,$requete);
+    $reponse = mysqli_fetch_array($exec_requete);
+    $count = $reponse['*'];
     
     
-    if (isset($_POST['Email'])) {
-        // ici on a bien recu des donnees d'un formulaire
-    
-        // on verifie donc l'adresse email
-        if (filter_var($_POST['Email'], FILTER_VALIDATE_EMAIL) !== false) {
-            // l'email est valide donc je cree la variable $email
-            $email = $_POST['Email'];
-            $_SESSION['email'] = $_POST['Email'];
-        }
-        else {
-            $error = 'Email invalide';
-        }
-        
-    }
-    if (isset($_POST['mdp'])) {
-        // ici on a bien recu des donnees d'un formulaire
-    
-        // on verifie donc l'adresse email
-        if (filter_var($_POST['mdp'])) {
-            // l'email est valide donc je cree la variable $email
-            $password = $_POST['mdp'];
-            $_SESSION['password'] = $_POST['mdp'];
-        }
-        else {
-            $error = 'mdp invalide';
-        }
-       
-    } 
+    if($count!=0) // nom d'utilisateur et mot de passe correctes
+    {
+    $_SESSION['username'] = $username;
     header('Location: monespace.php');
+    }
+    else
+    {
+    header('Location: login.php?erreur=1'); // utilisateur ou mot de passe incorrect
+    }
 
+
+    else
+    {
+    header('Location: login.php');
+    }
+}
+mysqli_close($db); // fermer la connexion
+    
    ?>
 
 

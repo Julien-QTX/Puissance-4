@@ -3,13 +3,7 @@
     require "Header.inc.php";
     session_start();
     include ('includes/sqlconnect.php');
-    if (!isset($_SESSION['email'])) {
-        header('Location: monespace.php');
-        die();
-    }
-    else {
-        echo $_SESSION['email'] .'<br>';
-    }
+    
 
 
     ?> 

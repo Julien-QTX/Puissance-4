@@ -7,4 +7,5 @@ $password = 'root';
 
 $dbh = new PDO($dsn, $utilisateur, $password);
 
+
 ?>
