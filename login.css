@@ -41,6 +41,14 @@
     border-radius: 5px;
 
 }
+    a {
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+a:hover {
+    color: orange;
+}
+
 
 /*
     Nous plaçons les éléments à l’intérieur du formulaire
