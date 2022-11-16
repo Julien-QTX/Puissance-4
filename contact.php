@@ -44,7 +44,7 @@ $VotreAdresseMail="julien.quatravaux@edu.esiee-it.fr";
 // si le bouton "Envoyer" est cliqué
 if(isset($_POST['submit'])){
     //on vérifie que le champ mail est correctement rempli
-    if(empty($_POST['pre nom'])) {
+    if(empty($_POST['prenom'])) {
         echo "Le champ nom est vide";
     }else{
         if(empty($_POST['email'])) {
