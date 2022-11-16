@@ -32,18 +32,59 @@
          
             
 
-            if (isset($_POST['mail'])) {
+            /*if (isset($_POST['mail'])) {
+                $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
+
+                $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 // ici on a bien recu des donnees d'un formulaire
 
                 // on verifie donc l'adresse email
                 if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) !== false) {
                     // l'email est valide donc je cree la variable $email
+                    $valid = false;
+                    $er_mail = "Le mail n'est pas valide";
+                   
+                
+                }else{
                     $email = $_POST['mail'];
-                    $_SESSION['email'] = $_POST['mail'];
-                }else {
-                    $error = 'Email invalide';
+                    $stmt = $DB->prepare("SELECT email FROM utilisateur WHERE email=?");
+                    $stmt->execute([$email]); 
+                    $user = $stmt->fetch();
+                    if ($user) {
+                        $valid=false;
+                        $er_mail = "Le mail est deja utilisé";
+                    }
                 }
-            }
+            }*/
+
+            if(empty($_POST['mail'])){
+                $valid = false;
+                $er_mail = "Le mail ne peut pas être vide";
+    
+              // On vérifit que le mail est dans le bon format
+            }elseif(!preg_match("/^[a-z0-9-.]+@[a-z]+.[a-z]{2,3}$/i", $_POST['mail'])){
+    
+                $valid = false;
+                $er_mail = "Le mail n'est pas valide";
+    
+            }else{
+                        // On vérifit que le mail est disponible
+                $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
+    
+                $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    
+                $email = $_POST['mail'];
+                $stmt = $DB->prepare("SELECT email FROM utilisateur WHERE email=?");
+                $stmt->execute([$email]); 
+                $user = $stmt->fetch();
+                if ($user) {
+                    $valid=false;
+                    $er_mail = "Le mail est deja utilisé";
+                }
+    
+    
+                }
          
             // Vérification du mot de passe
             if(empty($mdp)) {
@@ -70,22 +111,18 @@
                 $requeteInscription = $dbh -> prepare($requeteSql);
                 $requeteInscription -> execute([$email, $mdpH, $pseudo]);
 
-                
-                $to = $_POST['mail'];
-                $subject = 'le sujet';
-                $message = 'Bonjour !';
-                $headers = "Content-Type: text/plain; charset=utf-8\r\n";
-                $headers .= "From : julien.quatravaux@edu.esiee-it.fr \r\n";
+            
 
-                if (mail($to, $subject, $message, $headers)){
-                    echo 'Envoye !';
-                }else{
-                    echo 'Erreur envoi !';
+                $retour = mail('julien.quatravaux@edu.esiee-it.fr', 'Envoi depuis la page Inscription', 'email de confirmation', 'From: The Power Of Memory');
+                if ($retour){
+                    echo '<p>Votre message a bien été envoyé.</p>';
                 }
+           
 
-                exit;
+                
                 
                 header('Location: login.php');
+                exit;
             }
         }
     }
@@ -104,9 +141,9 @@
         <input class="pseudo" pattern=".{4,}" type="text" placeholder="Votre pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
         <?php
 
-        if (isset($er_email)){
+        if (isset($er_mail)){
             ?>
-            <div><?= $er_email ?></div>
+            <div><?= $er_mail ?></div>
             <?php
         }
         ?>
