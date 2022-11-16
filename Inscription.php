@@ -4,9 +4,12 @@
     session_start();
     include ('includes/sqlconnect.php');
 
+    $error = false;
+    $error2 = 0;
+
     // S'il y a une session alors on ne retourne plus sur cette page
     if (isset($_SESSION['id'])){
-        header('Location: login.php');
+        header('Location: monespace.php');
         exit;
     }
          
@@ -18,7 +21,6 @@
         // On se place sur le bon formulaire grâce au "name" de la balise "input"
         if (isset($_POST['Inscription'])){
             $pseudo = htmlentities(trim($pseudo)); // on récupère le pseudo
-            $email = htmlentities(strtolower(trim($email))); // On récupère le email
             $mdp = trim($mdp); // On récupère le mot de passe 
             $confmdp = trim($confmdp); //  On récupère la confirmation du mot de passe
          
@@ -28,26 +30,18 @@
                 $er_pseudo = ("Le pseudo d'utilisateur ne peut pas être vide");
             }
          
-            // Vérification du email
-            if(empty($email)){
-                $valid = false;
-                $er_email = "Le email ne peut pas être vide";
-         
-            // On vérifit que le email est dans le bon format
-            }elseif(!preg_match("/^[a-z0-9\-_.]+@[a-z]+\.[a-z]{2,3}$/i", $email)){
-                $valid = false;
-                $er_email = "Le email n'est pas valide";
-         
-            }else{
-                // On vérifit que le email est disponible
-                $req_email = $dbh->query("SELECT email FROM utilisateur WHERE mail = ?",
-                array($email));
             
-                $req_email = $req_email->fetch();
-            
-                if ($req_email['mail'] <> ""){
-                $valid = false;
-                $er_email = "Ce email existe déjà";
+
+            if (isset($_POST['mail'])) {
+                // ici on a bien recu des donnees d'un formulaire
+
+                // on verifie donc l'adresse email
+                if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) !== false) {
+                    // l'email est valide donc je cree la variable $email
+                    $email = $_POST['mail'];
+                    $_SESSION['email'] = $_POST['mail'];
+                }else {
+                    $error = 'Email invalide';
                 }
             }
          
@@ -58,28 +52,47 @@
          
             }elseif($mdp != $confmdp){
                 $valid = false;
-                $er_mdp = "La confirmation du mot de passe ne correspond pas";
+                $er_mdp = "La confirmation du mot de passe n'est pas valide'";
             }
          
             // Si toutes les conditions sont remplies alors on fait le traitement
             if($valid){
          
-                $mdp = crypt($mdp, "$6$rounds=5000$macleapersonnaliseretagardersecret$");
-                $date_creation_compte = date('Y-m-d H:i:s');
+                //$mdp = crypt($mdp, "$6$rounds=5000$macleapersonnaliseretagardersecret$");        achure du mot de passe
+                $date_creation_compte = date('d-m-Y H:i:s');
+
+                //Hachure du Mot de passe
+
+                $mdpH = hash('sha256', $_POST['mdp']);
          
                 // On insert nos données dans la table utilisateur
-                $dbh->execute("INSERT INTO utilisateur (id, email, password, pseudo, date_heure_inscription) VALUES
-                    (NULL,?, ?, ?, ?)", array($id, $email, $pseudo, $password, $date_heure_inscription));
-         
-                header('Location: login.php');
+                $requeteSql = 'INSERT INTO utilisateur (id, email, password, pseudo, date_heure_inscription) VALUES (NULL, ?, ?, ?, NOW())';
+                $requeteInscription = $dbh -> prepare($requeteSql);
+                $requeteInscription -> execute([$email, $mdpH, $pseudo]);
+
+                
+                $to = $_POST['mail'];
+                $subject = 'le sujet';
+                $message = 'Bonjour !';
+                $headers = "Content-Type: text/plain; charset=utf-8\r\n";
+                $headers .= "From : julien.quatravaux@edu.esiee-it.fr \r\n";
+
+                if (mail($to, $subject, $message, $headers)){
+                    echo 'Envoye !';
+                }else{
+                    echo 'Erreur envoi !';
+                }
+
                 exit;
+                
+                header('Location: login.php');
             }
         }
     }
 
     ?>
     
-    <form action ="login.php" method="post">
+    <form method="post">
         <?php
 
         if (isset($er_pseudo)){
@@ -88,7 +101,7 @@
             <?php
         }
         ?>
-        <input class="pseudo" type="text" placeholder="Votre pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
+        <input class="pseudo" pattern=".{4,}" type="text" placeholder="Votre pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
         <?php
 
         if (isset($er_email)){
@@ -106,7 +119,7 @@
             <?php
         }
         ?>
-        <input class="password" type="password" placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+        <input class="password" type="password"  placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
         <input class="password" type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
         <div>
             <button type="submit" name="Inscription">Envoyer</button>

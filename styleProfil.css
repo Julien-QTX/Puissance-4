@@ -50,3 +50,9 @@ th, td{
     width: 100%;
 }
 
+.formprofil{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
