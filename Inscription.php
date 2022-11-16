@@ -19,11 +19,35 @@
         $valid = true;
          
         // On se place sur le bon formulaire grâce au "name" de la balise "input"
+
+        if(empty($_POST['pseudo'])){
+            $valid = false;
+            $er_mail = "Le Pseudo ne peut pas être vide";
+
+          // On vérifit que le pseudo est dans le bon format
+        }else{
+            // On vérifit que le pseudo est disponible
+            $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
+
+            $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+            $pseudo = $_POST['pseudo'];
+            $stmt = $DB->prepare("SELECT pseudo FROM utilisateur WHERE pseudo = ? ");
+            $stmt->execute([$pseudo]); 
+            $user1 = $stmt->fetch();
+            if ($user1) {
+                $valid=false;
+                $er_pseudo = "Le mail est deja utilisé";
+            }
+        }
+
+        
         if (isset($_POST['Inscription'])){
             $pseudo = htmlentities(trim($pseudo)); // on récupère le pseudo
             $mdp = trim($mdp); // On récupère le mot de passe 
             $confmdp = trim($confmdp); //  On récupère la confirmation du mot de passe
-         
+         /*
             //  Vérification du pseudo
             if(empty($pseudo)){
                 $valid = false;
@@ -62,7 +86,7 @@
                 $er_mail = "Le mail ne peut pas être vide";
     
               // On vérifit que le mail est dans le bon format
-            }elseif(!preg_match("/^[a-z0-9-.]+@[a-z]+.[a-z]{2,3}$/i", $_POST['mail'])){
+            }elseif(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $_POST['mail'])){
     
                 $valid = false;
                 $er_mail = "Le mail n'est pas valide";
@@ -82,9 +106,7 @@
                     $valid=false;
                     $er_mail = "Le mail est deja utilisé";
                 }
-    
-    
-                }
+            }
          
             // Vérification du mot de passe
             if(empty($mdp)) {
