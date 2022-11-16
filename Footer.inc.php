@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="styleHeaderFooter.css">
+<link rel="stylesheet" href="styleFooterIndex.css">
 <footer>
 
     <div class="Coordonne">
