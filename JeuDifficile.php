@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="styleJeu.css">
     <?php
-    require 'Header.inc.php';
+    require "Header.inc.php";
     ?>
     <article class="arti">
         <p>Niveau de difficulté</p>
