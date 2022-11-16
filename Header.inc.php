@@ -17,10 +17,10 @@
             </div>
             <div class="Hheader">
                 <ul class="Llien">
-                    <a href="index.html">Accueil</a>
-                    <a href="JeuFacile.html">Jeu</a>
+                    <a href="index.php">Accueil</a>
+                    <a href="JeuFacile.php">Jeu</a>
                     <a href="Scores.html">Score</a>
-                    <a href="Contact.html">Contact</a>
+                    <a href="Contact.php">Contact</a>
                 </ul>
             </div>
         </nav>
