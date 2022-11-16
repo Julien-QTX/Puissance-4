@@ -12,6 +12,7 @@
                 <th><a href="JeuInter.php">Intermediére</a></th>
                 <th><a href="JeuDifficile.php">Difficile</a></th>
                 <th><a href="JeuExpert.php">Expert</a></th>
+                <th><a href="JeuFacile.php">Recommencer</a></th>
             </tr>
         </table>
 
