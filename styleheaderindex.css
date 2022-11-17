@@ -19,10 +19,12 @@ a{
 }
 
 nav{
+    width: 90%;
     min-height: 10vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 .Hheader{
@@ -38,8 +40,6 @@ nav{
 }
 
 .nomSite{
-    display: flex;
-    justify-content: center;
     color: #eee;
 }
 
@@ -54,8 +54,9 @@ nav{
 
 .banniere, .Banniere{
     width: 100%;
-    height: 35vh;
+    height: 50vh;
 }
+
 .banniere .text {
     z-index: 1;
     position: absolute;
@@ -68,60 +69,3 @@ nav{
     color: black;
     width: 70%;
 }
-
-
-/*
-  bas de la page
-*/
-
-
-footer{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15vh;
-    background: rgba(28, 23, 72, 0.8);
-    height: 40vh;
-
-}
-footer .iconlien{
-    width: 50%;
- }
-
-.Coordonne{
-    margin: auto;
-    width: 50%;
-    padding: 0 10vh;
-}
-
-.b{
-    color: #8f8aa7;
-}
-
-.info{
-    color: orange;
-}
-
-label {
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;
-}
-
-input,
-label {
-    margin: .4rem 0;
-}
-
-.selecavatar {
-    margin: 50px 50px;
-    width: 40%;
-    height: 15px;
-}
-
-.PDP {
-    width: 15%;
-}
-
-.boxprofil {
-    
- }
-

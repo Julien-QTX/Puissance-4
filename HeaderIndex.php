@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleheaderindex.css">
     <title>Acceuil</title>
 </head>
 <body>
@@ -17,10 +17,11 @@
             </div>
             <div class="Hheader">
                 <ul class="Llien">
-                    <a href="index.html">Accueil</a>
+                    <a href="login.html">Inscription</a>
                     <a href="JeuFacile.html">Jeu</a>
                     <a href="Scores.html">Score</a>
                     <a href="Contact.html">Contact</a>
+                    <a href="chat.php">Chat</a>
                 </ul>
             </div>
         </nav>
