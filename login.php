@@ -1,37 +1,15 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="styleHeaderFooter.css">
-    <title>Page de connexion</title>
-    
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="Hheader">
-                <h1 class="nomSite">The Power Of Memory</h1>
-            </div>
-            <div class="Hheader">
-                <ul class="Llien">
-                    <a href="index.html">Accueil</a>
-                    <a href="JeuFacile.html">Jeu</a>
-                    <a href="Scores.html">Score</a>
-                    <a href="Contact.html">Contact</a>
-                </ul>
-            </div>
-        </nav>
-        
-        <div class="banniere">
-            <img class="Banniere" src="./images/banniere.png" alt="">
-            <div class="text">
-            <h1>Nom de Page</h1>
-            </div>
-        </div>
-    </header>
+
+
+<link rel="stylesheet" href="login.css">
+
+    <?php
+    require "Header.inc.php";
+    session_start();
+    include ('includes/sqlconnect.php');
+   ?>
+
+
+   
 
     <section class="log">
         <div>
@@ -39,51 +17,42 @@
 
             <form action="" method="post">
           
-                <input type="text" name="Email" placeholder="Email" required="required"/>
+                <input type="text" id="user_id" name="email" placeholder="Email" required="required"/>
 
-                <input type="password" name="password" placeholder="Mot de passe" required="required"/>
+                <input type="password" id="user_password" name="password" placeholder="Mot de passe" required="required"/>
                 <button type="submit">Connexion</button>
 
             </form>
-        </div>
-    </section>
+            <a  class="juju" href="Insciption.php"> <u>Cliquez ici pour vous inscrire </u></a>
 
-    <footer>
+            <?php
+                if(isset($_POST["log"])){
 
-        <div class="Coordonne">
-            <h1> Information</h1>
-            <p> quisque commodo facilisis purus, interdum volutpat arcu viverra sed</p>
-            <ul class="b">
+                    //prepare les commandes pour l'etape suivant
+                    $demande = $conn->prepare("SELECT * FROM utilisateur WHERE email = ? AND password = ?");
+                    $demande->bindParam(1, $email);
+                    $demande->bindParam(2, $motDePasse);
+                    $demande->execute();
+
+
+                }
+
+               
+
+        ?>
+
     
-                <li> <span class="info">Tel :</span> 07 69 50 51 70</li>
-                <li> <span class="info">Email:</span>  jeuxmemo@gmail.com</li>
-                <li> <span class="info">Location:</span>  Paris Montparnasse </li>
-    
-            </ul>
-    
-            <div class="iconlien">
-                <a href="https://fr-fr.facebook.com/"><img src="./image/facebook.png" alt="" width="10%"></a>
-                <a href="https://twitter.com/?lang=fr"><img src="./image/tweeter.png" alt=""width="10%"></a>
-                <a href="https://www.pinterest.fr/"><img src="./image/pinterest.png" alt=""width="10%"></a>
-                <a href="https://www.google.fr/"><img src="./image/google.png" alt=""width="10%"></a>
-                <a href="https://www.instagram.com/?hl=fr"><img src="./image/insta.png" alt=""width="10%"></a>
-    
-            </div>
+
+
+            
+
             
         </div>
+    </section>
     
-        <div class="Coordonne">
-            <h1> Power Of Memory</h1>
-    
-            <ul class="b">
-                <li>Jouer!</li>
-                <li>Les scores</li>
-                <li> Nous contacter</li>
-            </ul>
-    
-        </div>
-    
-    </footer>
 
-</body>
-</html>
+    <?php
+    require "Footer.inc.php"
+    ?>
+
+

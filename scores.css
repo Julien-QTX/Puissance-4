@@ -25,5 +25,26 @@ td{
 .tete{
     display: flex;
     justify-content: space-around;
-    margin-top: 1vh;
+    margin-top: 15vh;
+    background: rgba(28, 23, 72, 0.8);
+    height: 40vh;
+
 }
+ footer div{
+
+    width: 50%;
+ }
+
+ .Coordonne{
+    margin: auto;
+ }
+
+ .b{
+
+    color: #8f8aa7;
+    
+ }
+
+ .info{
+    color: orange;
+ }
