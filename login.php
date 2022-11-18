@@ -16,37 +16,45 @@
     if(!empty($_POST)){
         extract($_POST);
         $valid = true;
-         
         
         if (isset($_POST['submit'])){
-            $email = htmlentities(trim($email)); // on récupère l'email
-            $mdp = trim($mdp); // On récupère le mot de passe 
-            $mdp = $_POST['password'];
+            
+           
             if(empty($_POST['email'])){
                 $valid = false;
                 $er_mail = "Le mail ne peut pas être vide";
     
-              // On vérifit que le pseudo est dans le bon format
+              // On vérifit que le mail est dans le bon format
+            }elseif(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $_POST['email'])){
+    
+                $valid = false;
+                $er_mail = "Le mail n'est pas valide";
+    
             }else{
-                // On vérifit que le pseudo est disponible
+                        // On vérifit que le mail est disponible
                 $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
     
                 $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+
     
                 $email = $_POST['email'];
-                $stmt = $DB->prepare("SELECT email FROM utilisateur WHERE email = ? ");
-                $stmt->execute([$email]); 
-                $user1 = $stmt->fetch();
-                if ($user1) {
-                    $valid=true;
+                $stmt1 = $DB->prepare("SELECT email FROM utilisateur WHERE email=?");
+                $stmt1->execute([$email]); 
+                $user = $stmt1->fetch();
+                if (!$user) {
+                    $valid = false;
+
+                    $er_mail = "le mail n'est pas bon";
                 }
+            
             }
-    
+
+                
+            
          
             // Vérification du mot de passe
-            
-            if(empty($_POST['password'])){
+            $mdp = $_POST['password'];
+            if(empty($mdp)){
                 $valid = false;
                 $er_mdp = "Le mot de passe ne peut pas être vide";
     
@@ -62,8 +70,10 @@
                 $stmt = $DB->prepare("SELECT password FROM utilisateur WHERE password = ? ");
                 $stmt->execute([$mdp]); 
                 $user2 = $stmt->fetch();
-                if ($user2) {
-                    $valid = true;
+                if (!$user2) {
+                    $valid = false;
+
+                    $er_mdp = "le mot de passe est mauvais";
                 }
             }
          
@@ -78,8 +88,6 @@
                 header('Location: JeuFacile.php');
                 exit;
             }
-
-        
         }
     }
 
@@ -91,30 +99,36 @@
     <section class="log">
         <div>
             
-        
-
             <form action="" method="post">
-          
-                <input type="text" id="user_id" name="email" placeholder="Email" required="required"/>
 
-                <input type="password" id="user_password" name="password" placeholder="Mot de passe" required="required"/>
+                <?php
+
+                if (isset($er_mail)){
+                ?>
+                <div><?= $er_mail ?></div>
+                <?php
+                }
+                ?>
+            
+                <input type="text" id="user_id" name="email" placeholder="Email" value="<?php if(isset($email)){ echo $email; }?>" required="required"/>
+                    <?php
+
+                    if (isset($er_mdp)){
+                        ?>
+                        <div><?= $er_mdp ?></div>
+                        <?php
+                    }
+                    ?>
+
+                <input type="password" id="user_password" name="password" placeholder="Mot de passe" value="<?php if(isset($mdp)){ echo $mdp; }?>" required="required"/>
                 <button type="submit" name="submit">Connexion</button>
 
             </form>
             <a  class="juju" href="Insciption.php"> <u>Cliquez ici pour vous inscrire </u></a>
 
-            
-
-    
-
-
-            
-
-            
         </div>
     </section>
     
-
     <?php
     require "Footer.inc.php"
     ?>
