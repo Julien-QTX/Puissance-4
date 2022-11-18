@@ -17,10 +17,6 @@ td{
     display: inline-block;
 }
 
-.back{
-    background-color: rgb(36, 36, 72);
-    color: rgb(187, 187, 187);
-}
 
 .tete{
     display: flex;
@@ -30,21 +26,4 @@ td{
     height: 40vh;
 
 }
- footer div{
-
-    width: 50%;
- }
-
- .Coordonne{
-    margin: auto;
- }
-
- .b{
-
-    color: #8f8aa7;
-    
- }
-
- .info{
-    color: orange;
- }
+ 
