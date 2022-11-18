@@ -20,6 +20,7 @@
                     <a href="index.php">Accueil</a>
                     <a href="JeuFacile.php">Jeu</a>
                     <a href="Scores.php">Score</a>
+                    <a href="monespace.php">Profil</a>
                     <a href="Contact.php">Contact</a>
                 </ul>
             </div>

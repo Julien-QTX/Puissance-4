@@ -49,9 +49,6 @@
             
             }
 
-                
-            
-         
             // Vérification du mot de passe
             $mdp = $_POST['password'];
             if(empty($mdp)){
@@ -64,7 +61,6 @@
                 $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
     
                 $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
     
                 $mdp = $_POST['password'];
                 $stmt = $DB->prepare("SELECT password FROM utilisateur WHERE password = ? ");
@@ -92,9 +88,6 @@
     }
 
 ?>
-
-
-   
 
     <section class="log">
         <div>
@@ -124,13 +117,13 @@
                 <button type="submit" name="submit">Connexion</button>
 
             </form>
-            <a  class="juju" href="Insciption.php"> <u>Cliquez ici pour vous inscrire </u></a>
+            <a  class="juju" href="Inscription.php"> <u>Cliquez ici pour vous inscrire </u></a>
 
         </div>
     </section>
     
-    <?php
-    require "Footer.inc.php"
-    ?>
+<?php
+require "Footer.inc.php"
+?>
 
 
