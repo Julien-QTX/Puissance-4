@@ -1,46 +1,16 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleJeu.css">
-    <link rel="stylesheet" href="styleHeaderFooter.css">
-    <title>Jeu</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="Hheader">
-                <h1 class="nomSite">The Power Of Memory</h1>
-            </div>
-            <div class="Hheader">
-                <ul class="Llien">
-                    <a href="index.html">Accueil</a>
-                    <a href="JeuFacile.html">Jeu</a>
-                    <a href="Scores.html">Score</a>
-                    <a href="Contact.html">Contact</a>
-                </ul>
-            </div>
-        </nav>
-        
-        <div class="banniere">
-            <img class="Banniere" src="./images/banniere.png" alt="">
-            <div class="text">
-            <h1>Expert</h1>
-            </div>
-        </div>
-    </header>
-
+<link rel="stylesheet" href="styleJeu.css">
+    <?php
+    require "Header.inc.php";
+    ?>
     <article class="arti">
         <p>Niveau de difficulté</p>
 
         <table>
             <tr class="NiveauJeu">
-                <th><a href="JeuFacile.html">Facile</a></th>
-                <th><a href="JeuInter.html">Intermediére</a></th>
-                <th><a href="JeuDifficile.html">Difficile</a></th>
-                <th><a href="JeuExpert.html">Expert</a></th>
+                <th><a href="JeuFacile.php">Facile</a></th>
+                <th><a href="JeuInter.php">Intermediére</a></th>
+                <th><a href="JeuExpert.php">Expert</a></th>
+                <th><a href="JeuDifficile.php">Recommencer</a></th>
             </tr>
         </table>
 
@@ -51,7 +21,7 @@
 
     <section>
         <table class="Jeu">
-            <tr>
+             <tr>
                 <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
                 <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
                 <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
@@ -230,169 +200,14 @@
                 <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
                 <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
             </tr>
-            <!-- 13 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 14 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 15 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 16 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 17 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 18 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 19 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 20 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-
         </table>
 
 
 
     </section>
 
-
-    <footer>
-
-        <div class="Coordonne">
-            <h1> Information</h1>
-            <p> quisque commodo facilisis purus, interdum volutpat arcu viverra sed</p>
-            <ul class="b">
-    
-                <li> <span class="info">Tel :</span> 07 69 50 51 70</li>
-                <li> <span class="info">Email:</span>  jeuxmemo@gmail.com</li>
-                <li> <span class="info">Location:</span>  Paris Montparnasse </li>
-    
-            </ul>
-    
-            <div class="iconlien">
-                <a href="https://fr-fr.facebook.com/"><img src="./image/facebook.png" alt="" width="10%"></a>
-                <a href="https://twitter.com/?lang=fr"><img src="./image/tweeter.png" alt=""width="10%"></a>
-                <a href="https://www.pinterest.fr/"><img src="./image/pinterest.png" alt=""width="10%"></a>
-                <a href="https://www.google.fr/"><img src="./image/google.png" alt=""width="10%"></a>
-                <a href="https://www.instagram.com/?hl=fr"><img src="./image/insta.png" alt=""width="10%"></a>
-    
-            </div>
-            
-        </div>
-    
-        <div class="Coordonne">
-            <h1> Power Of Memory</h1>
-    
-            <ul class="b">
-                <li>Jouer!</li>
-                <li>Les scores</li>
-                <li> Nous contacter</li>
-            </ul>
-    
-        </div>
-    
-    </footer>
+    <?php
+    require 'Footer.inc.php'
+    ?>
 </body>
 </html>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleHeaderFooter.css">
-    <title>Document</title>
+    <title>ffvvvfs</title>
 </head>
 <body>
     <header>
@@ -15,10 +17,10 @@
             </div>
             <div class="Hheader">
                 <ul class="Llien">
-                    <a href="index.html">Accueil</a>
-                    <a href="JeuFacile.html">Jeu</a>
+                    <a href="index.php">Accueil</a>
+                    <a href="JeuFacile.php">Jeu</a>
                     <a href="Scores.php">Score</a>
-                    <a href="Contact.html">Contact</a>
+                    <a href="Contact.php">Contact</a>
                 </ul>
             </div>
         </nav>

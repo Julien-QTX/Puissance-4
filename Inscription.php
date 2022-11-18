@@ -4,9 +4,12 @@
     session_start();
     include ('includes/sqlconnect.php');
 
+    $error = false;
+    $error2 = 0;
+
     // S'il y a une session alors on ne retourne plus sur cette page
     if (isset($_SESSION['id'])){
-        header('Location: index.php');
+        header('Location: monespace.php');
         exit;
     }
          
@@ -16,38 +19,92 @@
         $valid = true;
          
         // On se place sur le bon formulaire grâce au "name" de la balise "input"
+
+        if(empty($_POST['pseudo'])){
+            $valid = false;
+            $er_mail = "Le Pseudo ne peut pas être vide";
+
+          // On vérifit que le pseudo est dans le bon format
+        }else{
+            // On vérifit que le pseudo est disponible
+            $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
+
+            $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+            $pseudo = $_POST['pseudo'];
+            $stmt = $DB->prepare("SELECT pseudo FROM utilisateur WHERE pseudo = ? ");
+            $stmt->execute([$pseudo]); 
+            $user1 = $stmt->fetch();
+            if ($user1) {
+                $valid=false;
+                $er_pseudo = "Le mail est deja utilisé";
+            }
+        }
+
+        
         if (isset($_POST['Inscription'])){
             $pseudo = htmlentities(trim($pseudo)); // on récupère le pseudo
-            $email = htmlentities(strtolower(trim($email))); // On récupère le email
             $mdp = trim($mdp); // On récupère le mot de passe 
             $confmdp = trim($confmdp); //  On récupère la confirmation du mot de passe
-         
+         /*
             //  Vérification du pseudo
             if(empty($pseudo)){
                 $valid = false;
-                $er_pseudo = ("Le pseudo d' utilisateur ne peut pas être vide");
+                $er_pseudo = ("Le pseudo d'utilisateur ne peut pas être vide");
             }
          
-            // Vérification du email
-            if(empty($email)){
+            
+
+            /*if (isset($_POST['mail'])) {
+                $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
+
+                $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                // ici on a bien recu des donnees d'un formulaire
+
+                // on verifie donc l'adresse email
+                if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) !== false) {
+                    // l'email est valide donc je cree la variable $email
+                    $valid = false;
+                    $er_mail = "Le mail n'est pas valide";
+                   
+                
+                }else{
+                    $email = $_POST['mail'];
+                    $stmt = $DB->prepare("SELECT email FROM utilisateur WHERE email=?");
+                    $stmt->execute([$email]); 
+                    $user = $stmt->fetch();
+                    if ($user) {
+                        $valid=false;
+                        $er_mail = "Le mail est deja utilisé";
+                    }
+                }
+            }*/
+
+            if(empty($_POST['mail'])){
                 $valid = false;
-                $er_email = "Le email ne peut pas être vide";
-         
-            // On vérifit que le email est dans le bon format
-            }elseif(!preg_match("/^[a-z0-9\-_.]+@[a-z]+\.[a-z]{2,3}$/i", $email)){
+                $er_mail = "Le mail ne peut pas être vide";
+    
+              // On vérifit que le mail est dans le bon format
+            }elseif(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $_POST['mail'])){
+    
                 $valid = false;
-                $er_email = "Le email n'est pas valide";
-         
+                $er_mail = "Le mail n'est pas valide";
+    
             }else{
-                // On vérifit que le email est disponible
-                $req_email = $DB->query("SELECT email FROM utilisateur WHERE mail = ?",
-                array($email));
-            
-                $req_email = $req_email->fetch();
-            
-                if ($req_email['mail'] <> ""){
-                $valid = false;
-                $er_email = "Ce email existe déjà";
+                        // On vérifit que le mail est disponible
+                $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
+    
+                $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    
+                $email = $_POST['mail'];
+                $stmt = $DB->prepare("SELECT email FROM utilisateur WHERE email=?");
+                $stmt->execute([$email]); 
+                $user = $stmt->fetch();
+                if ($user) {
+                    $valid=false;
+                    $er_mail = "Le mail est deja utilisé";
                 }
             }
          
@@ -58,23 +115,35 @@
          
             }elseif($mdp != $confmdp){
                 $valid = false;
-                $er_mdp = "La confirmation du mot de passe ne correspond pas";
+                $er_mdp = "La confirmation du mot de passe n'est pas valide'";
             }
          
             // Si toutes les conditions sont remplies alors on fait le traitement
             if($valid){
          
-                $mdp = crypt($mdp, "$6$rounds=5000$macleapersonnaliseretagardersecret$");
-                $date_creation_compte = date('Y-m-d H:i:s');
+                //$mdp = crypt($mdp, "$6$rounds=5000$macleapersonnaliseretagardersecret$");        achure du mot de passe
+                $date_creation_compte = date('d-m-Y H:i:s');
+
+                //Hachure du Mot de passe
+
+                $mdpH = hash('sha256', $_POST['mdp']);
          
                 // On insert nos données dans la table utilisateur
-                $DB->insert("INSERT INTO utilisateur (id, email, `password`, pseudo, `date_heure_inscription`) VALUES
-                    (NULL,?, ?, ?, ?)", array($id, $email, $pseudo, $password, $date_heure_inscription));
+                $requeteSql = 'INSERT INTO utilisateur (id, email, password, pseudo, date_heure_inscription) VALUES (NULL, ?, ?, ?, NOW())';
+                $requeteInscription = $dbh -> prepare($requeteSql);
+                $requeteInscription -> execute([$email, $mdpH, $pseudo]);
 
-                    
-                    
-         
-                header('Location: index.php');
+            
+
+                $retour = mail('julien.quatravaux@edu.esiee-it.fr', 'Envoi depuis la page Inscription', 'email de confirmation', 'From: The Power Of Memory');
+                if ($retour){
+                    echo '<p>Votre message a bien été envoyé.</p>';
+                }
+           
+
+                
+                
+                header('Location: login.php');
                 exit;
             }
         }
@@ -91,12 +160,12 @@
             <?php
         }
         ?>
-        <input class="pseudo" type="text" placeholder="Votre pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
+        <input class="pseudo" pattern=".{4,}" type="text" placeholder="Votre pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
         <?php
 
-        if (isset($er_email)){
+        if (isset($er_mail)){
             ?>
-            <div><?= $er_email ?></div>
+            <div><?= $er_mail ?></div>
             <?php
         }
         ?>
@@ -109,10 +178,10 @@
             <?php
         }
         ?>
-        <input class="password" type="password" placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+        <input class="password" type="password"  placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
         <input class="password" type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
         <div>
-            <button type="submit" name="inscription">Envoyer</button>
+            <button type="submit" name="Inscription">Envoyer</button>
         </div>
         
     </form>
