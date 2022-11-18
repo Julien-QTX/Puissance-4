@@ -17,10 +17,10 @@
             </div>
             <div class="Hheader">
                 <ul class="Llien">
-                    <a href="login.html">Inscription</a>
-                    <a href="JeuFacile.html">Jeu</a>
-                    <a href="Scores.html">Score</a>
-                    <a href="Contact.html">Contact</a>
+                    <a href="inscription.php">Inscription</a>
+                    <a href="JeuFacile.php">Jeu</a>
+                    <a href="Scores.php">Score</a>
+                    <a href="Contact.php">Contact</a>
                     <a href="chat.php">Chat</a>
                 </ul>
             </div>
@@ -30,7 +30,7 @@
             <h1 class="H1">BIENVENUE DANS <br> NOTRE STUDIO !</h1>
             <h3 class="H3">Venez challenger les cerveaux les plus agiles !</h3>
             Bouton pour acceder au jeu
-            <p class="boutonjouer">Jouer !</p>
+            <p class="boutonjouer" href="JeuFacile.php">Jouer !</p>
         </div>
 
     </header>
