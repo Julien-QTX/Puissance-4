@@ -8,9 +8,9 @@
     include ('includes/sqlconnect.php');
 
     if (isset($_SESSION['id'])){
-        header('Location: JeuFacile.php');
+        header('Location: monespace.php');
         exit;
-
+        
     }
 
     if(!empty($_POST)){
@@ -18,8 +18,6 @@
         $valid = true;
         
         if (isset($_POST['submit'])){
-            
-           
             if(empty($_POST['email'])){
                 $valid = false;
                 $er_mail = "Le mail ne peut pas être vide";
@@ -79,13 +77,13 @@
          
             // Si toutes les conditions sont remplies alors on fait le traitement
             if($valid){
-
+                echo "valid";
                 // On insert nos données dans la table utilisateur
                 $requeteSql = 'SELECT utilisateur (id, email, password, date_heure_derniere_co) VALUES (NULL, ?, ?, NOW())';
                 $requeteConnexion= $dbh -> prepare($requeteSql);
                 $requeteConnexion -> execute([$email, $mdp]);
                 
-                header('Location: JeuFacile.php');
+                header('Location: monespace.php');
                 exit;
             }
         }

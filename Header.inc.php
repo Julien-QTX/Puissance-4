@@ -21,6 +21,7 @@
                     <a href="JeuFacile.php">Jeu</a>
                     <a href="Scores.php">Score</a>
                     <a href="Contact.php">Contact</a>
+                    <a href="monespace.php">Mon espace</a>
                 </ul>
             </div>
         </nav>
