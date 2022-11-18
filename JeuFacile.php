@@ -1,22 +1,45 @@
-    <link rel="stylesheet" href="styleJeu.css">
-    <?php
-    require "Header.inc.php";
-    ?>
+<link rel="stylesheet" href="styleJeu.css">
+<?php
+require "Header.inc.php";
+?>
+
+<div class="container">
+    
     <article class="arti">
         
+        <div class="lvl">
+            <p>Niveau de difficulté</p>
 
-        <p>Niveau de difficulté</p>
+            <table>
+                <tr class="NiveauJeu">
+                    <th><a href="JeuFacile.php">Recommencer</a></th>
+                    <th><a href="JeuInter.php">Intermediére</a></th>
+                    <th><a href="JeuDifficile.php">Difficile</a></th>
+                    <th><a href="JeuExpert.php">Expert</a></th>
+                    
+                </tr>
+            </table>
+        </div>
 
-        <table>
-            <tr class="NiveauJeu">
-                <th><a href="JeuInter.php">Intermediére</a></th>
-                <th><a href="JeuDifficile.php">Difficile</a></th>
-                <th><a href="JeuExpert.php">Expert</a></th>
-                <th><a href="JeuFacile.php">Recommencer</a></th>
-            </tr>
-        </table>
+        <div id="timer" class="compteur">100</div>
+        <script>
+            // Compteur de Temps
+            const departMinutes = 0
+            let temps = departMinutes * 60
 
-        <!-- Minuteur -->
+            const timerElement = document.getElementById("timer")
+
+            setInterval(() => {
+            let minutes = parseInt(temps / 60, 10)
+            let secondes = parseInt(temps % 60, 10)
+
+            minutes = minutes < 10 ? "0" + minutes : minutes
+            secondes = secondes < 10 ? "0" + secondes : secondes
+
+            timerElement.innerText = `${minutes}:${secondes}`
+            temps = temps <= 0 ? 0 : temps + 1
+            }, 1000)
+        </script>
 
     </article>
 
@@ -67,9 +90,9 @@
         </table>
 
     </section>
-
-    <?php
-    require 'Footer.inc.php'
-    ?>
+</div>
+<?php
+require 'Footer.inc.php'
+?>
 </body>
 </html>

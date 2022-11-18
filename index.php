@@ -62,18 +62,18 @@
         <div class = "carres">
             <div class="Haut">
                 <div class = carrerouge>
-                    <h2 class="H2">310 Parties Jouées</h2>
+                    <h2 class="H2i">310 Parties Jouées</h2>
                 </div>
                 <div class = carrevert>
-                    <h2 class="H2">1020 Joueurs connectés</h2>
+                    <h2 class="H2i">1020 Joueurs connectés</h2>
                 </div>
             </div>
             <div class="Bas">
                 <div class = carreorange>
-                    <h2 class="H2">10 sec Temps Record</h2>
+                    <h2 class="H2i">10 sec Temps Record</h2>
                 </div>
                 <div class = carrebleu>
-                    <h2 class="H2">21 300 Joeurs inscrits</h2>
+                    <h2 class="H2i">21 300 Joueurs inscrits</h2>
                 </div>
             </div>
         </div>

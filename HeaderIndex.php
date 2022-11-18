@@ -17,7 +17,7 @@
             </div>
             <div class="Hheader">
                 <ul class="Llien">
-                    <a href="inscription.php">Inscription</a>
+                    <a href="login.php">Connexion</a>
                     <a href="JeuFacile.php">Jeu</a>
                     <a href="Scores.php">Score</a>
                     <a href="Contact.php">Contact</a>
@@ -29,7 +29,7 @@
         <div class="text">
             <h1 class="H1">BIENVENUE DANS <br> NOTRE STUDIO !</h1>
             <h3 class="H3">Venez challenger les cerveaux les plus agiles !</h3>
-            Bouton pour acceder au jeu
+            <br>
             <p class="boutonjouer" href="JeuFacile.php">Jouer !</p>
         </div>
 

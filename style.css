@@ -171,30 +171,34 @@ body {
 .Haut, .Bas{
     display: flex;
     flex-direction: row;
+    height: 50%;
+}
+
+.carrerouge, .carrevert, .carreorange, .carrebleu{
+    width: 50%;
+    margin: 3vh;
 }
     
 .carrerouge{
     background-color: red;
-    width: 50%;
-    margin: 30px;
 }
 
 .carrevert{
     background-color: green;
-    width: 50%;
-    margin: 30px;
 }
 
 .carreorange{
     background-color: orange;
-    width: 50%;
-    margin: 30px;
 }
 
 .carrebleu {
     background-color: blue;
-    width: 50%;
-    margin: 30px;
+}
+
+.H2i{
+    text-align: center;
+    color: aliceblue;
+    margin: auto;
 }
 
 .ListEquipe{
