@@ -11,23 +11,6 @@
     background: rgba(28, 23, 72, 0.8);
 }
 
-.color{
-    background-color: #110728;
-    color: #eee;
-}
-
-.tete{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1vh;
-}
-
-
-/*
-  Le div directement sous la section nous permet 
-  de créer une boite avec une couleur d’arrière-plan
-  et une bordure.
-*/
 .log div{
     width: 450px;
   
@@ -83,34 +66,3 @@ form button[type="submit"] {
 }
 
 
-/*
-  bas de la page
-*/
-
-
-footer{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15vh;
-    background: rgba(28, 23, 72, 0.8);
-    height: 40vh;
-
-}
- footer div{
-
-    width: 50%;
- }
-
- .Coordonne{
-    margin: auto;
- }
-
- .b{
-
-    color: #8f8aa7;
-    
- }
-
- .info{
-    color: orange;
- }
