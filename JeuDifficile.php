@@ -1,4 +1,15 @@
-<link rel="stylesheet" href="styleJeu.css">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleJeu.css">
+    <link rel="stylesheet" href="styleHeaderFooter.css">
+    <title>Difficile</title>
+</head>
+<body>
+
 <?php
 require "Header.inc.php";
 ?>
@@ -12,7 +23,7 @@ require "Header.inc.php";
             <table>
                 <tr class="NiveauJeu">
                     <th><a href="JeuFacile.php">Facile</a></th>
-                    <th><a href="JeuInter.php">Intermediére</a></th>
+                    <th><a href="JeuInter.php">Intermédiaire</a></th>
                     <th><a href="JeuDifficile.php">Recommencer</a></th>
                     <th><a href="JeuExpert.php">Expert</a></th>
                 </tr>

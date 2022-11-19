@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +10,10 @@
 </head>
 <body>
 
-    <?php
-        require "Header.inc.php";
-        require 'includes/sqlconnect.php';
-    ?>
+<?php
+    require "Header.inc.php";
+    require 'includes/sqlconnect.php';
+?>
 
     <div class="texte">
         <div class="element">
@@ -22,8 +22,8 @@
                 <tr>
                     <td>Nom du jeu</td>
                     <td> pseudo du joueur</td>
-                    <td>score </td>
                     <td> Niveau de difficulté</td>
+                    <td>score du joueur </td>
                     <td> date/heure</td>        
                 </tr>
             
