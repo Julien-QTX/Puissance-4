@@ -177,6 +177,7 @@ body {
 .carrerouge, .carrevert, .carreorange, .carrebleu{
     width: 50%;
     margin: 3vh;
+    display: flex;
 }
     
 .carrerouge{

@@ -1,26 +1,25 @@
 .container{
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 /* sert a centré l'entièreté de la page */
 .name, .email{
-    width: 46%;
-    background-color: gray;
-    /*paramétre qui permet aligner et de paramétré les deux bloc du même nom */
-    
+    width: 47%;
+    height: 5vh;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 12px;
 }
 .sujet, .message{
-    width: 99%;
-    margin: 20px 0 0;
-    background-color: gray;
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 10px;
+    border-radius: 12px;
     /* les paramètre du bloc sujet dans le formulaire */
 
 }
 .message{
-    width: 99%;
     height: 150px;
-    border-radius: 5px;
-    background-color: gray;
     /* gros blocs de texte avec marqué message */
 }
 .icone{
@@ -42,29 +41,33 @@
 .PE{
     display: flex ;
     justify-content: space-between;
-    width: 99%;
+    width: 100%;
     /* Prénom + contact dans le formulaire */
 
 }
-.name, .email, .sujet, .bouton{
-    border-radius: 5px;
+
+.sujet, .bouton{
     height: 5vh;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 12px;
 }
 .bouton{
-    width: 26%;
-    margin : 10px 0 0 0 ;
-    background-color: orange;
+    font-weight: bold;
+    color: #eee;
+    background-color: #e67e22;
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 10px;
+    border-radius: 12px;
     /* bouton = envoyer */
 
 }
 .img{
     border-radius: 50%;
 }
-/* arrondie sur image */
 
-::placeholder{
-    color: white;   
-}
 /* met tous le texte du formulaire en blanc*/
 img{
     background-color: white;

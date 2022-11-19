@@ -30,7 +30,7 @@
             <h1 class="H1">BIENVENUE DANS <br> NOTRE STUDIO !</h1>
             <h3 class="H3">Venez challenger les cerveaux les plus agiles !</h3>
             <br>
-            <p class="boutonjouer" href="JeuFacile.php">Jouer !</p>
+            <a class="boutonjouer" href="JeuFacile.php">Jouer !</a>
         </div>
 
     </header>

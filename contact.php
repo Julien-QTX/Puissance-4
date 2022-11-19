@@ -34,7 +34,7 @@ include ('includes/sqlconnect.php');
             <input class="sujet" type="text" name="sujet" placeholder="sujet">
             <textarea class="message" type="text" name="message" placeholder="message "></textarea>
             <!--<input type='submit' class="button" name="submit" />-->
-            <button style="color: white;" class="bouton" name="submit">Envoyer</button>
+            <button class="bouton" name="submit">Envoyer</button>
         </form>
 
         <?php

@@ -2,13 +2,6 @@
 
 .log{
     display: flex;
-    
-    top:0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  
-    background: rgba(28, 23, 72, 0.8);
 }
 
 .log div{

@@ -127,6 +127,7 @@
             <?php
         }
         ?>
+        <label for="pseudo">Pseudo : </label>
         <input class="pseudo" pattern=".{4,}" type="text" placeholder="Votre pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
         <?php
 
@@ -136,6 +137,7 @@
             <?php
         }
         ?>
+        <label for="email">Email</label>
         <input class="email" type="email" placeholder="Adresse email" name="mail" value="<?php if(isset($email)){ echo $email; }?>" required>
         <?php
 
@@ -145,9 +147,12 @@
             <?php
         }
         ?>
+        <label for="mdp">Mot de passe : </label>
         <input class="password" type="password"  placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+
+        <label for="confmdp">Confirmer votre mot de passe : </label>
         <input class="password" type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
-        <div>
+        <div class="submitt">
             <button type="submit" name="Inscription">Envoyer</button>
         </div>
         
