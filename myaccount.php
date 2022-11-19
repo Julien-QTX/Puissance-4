@@ -21,6 +21,8 @@
         $requser->execute(array($getpseudo));
         $userinfo = $requser->fetch();
         }
+
+
 ?>
 <div class="container">
 
@@ -123,6 +125,15 @@
                     <td>4</td>
                 </tr>
             </table>
+            <ul>
+                
+                
+                    <li>
+                        <a href="logout.php">
+                            Se deconnecter
+                        </a>
+                    </li>
+            </ul>   
         </div>
 
     </div>

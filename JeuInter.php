@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,6 +9,13 @@
     <title>Intermédiaire</title>
 </head>
 <body>
+=======
+    <link rel="stylesheet" href="styleJeu.css">
+    <?php
+    require "Header.inc.php";
+    
+    ?>
+>>>>>>> adam
 
 <?php
 require "Header.inc.php";

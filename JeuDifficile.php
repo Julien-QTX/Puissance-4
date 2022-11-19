@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,6 +16,14 @@ require "Header.inc.php";
 ?>
 
 <div class="container">
+=======
+<link rel="stylesheet" href="styleJeu.css">
+    <?php
+    require "Header.inc.php";
+
+    
+    ?>
+>>>>>>> adam
     <article class="arti">
         
         <div class="lvl">
