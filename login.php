@@ -13,7 +13,7 @@
 <?php
 require "Header.inc.php";
 session_start();
-include ('includes/database.inc.php');
+include ('asset/includes/database.inc.php');
 
 if (isset($_SESSION['id'])){
     header('Location: JeuFacile.php');
