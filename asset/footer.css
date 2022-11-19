@@ -16,8 +16,15 @@ footer .iconlien{
     padding: 0 10vh;
 }
 
+.Iconelien{
+    width:6%;
+    margin: 2vh 0.5vh;
+
+}
+
 .b{
     color: #8f8aa7;
+    margin: 2vh;
 }
 
 .info{
@@ -43,8 +50,4 @@ label {
 .PDP {
     width: 15%;
 }
-
-.boxprofil {
-    
- }
 

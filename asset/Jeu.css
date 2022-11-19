@@ -1,10 +1,29 @@
 /* Body Jeux */
+.container{
+    width: 80%;
+    margin: auto;
+}
+
 .arti{
-    margin: 5vh 0 0 10vh;
+    margin: 5vh auto 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .NiveauJeu{
     text-decoration: none;
     color: black;
+}
+
+.lvl{
+    width: 33%;
+}
+
+.compteur{
+    font-weight: bold;
+    margin: auto 0;
+    width: 33%;
+    text-align: center;
 }
 
 .Jeu{

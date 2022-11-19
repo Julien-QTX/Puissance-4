@@ -1,8 +1,19 @@
-<link rel="stylesheet" href="styleProfil.css">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/Profil.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
+    <title>Mon Espace</title>
+</head>
+<body>
+
 <?php
     require "Header.inc.php";
     session_start();
-    include ('includes/sqlconnect.php');
+    include ('./asset/includes/database.inc.php');
 
     if(isset($_GET['pseudo'])) {
         $getpseudo = intval($_GET['pseudo']);
@@ -20,7 +31,7 @@
     <div class="AvaScore">
 
         <div class="Avatar">
-            <img class="AvaPro" src="./images/Champignon Bleu.jpg"alt="">
+            <img class="AvaPro" src="./asset/images/Champignon Bleu.jpg"alt="">
 
             <div class="selecavatar">
 
@@ -132,3 +143,5 @@
 <?php
     require "Footer.inc.php"
 ?>
+</body>
+</html>

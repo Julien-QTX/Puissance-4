@@ -1,8 +1,19 @@
-<link rel="stylesheet" href="styleInscription.css">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/register.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
+    <title>Inscription</title>
+</head>
+<body>
+
 <?php
     require 'Header.inc.php';
     session_start();
-    include ('includes/sqlconnect.php');
+    include ('./asset/includes/database.inc.php');
 
     $error = false;
     $error2 = 0;
@@ -22,7 +33,7 @@
 
         if(empty($_POST['pseudo'])){
             $valid = false;
-            $er_mail = "Le Pseudo ne peut pas être vide";
+            $er_pseudo = "Le Pseudo ne peut pas être vide";
 
           // On vérifit que le pseudo est dans le bon format
         }else{
@@ -38,7 +49,7 @@
             $user1 = $stmt->fetch();
             if ($user1) {
                 $valid=false;
-                $er_pseudo = "Le mail est deja utilisé";
+                $er_pseudo = "Le pseudo est deja utilisé";
             }
         }
 
@@ -47,39 +58,6 @@
             $pseudo = htmlentities(trim($pseudo)); // on récupère le pseudo
             $mdp = trim($mdp); // On récupère le mot de passe 
             $confmdp = trim($confmdp); //  On récupère la confirmation du mot de passe
-         /*
-            //  Vérification du pseudo
-            if(empty($pseudo)){
-                $valid = false;
-                $er_pseudo = ("Le pseudo d'utilisateur ne peut pas être vide");
-            }
-         
-            
-
-            /*if (isset($_POST['mail'])) {
-                $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
-
-                $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                // ici on a bien recu des donnees d'un formulaire
-
-                // on verifie donc l'adresse email
-                if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) !== false) {
-                    // l'email est valide donc je cree la variable $email
-                    $valid = false;
-                    $er_mail = "Le mail n'est pas valide";
-                   
-                
-                }else{
-                    $email = $_POST['mail'];
-                    $stmt = $DB->prepare("SELECT email FROM utilisateur WHERE email=?");
-                    $stmt->execute([$email]); 
-                    $user = $stmt->fetch();
-                    if ($user) {
-                        $valid=false;
-                        $er_mail = "Le mail est deja utilisé";
-                    }
-                }
-            }*/
 
             if(empty($_POST['mail'])){
                 $valid = false;
@@ -160,6 +138,7 @@
             <?php
         }
         ?>
+        <label for="pseudo">Pseudo : </label>
         <input class="pseudo" pattern=".{4,}" type="text" placeholder="Votre pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
         <?php
 
@@ -169,6 +148,7 @@
             <?php
         }
         ?>
+        <label for="email">Email</label>
         <input class="email" type="email" placeholder="Adresse email" name="mail" value="<?php if(isset($email)){ echo $email; }?>" required>
         <?php
 
@@ -178,9 +158,12 @@
             <?php
         }
         ?>
+        <label for="mdp">Mot de passe : </label>
         <input class="password" type="password"  placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+
+        <label for="confmdp">Confirmer votre mot de passe : </label>
         <input class="password" type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
-        <div>
+        <div class="submitt">
             <button type="submit" name="Inscription">Envoyer</button>
         </div>
         
@@ -189,3 +172,5 @@
 <?php
     require 'Footer.inc.php'
 ?>
+</body>
+</html>

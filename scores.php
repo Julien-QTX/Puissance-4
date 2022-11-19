@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scores.css">
-    <link rel="stylesheet" href="styleHeaderFooter.css">
+    <link rel="stylesheet" href="./asset/scores.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
     <title>Scores du joueur</title>
 </head>
 <body>
 
-    <?php
-        require "Header.inc.php";
-        require 'includes/sqlconnect.php';
-    ?>
+<?php
+    require "Header.inc.php";
+    require './asset/includes/database.inc.php';
+?>
 
     <div class="texte">
         <div class="element">
@@ -22,8 +22,8 @@
                 <tr>
                     <td>Nom du jeu</td>
                     <td> pseudo du joueur</td>
-                    <td>score </td>
                     <td> Niveau de difficulté</td>
+                    <td>score du joueur </td>
                     <td> date/heure</td>        
                 </tr>
             
