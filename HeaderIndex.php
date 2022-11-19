@@ -12,8 +12,8 @@
                 <a href="login.php">Connexion</a>
                 <a href="JeuFacile.php">Jeu</a>
                 <a href="scores.php">Score</a>
+                <a href="myaccount.php">Profil</a>
                 <a href="contact.php">Contact</a>
-                <a href="chat.php">Chat</a>
             </ul>
         </div>
     </nav>
