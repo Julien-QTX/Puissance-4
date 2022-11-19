@@ -2,7 +2,7 @@
 <header>
     <nav>
         <div class="Hheader">
-            <h1 class="nomSite">The Power Of Memory</h1>
+            <a href="index.php"><h1 class="nomSite">The Power Of Memory</h1></a>
         </div>
         <div class="Hheader">
             <ul class="Llien">
