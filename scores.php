@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scores.css">
-    <link rel="stylesheet" href="styleHeaderFooter.css">
+    <link rel="stylesheet" href="./asset/scores.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
     <title>Scores du joueur</title>
 </head>
 <body>
 
 <?php
     require "Header.inc.php";
-    require 'includes/sqlconnect.php';
+    require './asset/includes/sqlconnect.php';
 ?>
 
     <div class="texte">

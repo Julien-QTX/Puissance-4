@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./asset/login.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
     <title>Connexion</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
 <?php
 require "Header.inc.php";
 session_start();
-include ('includes/sqlconnect.php');
+include ('./asset/includes/sqlconnect.php');
 
 if (isset($_SESSION['id'])){
     header('Location: JeuFacile.php');
@@ -124,7 +125,7 @@ if(!empty($_POST)){
             <button type="submit" name="submit">Connexion</button>
 
         </form>
-        <a  class="juju" href="Inscription.php"> <u>Cliquez ici pour vous inscrire </u></a>
+        <a  class="juju" href="register.php"> <u>Cliquez ici pour vous inscrire </u></a>
 
     </div>
 </section>

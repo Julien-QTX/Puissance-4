@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style contact.css">
-    <link rel="stylesheet" href="styleHeaderFooter.css">
+    <link rel="stylesheet" href="./asset/contact.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
     <title>Contact</title>
 </head>
 <body>
 
 <?php
 require "Header.inc.php";
-include ('includes/sqlconnect.php');
+include ('./asset/includes/sqlconnect.php');
 ?>
 
 <div class="container">
@@ -21,15 +21,15 @@ include ('includes/sqlconnect.php');
     <!--au dessus ce situe le titre plus la balise permetant de tous centrer-->
     <div class="icone">
         <div class="Iicone">
-            <img class="img" src="./img/telephone.jpeg" width="25%" alt="phone">
+            <img class="img" src="./asset/images/telephone.jpeg" width="25%" alt="phone">
             <p style="color: white;">numéro de téléphone</p>
         </div class="Iicone">
         <div>
-            <img class="img" src="./img/lettre.jpeg" width="25%" alt="">
+            <img class="img" src="./asset/images/lettre.jpeg" width="25%" alt="">
             <p style="color: white;">email</p>
         </div>
         <div class="Iicone">
-            <img class="img" src="./img/point.jpeg" width="25%" alt="">
+            <img class="img" src="./asset/images/point.jpeg" width="25%" alt="">
             <p style="color: white;">Localisation</p>
         </div>
     </div>

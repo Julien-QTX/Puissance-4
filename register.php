@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleInscription.css">
-    <link rel="stylesheet" href="styleHeaderFooter.css">
+    <link rel="stylesheet" href="./asset/register.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
     <title>Inscription</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
 <?php
     require 'Header.inc.php';
     session_start();
-    include ('includes/sqlconnect.php');
+    include ('./asset/includes/sqlconnect.php');
 
     $error = false;
     $error2 = 0;

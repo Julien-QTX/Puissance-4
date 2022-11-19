@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="styleHeaderFooter.css">
+<link rel="stylesheet" href="./asset/Header.css">
 <header>
     <nav>
         <div class="Hheader">
@@ -9,14 +9,14 @@
                 <a href="index.php">Accueil</a>
                 <a href="JeuFacile.php">Jeu</a>
                 <a href="Scores.php">Score</a>
-                <a href="monespace.php">Profil</a>
+                <a href="myaccount.php">Profil</a>
                 <a href="Contact.php">Contact</a>
             </ul>
         </div>
     </nav>
     
     <div class="banniere">
-        <img class="Banniere" src="./images/banniere.png" alt="">
+        <img class="Banniere" src="./asset/images/banniere.png" alt="">
         <div class="text">
         <h1><?php     ?></h1>
         </div>

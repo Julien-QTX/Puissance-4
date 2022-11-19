@@ -1,7 +1,7 @@
-
+<link rel="stylesheet" href="./asset/HeaderFooterIndex.css">
 <header class="banniere">
 
-    <img class="Banniere" src="./images/setup-gamer-4-conseils-pour-installer-le-parfait-equipement-gaming.jpeg" alt="">
+    <img class="Banniere" src="./asset/images/setup-gamer-4-conseils-pour-installer-le-parfait-equipement-gaming.jpeg" alt="">
 
     <nav>
         <div class="Hheader">
@@ -11,8 +11,8 @@
             <ul class="Llien">
                 <a href="login.php">Connexion</a>
                 <a href="JeuFacile.php">Jeu</a>
-                <a href="Scores.php">Score</a>
-                <a href="Contact.php">Contact</a>
+                <a href="scores.php">Score</a>
+                <a href="contact.php">Contact</a>
                 <a href="chat.php">Chat</a>
             </ul>
         </div>

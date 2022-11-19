@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleHeaderFooterIndex.css">
+    <link rel="stylesheet" href="./asset/style.css">
+    <link rel="stylesheet" href="./asset/HeaderFooterIndex.css">
     <title>Accueil</title>
 </head>
 <body>
 <?php
-    require 'HeaderIndex.php'
+require 'HeaderIndex.php'
 ?>
 <div class="container">
     
     <!--images de plusieurs jeux avec description-->
     <div class="imaage">
-        <img class="imag" src="img/Photodejeux1.jpeg" alt="Photojeux1">
+        <img class="imag" src="./asset/images/Photodejeux1.jpeg" alt="Photojeux1">
     
-        <img class="imag" src="img/Photodejeux2.png" alt="Photojeux2">
+        <img class="imag" src="./asset/images/Photodejeux2.png" alt="Photojeux2">
         
-        <img class="imag" src="img/Photodejeux3.png" alt="Photojeux2">
+        <img class="imag" src="./asset/images/Photodejeux3.png" alt="Photojeux2">
 
     </div>
 
@@ -64,7 +64,7 @@
     <!--Creation de blocs répertoriant des infos sur l'utilisateur-->
     <div class="blocinfo">
         <div class="Immag">
-            <img src="img/image4.png" width="100%" alt="jeuvideo">
+            <img src="./asset/images/image4.png" width="100%" alt="jeuvideo">
         </div>    
         <div class = "carres">
             <div class="Haut">
@@ -89,57 +89,57 @@
     <div class="separation">
         <h2 class="H2">Notre Équipe</h2>
         <p id="texteequipe">Quisque commodo facilisis purus, interdum volutpat arcu viverra sed.</p>
-        <img src="img/separation.png" alt="separation">
+        <img src="./asset/images/separation.png" alt="separation">
     
         <div class="boxequipe">
             <div class = boxequipeT>
-                <img class = "pdp" src="img/contactaccueil/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/contactaccueil/photocontact.png" alt="" width="60%">
                 <h2 class="nom">Bastien</h2> 
                 <p>Games Developer</p>
                 <div class = icone>
-                    <img class = "logo" src="img/contactaccueil/facebook.png" alt="">
-                    <img class = "logo" src="img/contactaccueil/twitter.png" alt="">
-                    <img class = "logo" src="img/contactaccueil/pinterest.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/facebook.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/twitter.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/pinterest.png" alt="">
                 </div>
             </div>    
             
             <div class = boxequipeT>
-                <img class = "pdp" src="img/contactaccueil/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/contactaccueil/photocontact.png" alt="" width="60%">
                 <h2 class="nom">Adam</h2>
                 <p>Games Designer</p>
                 <div class="icone">
-                    <img class = "logo" src="img/contactaccueil/facebook.png" alt="">
-                    <img class = "logo" src="img/contactaccueil/twitter.png" alt="">
-                    <img class = "logo" src="img/contactaccueil/pinterest.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/facebook.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/twitter.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/pinterest.png" alt="">
                 </div>
             </div>
 
             <div class = boxequipeT>
-                <img class = "pdp" src="img/contactaccueil/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/contactaccueil/photocontact.png" alt="" width="60%">
                 <h2 class="nom">Guillaume</h2>
                 <p>Games Developer</p>
                 <div class="icone">
-                    <img class = "logo" src="img/contactaccueil/facebook.png" alt="">
-                    <img class = "logo" src="img/contactaccueil/twitter.png" alt="">
-                    <img class = "logo" src="img/contactaccueil/pinterest.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/facebook.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/twitter.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/pinterest.png" alt="">
                 </div>
             </div>
 
             <div class = boxequipeT>
-                <img class = "pdp" src="img/contactaccueil/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/contactaccueil/photocontact.png" alt="" width="60%">
                 <h2 class="nom">Julien</h2>
                 <p>Games Developer</p>
                 <div class="icone">
-                    <img class = "logo" src="img/contactaccueil/facebook.png" alt="">
-                    <img class = "logo" src="img/contactaccueil/twitter.png" alt="">
-                    <img class = "logo" src="img/contactaccueil/pinterest.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/facebook.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/twitter.png" alt="">
+                    <img class = "logo" src="./asset/images/contactaccueil/pinterest.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 </div>
 <?php
-    require 'Footer.inc.php'
+require 'Footer.inc.php'
 ?>
 </body>
 </html>

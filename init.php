@@ -2,7 +2,7 @@
 	header('Content-Type:text/html;charset=utf-8');
 	
 	// BDD
-	include('includes/sqlconnect.php')
+	include('./asset/includes/sqlconnect.php')
 	
 	// Infos site
 	define('URL_SITE', 'http://localhost/Puissance-4/chat.php');
