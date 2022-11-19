@@ -13,9 +13,9 @@
         </ul>
 
         <div>
-            <a href="https://fr-fr.facebook.com/"><img src="./asset/images/facebook.png" alt="" class="Iconelien"></a>
+            <a href="https://fr-fr.facebook.com/"><img src="./asset/images/asset.jpeg" alt="" class="Iconelien"></a>
             <a href="https://twitter.com/?lang=fr"><img src="./asset/images/tweeter.png" alt="" class="Iconelien"></a>
-            <a href="https://www.pinterest.fr/"><img src="./asset/images/pinterest.png" alt="" class="Iconelien"></a>
+            <a href="https://www.pinterest.fr/"><img src="./asset/images/images.png" alt="" class="Iconelien"></a>
             <a href="https://www.google.fr/"><img src="./asset/images/google.png" alt="" class="Iconelien"></a>
             <a href="https://www.instagram.com/?hl=fr"><img src="./asset/images/insta.png" alt="" class="Iconelien"></a>
 

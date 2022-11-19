@@ -13,7 +13,7 @@
 <?php
     require "Header.inc.php";
     session_start();
-    include ('./asset/includes/sqlconnect.php');
+    include ('./asset/includes/database.inc.php');
 
     if(isset($_GET['pseudo'])) {
         $getpseudo = intval($_GET['pseudo']);

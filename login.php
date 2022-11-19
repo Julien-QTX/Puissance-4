@@ -13,7 +13,7 @@
 <?php
 require "Header.inc.php";
 session_start();
-include ('./asset/includes/sqlconnect.php');
+include ('includes/database.inc.php');
 
 if (isset($_SESSION['id'])){
     header('Location: JeuFacile.php');
@@ -21,7 +21,6 @@ if (isset($_SESSION['id'])){
 
 }
 
-<<<<<<< HEAD
 if(!empty($_POST)){
     extract($_POST);
     $valid = true;
@@ -32,34 +31,6 @@ if(!empty($_POST)){
         if(empty($_POST['email'])){
             $valid = false;
             $er_mail = "Le mail ne peut pas être vide";
-=======
-    if (isset($_SESSION['id'])){
-        header('Location: monespace.php');
-        exit;
-        
-    }
-
-    if(!empty($_POST)){
-        extract($_POST);
-        $valid = true;
-        
-        if (isset($_POST['submit'])){
-            if(empty($_POST['email'])){
-                $valid = false;
-                $er_mail = "Le mail ne peut pas être vide";
-    
-              // On vérifit que le mail est dans le bon format
-            }elseif(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $_POST['email'])){
-    
-                $valid = false;
-                $er_mail = "Le mail n'est pas valide";
-    
-            }else{
-                        // On vérifit que le mail est disponible
-                $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
-    
-                $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
->>>>>>> adam
 
             // On vérifit que le mail est dans le bon format
         }elseif(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $_POST['email'])){
@@ -106,24 +77,7 @@ if(!empty($_POST)){
             if (!$user2) {
                 $valid = false;
 
-<<<<<<< HEAD
                 $er_mdp = "le mot de passe est mauvais";
-=======
-                    $er_mdp = "le mot de passe est mauvais";
-                }
-            }
-         
-            // Si toutes les conditions sont remplies alors on fait le traitement
-            if($valid){
-                echo "valid";
-                // On insert nos données dans la table utilisateur
-                $requeteSql = 'SELECT utilisateur (id, email, password, date_heure_derniere_co) VALUES (NULL, ?, ?, NOW())';
-                $requeteConnexion= $dbh -> prepare($requeteSql);
-                $requeteConnexion -> execute([$email, $mdp]);
-                
-                header('Location: monespace.php');
-                exit;
->>>>>>> adam
             }
         }
         

@@ -93,46 +93,46 @@ require 'HeaderIndex.php'
     
         <div class="boxequipe">
             <div class = boxequipeT>
-                <img class = "pdp" src="./asset/images/contactaccueil/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/photocontact.png" alt="" width="60%">
                 <h2 class="nom">Bastien</h2> 
                 <p>Games Developer</p>
                 <div class = icone>
-                    <img class = "logo" src="./asset/images/contactaccueil/facebook.png" alt="">
-                    <img class = "logo" src="./asset/images/contactaccueil/twitter.png" alt="">
-                    <img class = "logo" src="./asset/images/contactaccueil/pinterest.png" alt="">
+                    <img class = "logo" src="./asset/images/facebook.png" alt="">
+                    <img class = "logo" src="./asset/images/twitter.png" alt="">
+                    <img class = "logo" src="./asset/images/pinterest.png" alt="">
                 </div>
             </div>    
             
             <div class = boxequipeT>
-                <img class = "pdp" src="./asset/images/contactaccueil/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/photocontact.png" alt="" width="60%">
                 <h2 class="nom">Adam</h2>
                 <p>Games Designer</p>
                 <div class="icone">
-                    <img class = "logo" src="./asset/images/contactaccueil/facebook.png" alt="">
-                    <img class = "logo" src="./asset/images/contactaccueil/twitter.png" alt="">
-                    <img class = "logo" src="./asset/images/contactaccueil/pinterest.png" alt="">
+                    <img class = "logo" src="./asset/images/facebook.png" alt="">
+                    <img class = "logo" src="./asset/images/twitter.png" alt="">
+                    <img class = "logo" src="./asset/images/pinterest.png" alt="">
                 </div>
             </div>
 
             <div class = boxequipeT>
-                <img class = "pdp" src="./asset/images/contactaccueil/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/photocontact.png" alt="" width="60%">
                 <h2 class="nom">Guillaume</h2>
                 <p>Games Developer</p>
                 <div class="icone">
-                    <img class = "logo" src="./asset/images/contactaccueil/facebook.png" alt="">
-                    <img class = "logo" src="./asset/images/contactaccueil/twitter.png" alt="">
-                    <img class = "logo" src="./asset/images/contactaccueil/pinterest.png" alt="">
+                    <img class = "logo" src="./asset/images/facebook.png" alt="">
+                    <img class = "logo" src="./asset/images/twitter.png" alt="">
+                    <img class = "logo" src="./asset/images/pinterest.png" alt="">
                 </div>
             </div>
 
             <div class = boxequipeT>
-                <img class = "pdp" src="./asset/images/contactaccueil/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/photocontact.png" alt="" width="60%">
                 <h2 class="nom">Julien</h2>
                 <p>Games Developer</p>
                 <div class="icone">
-                    <img class = "logo" src="./asset/images/contactaccueil/facebook.png" alt="">
-                    <img class = "logo" src="./asset/images/contactaccueil/twitter.png" alt="">
-                    <img class = "logo" src="./asset/images/contactaccueil/pinterest.png" alt="">
+                    <img class = "logo" src="./asset/images/facebook.png" alt="">
+                    <img class = "logo" src="./asset/images/twitter.png" alt="">
+                    <img class = "logo" src="./asset/images/pinterest.png" alt="">
                 </div>
             </div>
         </div>

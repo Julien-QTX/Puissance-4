@@ -12,7 +12,7 @@
 
 <?php
     require "Header.inc.php";
-    require './asset/includes/sqlconnect.php';
+    require './asset/includes/database.inc.php';
 ?>
 
     <div class="texte">

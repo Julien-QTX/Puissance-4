@@ -12,7 +12,7 @@
 
 <?php
 require "Header.inc.php";
-include ('./asset/includes/sqlconnect.php');
+include ('./asset/includes/database.inc.php');
 ?>
 
 <div class="container">
