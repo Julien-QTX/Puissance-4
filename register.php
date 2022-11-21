@@ -20,7 +20,7 @@
 
     // S'il y a une session alors on ne retourne plus sur cette page
     if (isset($_SESSION['id'])){
-        header('Location: monespace.php');
+        header('Location: myaccount.php');
         exit;
     }
          

@@ -19,11 +19,9 @@
     width: 33%;
 }
 
-.compteur{
-    font-weight: bold;
-    margin: auto 0;
-    width: 33%;
-    text-align: center;
+.Chronometre{
+    color: aliceblue;
+    background-color: #110728;
 }
 
 .Jeu{

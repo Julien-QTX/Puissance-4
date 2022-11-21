@@ -30,25 +30,9 @@ require "Header.inc.php";
             </table>
         </div>
 
-        <div id="timer" class="compteur">100</div>
-        <script>
-            // Compteur de Temps
-            const departMinutes = 5
-            let temps = departMinutes * 60
-
-            const timerElement = document.getElementById("timer")
-
-            setInterval(() => {
-            let minutes = parseInt(temps / 60, 10)
-            let secondes = parseInt(temps % 60, 10)
-
-            minutes = minutes < 10 ? "0" + minutes : minutes
-            secondes = secondes < 10 ? "0" + secondes : secondes
-
-            timerElement.innerText = `${minutes}:${secondes}`
-            temps = temps <= 0 ? 0 : temps - 1
-            }, 1000)
-        </script>
+        <form name="chronoForm" class="Chronometre">
+            <input type="text"  name="startstop" name="chronotime" id="chronotime" value="00:00"/>
+        </form>
 
     </article>
 
@@ -521,6 +505,7 @@ require "Header.inc.php";
     </section>
 
 </div>
+<script src="./tchat.js"></script>
 <?php
 require 'Footer.inc.php'
 ?>
