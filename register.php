@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./asset/register.css">
     <link rel="stylesheet" href="./asset/HeaderFooter.css">
     <title>Inscription</title>
+    
 </head>
 <body>
 
