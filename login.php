@@ -75,7 +75,7 @@ if(!empty($_POST)){
             $stmt->execute([$mdp]); 
             $user2 = $stmt->fetch();
             if (!$user2) {
-                $valid = false;
+                $valid = false; 
 
                 $er_mdp = "le mot de passe est mauvais";
             }
