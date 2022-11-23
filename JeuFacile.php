@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./asset/Jeu.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./asset/JeuFacile.css">
     <title>Facile</title>
 </head>
 <body>
@@ -31,66 +32,152 @@ require "Header.inc.php";
             </table>
         </div>
 
-        
-        <form name="chronoForm" class="Chronometre">
-            <input type="text"  name="startstop" name="chronotime" id="chronotime" value="00:00"/>
-        </form>
-    
-        
-
     </article>
 
-    <section>
 
-        <table class="Jeu">
+    <div class="div_conteneur_parent">
+						
+		<div style="width:800px;display:inline-block;" id="conteneur">
+		
+		
+			<div class="colonne" id="liste">
 
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 2 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Metal.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Helice.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 3 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Helice.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 4 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Metal.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 5 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Metal.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
+				Vous avez trois minutes,<br />soit <span style="color:#CC3300;">180 secondes :</span><br /><br />
+				<span style="font-size:18px;font-weight:normal;">Votre score :<br />
+				<div id="score" style="font-size:30px;"><strong>10</strong>/10</div>
+				<br />
+				<div id="temps" style="font-size:20px;"></div>
+				<input type="button" class="btn" value="Nouvelle partie" onClick="window.location.reload()"/>
+				</span>
+				<br /><br />
+				<div id="grille">
+				<div class="case" id="case0"></div>
+				<div class="case" id="case1"></div>
+				<div class="case" id="case2"></div>
+				<div class="case" id="case3"></div>
+				
+				<div class="case" id="case4"></div>
+				<div class="case" id="case5"></div>
+				<div class="case" id="case6"></div>
+				<div class="case" id="case7"></div>
+				
+				<div class="case" id="case8"></div>
+				<div class="case" id="case9"></div>
+				<div class="case" id="case10"></div>
+				<div class="case" id="case11"></div>
+				
+				<div class="case" id="case12"></div>
+				<div class="case" id="case13"></div>
+				<div class="case" id="case14"></div>
+				<div class="case" id="case15"></div>
+				</div>
+				
+			</div>				
+			
+		</div>
+			
+	
+	</div>
+    
 
-        </table>
-
-    </section>
 </div>
-<script src="./tchat.js"></script>
+
 <?php
 require 'Footer.inc.php'
 ?>
 </body>
+<script type="text/javascript" language="javascript">
+
+
+	var nb_clics = 0;
+	var mimi1 = "";
+	var mimi2 = "";
+	var case1 = "";
+	var case2 = "";
+	var img_ok = 0;
+	var nb_erreurs = 0;
+	var le_score = 0;
+	var depart = false;
+	var temps_debut = new Date().getTime()
+
+
+	generation();
+
+	var attente = setTimeout(function(){
+		for(var i=0;i<16;i++){
+			document.getElementById('img' + i).src = "./asset/images/mini/miniz.png";
+		}
+		depart = true;
+	},4000);
+	
+	function generation()
+	{
+		var nb_alea; var nb_img="";
+		var test = true; var chaine = "";
+		
+		for (var i=0;i<16;i++)
+		{
+			while (test==true)
+			{
+				nb_alea = Math.floor(Math.random()*16) + 1; //Pour génération dans les 16 cases
+				if(chaine.indexOf("-" + nb_alea + "-")>-1)
+					nb_alea = Math.floor(Math.random()*16) + 1;
+				else
+				{
+					nb_img = Math.floor((nb_alea+1)/2); //8 paires pour 16 places ==> 2 générations différentes par image
+					document.getElementById('case' + i).innerHTML = "<img style='cursor:pointer;' id='img" + i + "' src='./asset/images/mini/mini" + nb_img + ".png' onClick='verifier(\"img" + i + "\", \"mini" + nb_img + "\")' alt='' />";
+					chaine += "-" + nb_alea + "-";
+					test=false;
+				}			
+			}
+			test=true;			
+		}
+	}
+
+	function verifier(limg, source){
+		if(depart == true){
+			nb_clics++;
+			document.getElementById(limg).src = "./asset/images/mini/" + source + ".png";
+
+			if(nb_clics == 1){
+				mini1 = source;
+				case1 = limg;
+			}else{
+				mini2 = source;
+				case2 = limg;
+
+				if(case1!=case2){
+					depart = false;
+					if(mini1 != mini2){
+						var attente = setTimeout(function(){
+							document.getElementById(case1).src = "./asset/images/mini/miniz.png";
+							document.getElementById(case2).src = "./asset/images/mini/miniz.png";
+							depart=true;
+							nb_clics = 0;
+							nb_erreurs ++;
+							if(nb_erreurs < 11) le_score = 10 - nb_erreurs;
+							document.getElementById("score").innerHTML = "<strong>" + le_score + "</strong>/10";
+						},1000);
+					}else{
+						depart=true;
+						nb_clics=0;
+						img_ok += 2;
+						if(img_ok==16){
+							var dif_temps = Math.floor((new Date().getTime() - temps_debut)/1000);
+							document.getElementById("score").innerHTML = "<strong>" + le_score + "</strong>/10";
+							document.getElementById("temps").innerHTML = "Vous avez mis <strong>" + dif_temps + "</strong> secondes";
+						}
+					}
+				}else{
+					if(nb_clics == 2) nb_clics =1;
+				}
+				if(dif_temps >180){
+					document.getElementById("temps").innerHTML = "le temps imparti est dépassé, vous avez perdu";
+					depart = false;
+				}
+			}
+		}
+	}
+	
+</script>
 </html>
