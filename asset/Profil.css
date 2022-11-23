@@ -1,11 +1,11 @@
 .container{
-    width: 80%;
-    margin: auto;
+    width: 100%;
+   
 }
 
 .Titre{
     text-align: center;
-    margin: 5vh auto;
+    margin: 3vh auto;
 }
 
 .AvaScore{
@@ -14,7 +14,7 @@
 }
 
 .Score{
-    width: 70%;
+    width: 100%;
 }
 
 table{
@@ -28,8 +28,6 @@ th, td{
     text-align: center;
 }
 
-
-
 .AvaPro{
     width: 80%;
     margin: 5vh auto;
@@ -42,17 +40,42 @@ th, td{
 
 }
 
-.selecavatar {
-    margin: auto;
-}
+
 
 .avatarFile{
     width: 100%;
 }
 
-.formprofil{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+
+
+form{
+    width: 70%;
+    margin: 4vh auto;
 }
 
+.mod{
+    background-color: #2a3858;
+
+}
+
+.formulaire{
+    width: 50%;
+    margin-bottom: 32px;
+    padding: 7px;
+    border-radius: 12px;
+    margin: 0 0 1vh 0;
+}
+
+.submitt{
+    width: 50%;
+}
+
+div button{
+    font-weight: bold;
+    color: #eee;
+    background-color: #e67e22;
+    width: 100%;
+    margin : 2vh 0 0 0;
+    padding: 8px;
+    border-radius: 12px;
+}
