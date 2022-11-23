@@ -4,86 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="styleHeaderFooter.css">
-    <title>Page de connexion</title>
-    
+    <link rel="stylesheet" href="./asset/login.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
+    <title>Connexion</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="Hheader">
-                <h1 class="nomSite">The Power Of Memory</h1>
-            </div>
-            <div class="Hheader">
-                <ul class="Llien">
-                    <a href="index.html">Accueil</a>
-                    <a href="JeuFacile.html">Jeu</a>
-                    <a href="Scores.html">Score</a>
-                    <a href="Contact.html">Contact</a>
-                </ul>
-            </div>
-        </nav>
+
+<?php
+require "Header.inc.php";
+session_start();
+include ('./asset/includes/database.inc.php');
+
+if (isset($_SESSION['id'])){
+    header('Location: JeuFacile.php');
+    exit;
+
+}
+
+if(!empty($_POST)){
+    extract($_POST);
+    $valid = true;
+    
+    if (isset($_POST['submit'])){
         
-        <div class="banniere">
-            <img class="Banniere" src="./images/banniere.png" alt="">
-            <div class="text">
-            <h1>Nom de Page</h1>
-            </div>
-        </div>
-    </header>
-
-    <section class="log">
-        <div>
         
+        if(empty($_POST['email'])){
+            $valid = false;
+            $er_mail = "Le mail ne peut pas être vide";
 
-            <form action="" method="post">
-          
-                <input type="text" name="Email" placeholder="Email" required="required"/>
+            // On vérifit que le mail est dans le bon format
+        }elseif(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $_POST['email'])){
 
-                <input type="password" name="password" placeholder="Mot de passe" required="required"/>
-                <button type="submit">Connexion</button>
+            $valid = false;
+            $er_mail = "Le mail n'est pas valide";
 
-            </form>
-        </div>
-    </section>
+        }else{
+                    // On vérifit que le mail est disponible
+            $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
 
-    <footer>
+            $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        <div class="Coordonne">
-            <h1> Information</h1>
-            <p> quisque commodo facilisis purus, interdum volutpat arcu viverra sed</p>
-            <ul class="b">
-    
-                <li> <span class="info">Tel :</span> 07 69 50 51 70</li>
-                <li> <span class="info">Email:</span>  jeuxmemo@gmail.com</li>
-                <li> <span class="info">Location:</span>  Paris Montparnasse </li>
-    
-            </ul>
-    
-            <div class="iconlien">
-                <a href="https://fr-fr.facebook.com/"><img src="./image/facebook.png" alt="" width="10%"></a>
-                <a href="https://twitter.com/?lang=fr"><img src="./image/tweeter.png" alt=""width="10%"></a>
-                <a href="https://www.pinterest.fr/"><img src="./image/pinterest.png" alt=""width="10%"></a>
-                <a href="https://www.google.fr/"><img src="./image/google.png" alt=""width="10%"></a>
-                <a href="https://www.instagram.com/?hl=fr"><img src="./image/insta.png" alt=""width="10%"></a>
-    
-            </div>
+
+            $email = $_POST['email'];
+            $stmt1 = $DB->prepare("SELECT email FROM utilisateur WHERE email=?");
+            $stmt1->execute([$email]); 
+            $user = $stmt1->fetch();
+            if (!$user) {
+                $valid = false;
+
+                $er_mail = "le mail n'est pas bon";
+            }
+        
+        }
+
+        // Vérification du mot de passe
+        $mdp = $_POST['password'];
+        if(empty($mdp)){
+            $valid = false;
+            $er_mdp = "Le mot de passe ne peut pas être vide";
+
+            // On vérifit que le pseudo est dans le bon format
+        }else{
+            // On vérifit que le pseudo est disponible
+            $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
+
+            $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $mdp = $_POST['password'];
+            $stmt = $DB->prepare("SELECT password FROM utilisateur WHERE password = ? ");
+            $stmt->execute([$mdp]); 
+            $user2 = $stmt->fetch();
+            if (!$user2) {
+                $valid = false;
+
+                $er_mdp = "le mot de passe est mauvais";
+            }
+        }
+        
+        // Si toutes les conditions sont remplies alors on fait le traitement
+        if($valid){
+
+            // On insert nos données dans la table utilisateur
+            $requeteSql = 'SELECT utilisateur (id, email, password, date_heure_derniere_co) VALUES (NULL, ?, ?, NOW())';
+            $requeteConnexion= $dbh -> prepare($requeteSql);
+            $requeteConnexion -> execute([$email, $mdp]);
             
-        </div>
-    
-        <div class="Coordonne">
-            <h1> Power Of Memory</h1>
-    
-            <ul class="b">
-                <li>Jouer!</li>
-                <li>Les scores</li>
-                <li> Nous contacter</li>
-            </ul>
-    
-        </div>
-    
-    </footer>
+            header('Location: JeuFacile.php');
+            exit;
+        }
+    }
+}
 
+?>
+
+<section class="log">
+    <div>
+        
+        <form action="" method="post">
+
+            <?php
+
+            if (isset($er_mail)){
+            ?>
+            <div><?= $er_mail ?></div>
+            <?php
+            }
+            ?>
+        
+            <input type="text" id="user_id" name="email" placeholder="Email" value="<?php if(isset($email)){ echo $email; }?>" required="required"/>
+                <?php
+
+                if (isset($er_mdp)){
+                    ?>
+                    <div><?= $er_mdp ?></div>
+                    <?php
+                }
+                ?>
+
+            <input type="password" id="user_password" name="password" placeholder="Mot de passe" value="<?php if(isset($mdp)){ echo $mdp; }?>" required="required"/>
+            <button type="submit" name="submit">Connexion</button>
+
+        </form>
+        <a  class="juju" href="register.php"> <u>Cliquez ici pour vous inscrire </u></a>
+
+    </div>
+</section>
+    
+<?php
+require "Footer.inc.php"
+?>
 </body>
 </html>

@@ -1,22 +1,42 @@
-    <link rel="stylesheet" href="styleJeu.css">
-    <?php
-    require "Header.inc.php";
-    ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/Jeu.css">
+    <title>Facile</title>
+</head>
+<body>
+
+<?php
+require "Header.inc.php";
+?>
+
+<div class="container">
+    
     <article class="arti">
         
+        <div class="lvl">
+            <p>Niveau de difficulté</p>
 
-        <p>Niveau de difficulté</p>
+            <table>
+                <tr class="NiveauJeu">
+                    <th><a href="JeuFacile.php">Recommencer</a></th>
+                    <th><a href="JeuInter.php">Intermédiaire</a></th>
+                    <th><a href="JeuDifficile.php">Difficile</a></th>
+                    <th><a href="JeuExpert.php">Expert</a></th>
+                    
+                </tr>
+            </table>
+        </div>
 
-        <table>
-            <tr class="NiveauJeu">
-                <th><a href="JeuInter.php">Intermediére</a></th>
-                <th><a href="JeuDifficile.php">Difficile</a></th>
-                <th><a href="JeuExpert.php">Expert</a></th>
-                <th><a href="JeuFacile.php">Recommencer</a></th>
-            </tr>
-        </table>
-
-        <!-- Minuteur -->
+        
+        <form name="chronoForm" class="Chronometre">
+            <input type="text"  name="startstop" name="chronotime" id="chronotime" value="00:00"/>
+        </form>
+    
+        
 
     </article>
 
@@ -67,9 +87,10 @@
         </table>
 
     </section>
-
-    <?php
-    require 'Footer.inc.php'
-    ?>
+</div>
+<script src="./tchat.js"></script>
+<?php
+require 'Footer.inc.php'
+?>
 </body>
 </html>

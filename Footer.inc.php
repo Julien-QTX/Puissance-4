@@ -1,5 +1,4 @@
-
-<link rel="stylesheet" href="styleHeaderFooter.css">
+<link rel="stylesheet" href="./asset/Footer.css">
 <footer>
 
     <div class="Coordonne">
@@ -14,11 +13,11 @@
         </ul>
 
         <div>
-            <a href="https://fr-fr.facebook.com/"><img src="./image/facebook.png" alt="" width="10%"></a>
-            <a href="https://twitter.com/?lang=fr"><img src="./image/tweeter.png" alt=""width="10%"></a>
-            <a href="https://www.pinterest.fr/"><img src="./image/pinterest.png" alt=""width="10%"></a>
-            <a href="https://www.google.fr/"><img src="./image/google.png" alt=""width="10%"></a>
-            <a href="https://www.instagram.com/?hl=fr"><img src="./image/insta.png" alt=""width="10%"></a>
+            <a href="https://fr-fr.facebook.com/"><img src="./asset/images/asset.jpeg" alt="" class="Iconelien"></a>
+            <a href="https://twitter.com/?lang=fr"><img src="./asset/images/tweeter.png" alt="" class="Iconelien"></a>
+            <a href="https://www.pinterest.fr/"><img src="./asset/images/images.png" alt="" class="Iconelien"></a>
+            <a href="https://www.google.fr/"><img src="./asset/images/google.png" alt="" class="Iconelien"></a>
+            <a href="https://www.instagram.com/?hl=fr"><img src="./asset/images/insta.png" alt="" class="Iconelien"></a>
 
         </div>
         

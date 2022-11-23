@@ -1,0 +1,76 @@
+.container{
+    width: 80%;
+    margin: auto;
+}
+/* sert a centré l'entièreté de la page */
+.name, .email{
+    width: 47%;
+    height: 5vh;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 12px;
+}
+.sujet, .message{
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 10px;
+    border-radius: 12px;
+    /* les paramètre du bloc sujet dans le formulaire */
+
+}
+.message{
+    height: 150px;
+    /* gros blocs de texte avec marqué message */
+}
+.icone{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 4vh auto 10vh;
+    text-align: center;
+}
+
+.Iicone{
+    text-align: center;
+}
+/* les trois image plus le texte en dessous */
+.contact{
+    width: 50%;
+}
+/*formulaire en entier*/
+.PE{
+    display: flex ;
+    justify-content: space-between;
+    width: 100%;
+    /* Prénom + contact dans le formulaire */
+
+}
+
+.sujet, .bouton{
+    height: 5vh;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 12px;
+}
+.bouton{
+    font-weight: bold;
+    color: #eee;
+    background-color: #e67e22;
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 10px;
+    border-radius: 12px;
+    /* bouton = envoyer */
+
+}
+.img{
+    border-radius: 50%;
+}
+
+/* met tous le texte du formulaire en blanc*/
+img{
+    background-color: white;
+
+}
+

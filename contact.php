@@ -1,10 +1,19 @@
-<link rel="stylesheet" href="style contact.css">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/contact.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
+    <title>Contact</title>
+</head>
+<body>
 
 <?php
 require "Header.inc.php";
-include ('includes/sqlconnect.php');
+include ('./asset/includes/database.inc.php');
 ?>
-    
 
 <div class="container">
 
@@ -12,15 +21,15 @@ include ('includes/sqlconnect.php');
     <!--au dessus ce situe le titre plus la balise permetant de tous centrer-->
     <div class="icone">
         <div class="Iicone">
-            <img class="img" src="./img/telephone.jpeg" width="25%" alt="phone">
+            <img class="img" src="./asset/images/telephone.jpeg" width="25%" alt="phone">
             <p style="color: white;">numéro de téléphone</p>
         </div class="Iicone">
         <div>
-            <img class="img" src="./img/lettre.jpeg" width="25%" alt="">
+            <img class="img" src="./asset/images/lettre.jpeg" width="25%" alt="">
             <p style="color: white;">email</p>
         </div>
         <div class="Iicone">
-            <img class="img" src="./img/point.jpeg" width="25%" alt="">
+            <img class="img" src="./asset/images/point.jpeg" width="25%" alt="">
             <p style="color: white;">Localisation</p>
         </div>
     </div>
@@ -34,7 +43,7 @@ include ('includes/sqlconnect.php');
             <input class="sujet" type="text" name="sujet" placeholder="sujet">
             <textarea class="message" type="text" name="message" placeholder="message "></textarea>
             <!--<input type='submit' class="button" name="submit" />-->
-            <button style="color: white;" class="bouton" name="submit">Envoyer</button>
+            <button class="bouton" name="submit">Envoyer</button>
         </form>
 
         <?php
@@ -92,10 +101,8 @@ if(isset($_POST['submit'])){
     <!--au dessus ce situe le formulaire de remplisage avec le bouton envoyer -->
 </div>
 
-
-
-
-
 <?php
     require "Footer.inc.php"
 ?>
+</body>
+</html>

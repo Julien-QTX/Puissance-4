@@ -1,196 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scores.css">
-    <link rel="stylesheet" href="styleHeaderFooter.css">
+    <link rel="stylesheet" href="./asset/scores.css">
+    <link rel="stylesheet" href="./asset/HeaderFooter.css">
     <title>Scores du joueur</title>
 </head>
-<?php 
-    require "Header.inc.php";
-?>
 <body>
+
+<?php
+    require "Header.inc.php";
+    require './asset/includes/database.inc.php';
+?>
 
     <div class="texte">
         <div class="element">
-
-            
+ 
             <table border="3" cellpadding="25" >
                 <tr>
-                    <td>Nom du joueur</td>
+                    <td>Nom du jeu</td>
                     <td> pseudo du joueur</td>
-                    <td>  Niveau de difficulté</td>
-                    <td>score</td>
+                    <td> Niveau de difficulté</td>
+                    <td>score du joueur </td>
                     <td> date/heure</td>        
                 </tr>
             
-                <tr> 
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                <?php
 
-                </tr>
-                
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td>  </td>
-                    <td> </td>
-                </tr>
+                   $scores = $dbh->prepare ('SELECT jeu.nom_du_jeu, pseudo, scrore, difficulty, `date/heure_partie` FROM Scrores
+                    INNER JOIN utilisateur ON Scrores.id_utilisateur = utilisateur.id
+                    INNER JOIN jeu ON Scrores.id_jeu = jeu.id
+                    ORDER BY id_jeu , difficulty DESC , scrore ');
 
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                    $scores->execute();
+                    $scores = $scores-> fetchAll();
 
-                <tr> 
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    foreach($scores as $score) { ?>
 
-                </tr>
-                
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td>  </td>
-                    <td> </td>
-                </tr>
+                        <tr>
 
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                        <td> <?php echo $score['nom_du_jeu'] ?> </td>
+                        <td> <?php echo $score['pseudo'] ?></td>
+                        <td> <?php echo $score['scrore'] ?></td>
+                        <td> <?php echo $score['difficulty']?></td>
+                        <td> <?php echo $score['date/heure_partie'] ?> </td>
+                            
+                        </tr>
 
-                <tr> 
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                 <?php   }
 
-                </tr>
-                
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td>  </td>
-                    <td> </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr> 
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-
-                </tr>
-                
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td>  </td>
-                    <td> </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr> 
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-
-                </tr>
-                
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td>  </td>
-                    <td> </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                ?>  
+              
             </table>
         </div>    
             
     </div>
 
-    <footer>
-
-        <div class="Coordonne">
-            <h1> Information</h1>
-            <p> quisque commodo facilisis purus, interdum volutpat arcu viverra sed</p>
-            <ul class="b">
-    
-                <li> <span class="info">Tel :</span> 07 69 50 51 70</li>
-                <li> <span class="info">Email:</span>  jeuxmemo@gmail.com</li>
-                <li> <span class="info">Location:</span>  Paris Montparnasse </li>
-    
-            </ul>
-    
-            <div class="iconlien">
-                <a href="https://fr-fr.facebook.com/"><img src="./image/facebook.png" alt="" width="10%"></a>
-                <a href="https://twitter.com/?lang=fr"><img src="./image/tweeter.png" alt=""width="10%"></a>
-                <a href="https://www.pinterest.fr/"><img src="./image/pinterest.png" alt=""width="10%"></a>
-                <a href="https://www.google.fr/"><img src="./image/google.png" alt=""width="10%"></a>
-                <a href="https://www.instagram.com/?hl=fr"><img src="./image/insta.png" alt=""width="10%"></a>
-    
-            </div>
-            
-        </div>
-    
-        <div class="Coordonne">
-            <h1> Power Of Memory</h1>
-    
-            <ul class="b">
-                <li>Jouer!</li>
-                <li>Les scores</li>
-                <li> Nous contacter</li>
-            </ul>
-    
-        </div>
-    
-    </footer>
+    <?php
+    require "Footer.inc.php"
+    ?>
 
 </body>
 </html>
