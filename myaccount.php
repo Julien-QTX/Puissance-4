@@ -26,7 +26,7 @@
 
 <div class="deco">
 
-            <ul>
+    <ul>
                     <li>
                         <a href="logout.php">
                             Se deconnecter

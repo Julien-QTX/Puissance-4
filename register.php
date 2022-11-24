@@ -23,6 +23,7 @@
             require 'Header.inc.php';
             session_start();
             include ('./asset/includes/database.inc.php');
+            
 
             $error = false;
             $error2 = 0;
@@ -113,7 +114,7 @@
 
                         //Hachure du Mot de passe
 
-                        $mdpH = hash('sha256', $_POST['mdp']);
+                        $mdpH = password_hash($confmdp, PASSWORD_DEFAULT);
                 
                         // On insert nos données dans la table utilisateur
                         $requeteSql = 'INSERT INTO utilisateur (id, email, password, pseudo, date_heure_inscription) VALUES (NULL, ?, ?, ?, NOW())';

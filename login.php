@@ -25,6 +25,7 @@ if(!empty($_POST)){
     extract($_POST);
     $valid = true;
     
+    
     if (isset($_POST['submit'])){
         
         
@@ -54,6 +55,8 @@ if(!empty($_POST)){
 
                 $er_mail = "le mail n'est pas bon";
             }
+
+            
         
         }
 
@@ -64,21 +67,6 @@ if(!empty($_POST)){
             $er_mdp = "Le mot de passe ne peut pas être vide";
 
             // On vérifit que le pseudo est dans le bon format
-        }else{
-            // On vérifit que le pseudo est disponible
-            $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
-
-            $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            $mdp = $_POST['password'];
-            $stmt = $DB->prepare("SELECT password FROM utilisateur WHERE password = ? ");
-            $stmt->execute([$mdp]); 
-            $user2 = $stmt->fetch();
-            if (!$user2) {
-                $valid = false; 
-
-                $er_mdp = "le mot de passe est mauvais";
-            }
         }
         
         // Si toutes les conditions sont remplies alors on fait le traitement
@@ -88,11 +76,17 @@ if(!empty($_POST)){
             $requeteSql = 'SELECT utilisateur (id, email, password, date_heure_derniere_co) VALUES (NULL, ?, ?, NOW())';
             $requeteConnexion= $dbh -> prepare($requeteSql);
             $requeteConnexion -> execute([$email, $mdp]);
+            $_SESSION = $user;
             
             header('Location: JeuFacile.php');
             exit;
         }
+        
+
+        
     }
+
+    
 }
 
 ?>
