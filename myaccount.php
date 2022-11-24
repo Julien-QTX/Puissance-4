@@ -23,114 +23,23 @@
 
 
 ?>
-<div class="container">
 
-    <h1 class="Titre">Bienvenue <?php echo "." ?> Julien</h1>
+<div class="deco">
 
-    <div class="AvaScore">
-
-        <div class="Avatar">
-            <img class="AvaPro" src="./asset/images/Champignon Bleu.jpg"alt="">
-
-            <div class="selecavatar">
-
-                <label for="avatar">Choisir votre photo de profil :</label>
-
-                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" class="avatarFile">
-
-                <br> 
-            </div>
-
-            
-        </div>
-
-        
-           
-
-            
-                
-                   
-
-        
-
-        <div class="Score">
-            <h1 class="Titre">Meilleur Scores</h1>
-
-            <table>
-                <thead>
-                    <th>scores</th>
-                    <th>Nbr de Coups</th>
-                    <th>Difficulté</th>
-                    <th>Date</th>
-                </thead>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                
-            </table>
             <ul>
                     <li>
                         <a href="logout.php">
                             Se deconnecter
                         </a>
                     </li>
-                </ul> 
+            </ul> 
                 
-            
-        </div>
+</div>
+<div class="container">
 
-    </div>
+    <h1 class="Titre">Bienvenue</h1>
+            
+      
             <div class="mod">
 
                 <!--Changer son adresse email-->
@@ -186,6 +95,75 @@
 
 
 </div> 
+
+<?php
+
+                //la verifications des informations saisie par l'utilisateur
+                if(isset($_POST["submit_email"])){
+
+                    //mes variables qui contiennent mes informations $_POST
+                    $old_email = filter_var($_POST["old_email"], FILTER_SANITIZE_EMAIL);
+                    $new_email = filter_var($_POST["new_email"], FILTER_SANITIZE_EMAIL);
+                    $mdp = $_POST["password"];
+
+                    if(filter_var($old_email, FILTER_VALIDATE_EMAIL) && filter_var($new_email, FILTER_VALIDATE_EMAIL)) {
+
+                        //prepare les commandes pour l'etape suivant
+                        $demande = $dbh->prepare("SELECT * FROM utilisateur WHERE email = ?");
+                        $demande->bindParam(1, $old_email);
+                        $demande->execute();
+                        $utilisateur = $demande->fetch();
+
+                        if($utilisateur && password_verify($mdp, $utilisateur['password'])) {
+                            $requeteSQL = "UPDATE utilisateur SET email = ? WHERE email = '{$old_email}'";
+                            $requeteChange = $dbh -> prepare($requeteSQL);
+                            $requeteChange -> execute([$new_email]);
+                        } else {
+                            echo "Le mot de passe est incorrect.";
+                        }
+
+                    }
+                }
+
+                if(isset($_POST["submit_password"])){
+
+                    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+                    $old_password = $_POST["old_password"];
+                    $new_password = $_POST["new_password"];
+                    $confirm_mdp = $_POST["confirm_password"];
+
+                    $request = $dbh->prepare("SELECT * FROM utilisateur WHERE email = ?");
+                    $request->bindParam(1, $email);
+                    $request->execute();
+                    $player = $request->fetch();
+
+                    if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+                        if($player && password_verify($old_password, $player['password'])) {
+                            if(!preg_match("#[0-9]#", $new_password)){
+                                echo "Le mot de passe ne contient pas de nombre.";
+                            } elseif(!preg_match("#[A-Z]#", $new_password)){
+                                echo "Le mot de passe ne contient pas de majuscule.";
+                            } elseif(!preg_match("/[\'^£$%&*()}{@#~?><>,|=_+!-]/", $new_password)){
+                                echo "Le mot de passe ne contient pas de caractère spécial.";
+                            } elseif($new_password != $confirm_mdp){
+                                echo "Les mots de passe ne sont pas similaires.";
+                            } else {
+                                $pass_hash = password_hash($new_password, PASSWORD_DEFAULT);
+                                $anotherSQLrequest = "UPDATE utilisateur SET password = ? WHERE email = '{$email}'";
+                                $anotherSQLrequestChange = $dbh -> prepare($anotherSQLrequest);
+                                $anotherSQLrequestChange -> execute([$pass_hash]);
+                            }
+                        } else {
+                            echo "Mot de passe incorrect.";
+                        }
+
+                    }
+
+                }
+
+            ?>
+
 
 
 <?php
