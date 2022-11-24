@@ -1,58 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./asset/register.css">
-    <link rel="stylesheet" href="./asset/HeaderFooter.css">
-    <title>Inscription</title>
-</head>
-<body>
-
-<?php
-    require 'Header.inc.php';
-    session_start();
-    include ('./asset/includes/database.inc.php');
-
-    $error = false;
-    $error2 = 0;
-
-    // S'il y a une session alors on ne retourne plus sur cette page
-    if (isset($_SESSION['id'])){
-        header('Location: myaccount.php');
-        exit;
-    }
-         
-    // Si la variable "$_Post" contient des informations alors on les traitres
-    if(!empty($_POST)){
-        extract($_POST);
-        $valid = true;
-         
-        // On se place sur le bon formulaire grâce au "name" de la balise "input"
-
-        if(empty($_POST['pseudo'])){
-            $valid = false;
-            $er_pseudo = "Le Pseudo ne peut pas être vide";
-
-          // On vérifit que le pseudo est dans le bon format
-        }else{
-            // On vérifit que le pseudo est disponible
-            $DB = new PDO('mysql:host=localhost;dbname=Puissance-4;charset=utf8', 'root', 'root');
-
-            $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
-            $pseudo = $_POST['pseudo'];
-            $stmt = $DB->prepare("SELECT pseudo FROM utilisateur WHERE pseudo = ? ");
-            $stmt->execute([$pseudo]); 
-            $user1 = $stmt->fetch();
-            if ($user1) {
-                $valid=false;
-                $er_pseudo = "Le pseudo est deja utilisé";
-            }
-        }
-    ?>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./asset/register.css">
+        <link rel="stylesheet" href="./asset/HeaderFooter.css">
+        <title>Inscription</title>
+        
     </head>
     <body>
 
