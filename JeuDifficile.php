@@ -39,9 +39,9 @@ require "Header.inc.php";
     <section>
         <table class="Jeu">
              <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
+                <td><img class="cartes" src="./images/voiture png/mini 1.png" alt=""></td>
+                <td><img class="cartes" src="./images/voiture png/mini 2.png" alt=""></td>
+                <td><img class="cartes" src="./images/voiture png/mini 3.png" alt=""></td>
                 <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
                 <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
                 <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
