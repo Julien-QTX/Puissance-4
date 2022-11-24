@@ -10,9 +10,11 @@
 <body>
 
 <?php
+    
     require "Header.inc.php";
     session_start();
     include ('./asset/includes/database.inc.php');
+    
 
     if(isset($_GET['pseudo'])) {
         $getpseudo = intval($_GET['pseudo']);
@@ -69,11 +71,6 @@
                 <!--Changer son mot de passe-->
                 <section>
                     <form method="POST">
-                        <div>
-                            <h3>Modifier mon mot de passe :</h3>
-                            <label for="email"></label>
-                            <input class="formulaire" type="email" id="email" name="email" placeholder="Email" size="40" >
-                        </div>
                         <div>
                             <label for="old_password"></label>
                             <input class="formulaire" type="password" id="old_password" name="old_password" placeholder="Ancien mot de passe" size="40">
