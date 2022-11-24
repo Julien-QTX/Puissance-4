@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./asset/Profil.css">
-    <link rel="stylesheet" href="./asset/HeaderFooter.css">
     <title>Mon Espace</title>
 </head>
 <body>
@@ -39,26 +38,20 @@
 
                 <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" class="avatarFile">
 
-                <br>
-
-                <form action="" class="formprofil">
-                    <label for="oldEmail">Ancien e-mail :</label>
-                    <input type="mail" id="" name="oldmail" class=""><br>
-
-                    <label for="newEmail">Nouvel e-mail :</label>
-                    <input type="mail" id="" name="newmail" class=""><br>
-
-                    <label for="oldMDP">Ancien Mot de passe :</label>
-                    <input type="password" id="" name="oldMDP" class=""><br>
-
-                    <label for="newMDP">Nouveaux Mot de passe :</label>
-                    <input type="password" id="" name="newMDP" class=""><br>
-
-                    <button>Enregistrer</button>
-                </form>
-                
+                <br> 
             </div>
+
+            
         </div>
+
+        
+           
+
+            
+                
+                   
+
+        
 
         <div class="Score">
             <h1 class="Titre">Meilleur Scores</h1>
@@ -124,21 +117,76 @@
                     <td>3</td>
                     <td>4</td>
                 </tr>
+                
             </table>
             <ul>
-                
-                
                     <li>
                         <a href="logout.php">
                             Se deconnecter
                         </a>
                     </li>
-            </ul>   
+                </ul> 
+                
+            
         </div>
 
     </div>
+            <div class="mod">
 
-</div>        
+                <!--Changer son adresse email-->
+                <section >
+                    <form method="POST">
+                        <div>
+                            <h3>Modifier mon adresse email :</h3>
+                            <label for="old_email"></label>
+                            <input class="formulaire" type="email" id="old_email" name="old_email" placeholder="Ancien email" size="40" >
+                        </div>
+                        <div >
+                            <label for="new_email"></label>
+                            <input class="formulaire" type="email" id="new_email" name="new_email" placeholder="Nouvel email" size="40" >
+                        </div>
+                        <div >
+                            <label for="password"></label>
+                            <input class="formulaire" type="password" id="password" name="password" placeholder="Mot de passe" size="40">
+                        </div>
+                        <div class="submitt">
+                            <button type="submit" name="mai">Changer l'email</button>
+                        </div>
+                    </form>
+                </section>
+
+                  
+        
+                <!--Changer son mot de passe-->
+                <section>
+                    <form method="POST">
+                        <div>
+                            <h3>Modifier mon mot de passe :</h3>
+                            <label for="email"></label>
+                            <input class="formulaire" type="email" id="email" name="email" placeholder="Email" size="40" >
+                        </div>
+                        <div>
+                            <label for="old_password"></label>
+                            <input class="formulaire" type="password" id="old_password" name="old_password" placeholder="Ancien mot de passe" size="40">
+                        </div>
+                        <div>
+                            <label for="new_password"></label>
+                            <input class="formulaire" type="password" id="new_password" name="new_password" placeholder="Nouveau mot de passe" size="40">
+                        </div>
+                        <div>
+                            <label for="confirm_password"></label>
+                            <input class="formulaire" type="password" id="confirm_password" name="confirm_password" placeholder="Confirmez le mot de passe"size="40">
+                        </div>
+                        <div class="submitt">
+                        <button type="submit" name="pass">Changer le mot de passe</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+
+</div> 
+
 
 <?php
     require "Footer.inc.php"
