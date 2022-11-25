@@ -140,7 +140,7 @@
             ?>
 
             
-            <div class="container">
+            <div>
                 <form method="post" action="#">
                     <?php
 
@@ -170,9 +170,10 @@
                         <?php
                     }
                     ?>
-
-                    <label for="mdp">Mot de passe : </label>
-                    <div class="field">
+                       
+                    <label for="mdp">Mot de passe : </label> 
+                    
+                    <div>
                         <input onkeyup="trigger()" class="password" type="password"  placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
                         
                     </div>
@@ -181,7 +182,8 @@
                         <span class="medium"></span>
                         <span class="strong"></span>
                     </div>
-                    <div class="text"> ton password est trop faible</div>
+                    <div class="text"></div>
+
                     <label for="confmdp">Confirmer votre mot de passe : </label>
                     <input class="password" type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
                     
@@ -202,45 +204,43 @@
                 
                 let regExpWeak = /[a-z]/;
                 let regExpMedium = /\d+/;
-                let regExpStrong = /.[!,@,$,^,&,*,?,_,~,‑,(,)]./;
+                let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
 
                 function trigger(){
                     if(input.value != ""){
-                       indicator.style.display = "block"; 
-                       indicator.style.display = "flex";
-                       if(input.value.lenght <= 3 && (input.value.match(regExpWeak) || input.value.match(regExpMedium) || input.value.match(regExpStrong)))no=1;
-                       if(input.value.lenght >= 6 && ((input.value.match(regExpWeak) && input.value.match(regExpMedium)) || (input.value.match(regExpMedium) && input.value.match(reExpStrong)) || (input.value.match(reExpWeak) && input.value.match(reExpStrong))))no=2;
-                       if(input.value.lenght >= 6 && input.value.match(regExpWeak) && input.value.match(regExpMedium) && input.value.match(regExpStrong))no=3;
-                       if( no == 1){
-                        weak.classlist.add("active");
+                        indicator.style.display = "block";
+                        indicator.style.display = "flex";
+                        if(input.value.length <= 3 && (input.value.match(regExpWeak) || input.value.match(regExpMedium) || input.value.match(regExpStrong)))no=1;
+                        if(input.value.length >= 6 && ((input.value.match(regExpWeak) && input.value.match(regExpMedium)) || (input.value.match(regExpMedium) && input.value.match(regExpStrong)) || (input.value.match(regExpWeak) && input.value.match(regExpStrong))))no=2;
+                        if(input.value.length >= 6 && input.value.match(regExpWeak) && input.value.match(regExpMedium) && input.value.match(regExpStrong))no=3;
+                        if(no==1){
+                        weak.classList.add("active");
                         text.style.display = "block";
-                        text.textContent = " ton mot de passe est trop faible";
-                        text.classlist.add("weak");
-                       }
-                       if( no == 2){
-                        medium.classlist.add("active");
-                        text.textContent = " ton mot de passe est moyen";
-                        text.classlist.add("medium");
-                       }else{
-                        medium.classlist.remove("active");
-                        text.classlist.remove("medium");
-
-                       }
-                       if( no == 3){
-                        medium.classlist.add("active");
-                        strong.classlist.add("active");
-                        text.textContent = " ton mot de passe est fort";
-                        text.classlist.add("strong");
-                       }else{
-                        strong.classlist.remove("active");
-                        text.classlist.remove("strong");
-
-                       }
-
-                    }else{
+                        text.textContent = "Your password is too week";
+                        text.classList.add("weak");
+                        }
+                        if(no==2){
+                        medium.classList.add("active");
+                        text.textContent = "Your password is medium";
+                        text.classList.add("medium");
+                        }else{
+                        medium.classList.remove("active");
+                        text.classList.remove("medium");
+                        }
+                        if(no==3){
+                        weak.classList.add("active");
+                        medium.classList.add("active");
+                        strong.classList.add("active");
+                        text.textContent = "Your password is strong";
+                        text.classList.add("strong");
+                        }else{
+                        strong.classList.remove("active");
+                        text.classList.remove("strong");
+                        }
+                        }else{
                         indicator.style.display = "none";
                         text.style.display = "none";
-
+                        
                     }
                 }
             </script>
