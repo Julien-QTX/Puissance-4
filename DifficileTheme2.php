@@ -10,6 +10,7 @@
 <body>
 
 <?php
+$titre='Difficile';
 require "Header.inc.php";
 ?>
 

@@ -10,6 +10,7 @@
 <body>
 
 <?php
+$titre='Intermédiaire';
 require "Header.inc.php";
 ?>
 <div class="container">

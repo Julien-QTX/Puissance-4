@@ -10,6 +10,7 @@
 <body>
 
 <?php
+    $titre='Scores';
     require "Header.inc.php";
     require './asset/includes/database.inc.php';
 ?>

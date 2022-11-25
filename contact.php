@@ -10,8 +10,10 @@
 <body>
 
 <?php
+$titre='Contact';
 require "Header.inc.php";
 include ('./asset/includes/database.inc.php');
+
 ?>
 
 <div class="container">

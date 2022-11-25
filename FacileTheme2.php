@@ -10,6 +10,7 @@
 <body>
 
 <?php
+$titre='Facile';
 require "Header.inc.php";
 ?>
 
@@ -89,8 +90,8 @@ require 'Footer.inc.php'
 ?>
 <script>
 var nb_clics = 0;
-var mimi1 = "";
-var mimi2 = "";
+var mini1 = "";
+var mini2 = "";
 var case1 = "";
 var case2 = "";
 var img_ok = 0;

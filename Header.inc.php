@@ -18,7 +18,7 @@
     <div class="banniere">
         <img class="Banniere" src="./asset/images/banniere.png" alt="">
         <div class="text">
-        <h1><?php     ?></h1>
+        <h1><?php echo $titre; ?></h1>
         </div>
     </div>
 </header>

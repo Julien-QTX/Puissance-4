@@ -10,6 +10,7 @@
 <body>
 
 <?php
+$titre='Connexion';
 require "Header.inc.php";
 session_start();
 include ('asset/includes/database.inc.php');

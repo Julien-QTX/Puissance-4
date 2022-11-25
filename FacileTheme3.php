@@ -10,6 +10,7 @@
 <body>
 
 <?php
+$titre='Facile';
 require "Header.inc.php";
 ?>
 
@@ -90,8 +91,8 @@ require 'Footer.inc.php'
 </body>
 <script>
 var nb_clics = 0;
-var mimi1 = "";
-var mimi2 = "";
+var mini1 = "";
+var mini2 = "";
 var case1 = "";
 var case2 = "";
 var img_ok = 0;
@@ -125,7 +126,7 @@ function generation()
             else
             {
                 nb_img = Math.floor((nb_alea+1)/2); //8 paires pour 16 places ==> 2 générations différentes par image
-                document.getElementById('case' + i).innerHTML = "<img style='cursor:pointer;width:100%' id='img " + i + "' src='./asset/images/middle/middle " + nb_img + ".png' onClick='verifier(\"img " + i + "\", \"middle " + nb_img + "\")' alt='' />";
+                document.getElementById('case' + i).innerHTML = "<img style='cursor:pointer;width:100%' id='img " + i + "' src='asset/images/middle/middle " + nb_img + ".png' onClick='verifier(\"img " + i + "\", \"middle " + nb_img + "\")' alt='' />";
                 chaine += "-" + nb_alea + "-";
                 test=false;
             }			

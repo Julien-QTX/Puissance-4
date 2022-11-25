@@ -10,6 +10,7 @@
 <body>
 
 <?php
+$titre='Profile';
     require "Header.inc.php";
     session_start();
     include ('./asset/includes/database.inc.php');
@@ -25,7 +26,7 @@
 ?>
 <div class="container">
 
-    <h1 class="Titre">Bienvenue <?php echo "." ?> Julien</h1>
+    <h1 class="Titre">Bienvenue <?php echo "." ?></h1>
 
     <div class="AvaScore">
 
