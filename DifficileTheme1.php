@@ -38,8 +38,6 @@ require "Header.inc.php";
                 </tr>
             </table>
         </div>
-       
-
 
     </article>
 
@@ -69,7 +67,7 @@ require "Header.inc.php";
         </form>
     </div>
     </section>    
-    <script src="js/app.js"></script>
+    <script src="./asset/JS/app.js"></script>
 
     <div class="div_conteneur_parent">
 						
@@ -248,6 +246,7 @@ require "Header.inc.php";
 		</div>
 	</div>
 </div>
+
 <?php
 require 'Footer.inc.php'
 ?>

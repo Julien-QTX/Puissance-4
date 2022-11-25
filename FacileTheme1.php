@@ -44,6 +44,33 @@ require "Header.inc.php";
 
     </article>
 
+    <section class="chat">
+    <div class="messages">
+        <div class="message">
+            <span class="date">23:22</span>
+            <span class="author">Bastien</span>
+            <span class="content">Salut !</span>
+        </div>
+        <div class="message">
+            <span class="date">23:24</span>
+            <span class="author">Thomas</span>
+            <span class="content">Ca va ?</span>
+        </div>
+        <div class="message">
+            <span class="date">23:26</span>
+            <span class="author">Bastien</span>
+            <span class="content">Oui et toi ?</span>
+        </div>
+    </div>
+    <div class="user-inputs">
+        <form action="handler.php?task=write" method="POST">
+            <input type="text" name="author" id="author" placeholder="Pseudo ?"> 
+            <input type="text" name="content" placeholder="Tape ton message ici...">
+            <button type="submit">Envoyer !</button>
+        </form>
+    </div>
+    </section>    
+    <script src="./asset/JS/app.js"></script>
 
     <div class="div_conteneur_parent">
 						

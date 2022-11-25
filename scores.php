@@ -22,8 +22,8 @@
                 <tr>
                     <td>Nom du jeu</td>
                     <td> pseudo du joueur</td>
-                    <td> Niveau de difficulté</td>
                     <td>score du joueur </td>
+                    <td> Niveau de difficulté</td>
                     <td> date/heure</td>        
                 </tr>
             
