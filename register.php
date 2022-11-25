@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./asset/register.css">
-        <link rel="stylesheet" href="./asset/HeaderFooter.css">
+        
         <title>Inscription</title>
        
         
@@ -199,15 +199,26 @@
                 const medium = document.querySelector(".medium");
                 const strong = document.querySelector(".strong");
                 const text = document.querySelector(".text");
-                let regExWeak = /[a-z]/;
-                let regExMedium = /\d+/;
-                let regExStrong = /.[!,@,$,^,&,*,?,_,~,‑,(,)]./;
-                function trigger(){~
+                let regExpWeak = /[a-z]/;
+                let regExpMedium = /\d+/;
+                let regExpStrong = /.[!,@,$,^,&,*,?,_,~,‑,(,)]./;
+
+                function trigger(){
                     if(input.value != ""){
                        indicator.style.display = "block"; 
                        indicator.style.display = "flex";
+                       if(input.value.lenght <= 3 && (input.value.match(regExpWeak) || input.value.match(regExpMedium) || input.value.match(regExpStrong)))no=1;
+                       if(input.value.lenght >= 6 && ((input.value.match(regExpWeak) && input.value.match(regExpMedium)) || (input.value.match(regExpMedium) && input.value.match(reExpStrong)) || (input.value.match(reExpWeak) && input.value.match(reExpStrong))))no=2;
+                       if(input.value.lenght >= 6 && input.value.match(regExpWeak) && input.value.match(regExpMedium) && input.value.match(regExpStrong))no=3;
+                       if( no == 1){
+                        weak.classlist.add("active");
+                        text.style.display = "block";
+                        text.textContent = " ton mot de passe est trop faible";
+                        text.classlist.add("weak");
+                       }
                     }else{
                         indicator.style.display = "none";
+                        text.style.display = "none";
 
                     }
                 }
