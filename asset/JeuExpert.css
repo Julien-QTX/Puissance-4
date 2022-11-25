@@ -1,0 +1,134 @@
+/* Body Jeux */
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.arti{
+    margin: 5vh auto 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.NiveauJeu{
+    text-decoration: none;
+    color: black;
+}
+
+.lvl{
+    width: 33%;
+}
+
+#grille
+{
+	width:100%;
+	float:left;
+	text-align:center;
+	border:#333 1px solid;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+	padding-left:10px;
+}
+
+.bouton
+{
+	 width:270px;
+	 height:30px;
+	 font-weight:bold;
+     color: #EDEEEE;
+	 font-weight:bold;
+	border:#333 1px solid;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;	 
+     background: #444;
+     background: linear-gradient( #555, #2C2C2C);
+	 text-shadow: 0px 1px 0px white;
+	 text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.4);
+     box-shadow: 0 0 10px rgba( 0, 0, 0, 0.8),
+                 0 -1px 0 rgba( 255, 255, 255, 0.6);	
+	
+	box-shadow: 2px 2px 0px #aaa;
+	font-size:20px;
+	text-align:center;	
+	padding-left:0px;
+	margin:20px;
+}
+
+.bouton:hover
+{
+	cursor:pointer;
+	box-shadow: 6px 6px 0px #aaa;
+}
+
+.btn
+{
+	width:185px;
+	height:55px;
+	text-align:center;
+	padding:0px;
+	margin:0px;
+	border:#333 1px solid;
+	border-radius: 5px;
+	background: #444;
+	background: linear-gradient( #555, #2C2C2C);
+	text-shadow: 0px 1px 0px white;
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.4);
+	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.8),
+			 0 -1px 0 rgba( 255, 255, 255, 0.6);	
+	
+	box-shadow: 2px 2px 0px #aaa;	
+	margin:5px;
+	font-size:20px;
+	color:#ccccff;
+}
+
+.btn:hover
+{
+	cursor:pointer;
+	box-shadow: 6px 6px 0px #aaa;
+}
+
+.case
+{
+	width:35px;
+	float:left;
+	height:35px;
+	text-align:center;
+	padding:0px;
+	margin:0px;
+	border:#333 1px solid;
+	border-radius: 5px;
+     background: #CCC;
+     background: linear-gradient( #CCC, #FFF);
+	 text-shadow: 0px 1px 0px white;
+	 text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.4);
+     box-shadow: 0 0 10px rgba( 0, 0, 0, 0.8),
+                 0 -1px 0 rgba( 255, 255, 255, 0.6);	
+	
+	box-shadow: 2px 2px 0px #aaa;	
+	margin:2px;
+}
+
+.colonne
+{
+	float:left;
+	height:auto;
+	text-align:center;
+	border:#333 1px solid;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;	
+	background-color:#EDEEEE;
+	background:rgba(100,100,100,.1);
+	color:#66666;
+	font-weight:bold;
+	font-size:20px;
+	padding-top:16px;
+}
+
+.div_conteneur_parent
+{
+	width:100%;
+	height:auto;
+	text-align:center;
+}

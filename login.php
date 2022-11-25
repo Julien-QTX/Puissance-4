@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./asset/login.css">
-    <link rel="stylesheet" href="./asset/HeaderFooter.css">
     <title>Connexion</title>
 </head>
 <body>
@@ -13,7 +12,7 @@
 <?php
 require "Header.inc.php";
 session_start();
-include ('./asset/includes/database.inc.php');
+include ('asset/includes/database.inc.php');
 
 if (isset($_SESSION['id'])){
     header('Location: JeuFacile.php');
@@ -75,7 +74,7 @@ if(!empty($_POST)){
             $stmt->execute([$mdp]); 
             $user2 = $stmt->fetch();
             if (!$user2) {
-                $valid = false;
+                $valid = false; 
 
                 $er_mdp = "le mot de passe est mauvais";
             }
