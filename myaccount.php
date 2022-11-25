@@ -50,7 +50,7 @@
                         <div>
                             <h3>Modifier mon adresse email :</h3>
                             <label for="old_email"></label>
-                            <input class="formulaire" type="email" id="old_email" name="old_email" placeholder="Ancien email" size="40" >
+                            <input class="formulaire" type="email" id="old_email" name="old_email" placeholder="Email actuel" size="40" >
                         </div>
                         <div >
                             <label for="new_email"></label>
@@ -71,9 +71,15 @@
                 <!--Changer son mot de passe-->
                 <section>
                     <form method="POST">
+                    <div>
+                            <h3>Modifier mon mot de passe :</h3>
+                            <label for="email"></label>
+                            <input class="formulaire" type="email" id="email" name="email" placeholder="Email" size="40">
+                        </div>
+                            
                         <div>
                             <label for="old_password"></label>
-                            <input class="formulaire" type="password" id="old_password" name="old_password" placeholder="Ancien mot de passe" size="40">
+                            <input class="formulaire" type="password" id="old_password" name="old_password" placeholder=" Mot de passe actuel" size="40">
                         </div>
                         <div>
                             <label for="new_password"></label>
@@ -95,10 +101,10 @@
 
 <?php
 
-                //la verifications des informations saisie par l'utilisateur
+                //la verif des informations saisie par l'utilisateur
                 if(isset($_POST["submit_email"])){
 
-                    //mes variables qui contiennent mes informations $_POST
+                    //mes variables 
                     $old_email = filter_var($_POST["old_email"], FILTER_SANITIZE_EMAIL);
                     $new_email = filter_var($_POST["new_email"], FILTER_SANITIZE_EMAIL);
                     $mdp = $_POST["password"];

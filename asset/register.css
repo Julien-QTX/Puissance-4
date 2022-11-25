@@ -71,13 +71,13 @@ form .indicator span:before{
     border-radius: 5px;
   }
 
-.indicator span.weak:before{
+.indicator span.active.weak:before{
     background-color: #ff4757;
   }
-  .indicator span.medium:before{
+  .indicator span.active.medium:before{
     background-color: orange;
   }
-  .indicator span.strong:before{
+  .indicator span.active.strong:before{
     background-color: #23ad5c;
   }
 
