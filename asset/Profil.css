@@ -1,0 +1,46 @@
+.container{
+    width: 100%;
+    justify-content: center;
+    
+   
+}
+.Titre{
+    text-align: center;
+    margin: 3vh auto;
+}
+
+
+.deco{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1%;
+
+}
+
+form{
+    width: 40%;
+    margin: 5vh auto;
+}
+
+.formulaire{
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 0 0 2vh 0;
+}
+
+.submitt{
+    margin: auto;
+    width: 50%;
+}
+
+div button{
+    font-weight: bold;
+    color: #eee;
+    background-color: #e67e22;
+    width: 100%;
+    margin : 1vh 0 0 0;
+    padding: 10px;
+    border-radius: 12px;
+}
