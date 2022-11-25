@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./asset/Jeu.css">
+    <link rel="stylesheet" href="./asset/JeuFacile.css">
     <title>Facile</title>
 </head>
 <body>
@@ -30,65 +30,69 @@ require "Header.inc.php";
                 </tr>
             </table>
         </div>
+		<div>
+            <p>Différent thème</p>
+            <table>
+                <tr class="theme">
+                    <th><a href="asset/FacileTheme1.js"></a> thème 1</th>
+                    <th><a href="asset/FacileTheme2.js"></a> thème 2</th>
+                    <th><a href="asset/FacileTheme3.js"></a> thème 3</th>
 
-        
-        <form name="chronoForm" class="Chronometre">
-            <input type="text"  name="startstop" name="chronotime" id="chronotime" value="00:00"/>
-        </form>
-    
-        
+                   
+                </tr>
+            </table>
+        </div>
 
     </article>
 
-    <section>
 
-        <table class="Jeu">
+    <div class="div_conteneur_parent">
+						
+		<div style="width:800px;display:inline-block;" id="conteneur">
+		
+		
+			<div class="colonne" id="liste">
 
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 2 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Metal.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Helice.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 3 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Helice.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 4 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Metal.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 5 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Metal.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
+				Vous avez trois minutes,<br />soit <span style="color:#CC3300;">180 secondes :</span><br /><br />
+				<span style="font-size:18px;font-weight:normal;">Votre score :<br />
+				<div id="score" style="font-size:30px;"><strong>10</strong>/10</div>
+				<br />
+				<div id="temps" style="font-size:20px;"></div>
+				<input type="button" class="btn" value="Nouvelle partie" onClick="window.location.reload()"/>
+				</span>
+				<br /><br />
+				<div id="grille">
+				<div class="case" id="case0"></div>
+				<div class="case" id="case1"></div>
+				<div class="case" id="case2"></div>
+				<div class="case" id="case3"></div>
+				
+				<div class="case" id="case4"></div>
+				<div class="case" id="case5"></div>
+				<div class="case" id="case6"></div>
+				<div class="case" id="case7"></div>
+				
+				<div class="case" id="case8"></div>
+				<div class="case" id="case9"></div>
+				<div class="case" id="case10"></div>
+				<div class="case" id="case11"></div>
+				
+				<div class="case" id="case12"></div>
+				<div class="case" id="case13"></div>
+				<div class="case" id="case14"></div>
+				<div class="case" id="case15"></div>
+				</div>
+				
+			</div>				
+			
+		</div>
+			
+	
+	</div>
+    
 
-        </table>
-
-    </section>
 </div>
-<script src="./tchat.js"></script>
+
 <?php
 require 'Footer.inc.php'
 ?>
