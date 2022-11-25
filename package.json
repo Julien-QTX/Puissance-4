@@ -1,0 +1,22 @@
+{
+  "name": "socket-app-chat",
+  "version": "1.0.0",
+  "description": "chat app",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julien-QTX/Puissance-4.git"
+  },
+  "author": "bastien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Julien-QTX/Puissance-4/issues"
+  },
+  "homepage": "https://github.com/Julien-QTX/Puissance-4#readme"
+}

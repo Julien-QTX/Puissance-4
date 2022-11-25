@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./asset/Jeu.css">
+    <link rel="stylesheet" href="stylefacile.css" />
+     <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
     <title>Facile</title>
 </head>
 <body>
@@ -51,55 +54,26 @@ require "Header.inc.php";
             }, 1000)
         </script>
 
+
     </article>
 
-    <section>
+    <div class="wrapper">
+        <div class="stats-container">
+            <div id="moves-count"></div>
+            <div id="time"></div>
+        </div>
+        <div class="game-container"></div>
+        <button id="stop" class="hide">Stop Game</button>
+    </div>
+    <div class="controls-container">
+      <p id="result"></p>
+      <button id="start">Start Game</button>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
 
-        <table class="Jeu">
 
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 2 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Metal.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Helice.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 3 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Rouge.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Helice.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Bleu.jpg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 4 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Metal.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
-            <!-- 5 -->
-            <tr>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Metal.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Fantome.png" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-                <td><img class="cartes" src="./images/Champignon Dorer.jpeg" alt=""></td>
-            </tr>
 
-        </table>
-
-    </section>
 </div>
 <?php
 require 'Footer.inc.php'
