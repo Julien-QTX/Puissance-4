@@ -30,7 +30,7 @@ div button{
 
 /* barre mdp */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -44,22 +44,24 @@ form .indicator{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    display: none;
+    
+    
   }
 
 
 form .indicator span{
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: lightgrey;
-  border-radius: 5px;
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: lightgrey;
+    border-radius: 5px;
 }
 
 form .indicator span:nth-child(2){
     margin: 0 3px;
   }
-form .indicator span.active:before{
+form .indicator span:before{
     position: absolute;
     content: '';
     top: 0;
@@ -82,8 +84,8 @@ form .indicator span.active:before{
 form .text{
     font-size: 20px;
     font-weight: 500;
-    display: none;
     margin-bottom: -10px;
+    
   }
   form .text.weak{
     color: #ff4757;
