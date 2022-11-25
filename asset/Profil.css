@@ -1,72 +1,37 @@
 .container{
     width: 100%;
+    justify-content: center;
+    
    
 }
-
 .Titre{
     text-align: center;
     margin: 3vh auto;
 }
 
-.AvaScore{
+
+.deco{
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
+    margin: 1%;
+
 }
 
-.Score{
-    width: 100%;
-}
-
-table{
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
-}
-
-th, td{
-    border: 2.1px solid rgb(166, 161, 161) ;
-    text-align: center;
-}
-
-.AvaPro{
-    width: 80%;
+form{
+    width: 40%;
     margin: 5vh auto;
 }
 
-.Avatar{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-
-}
-
-
-
-.avatarFile{
-    width: 100%;
-}
-
-
-
-form{
-    width: 70%;
-    margin: 4vh auto;
-}
-
-.mod{
-    background-color: #2a3858;
-
-}
-
 .formulaire{
-    width: 50%;
+    width: 100%;
     margin-bottom: 32px;
-    padding: 7px;
+    padding: 10px;
     border-radius: 12px;
-    margin: 0 0 1vh 0;
+    margin: 0 0 2vh 0;
 }
 
 .submitt{
+    margin: auto;
     width: 50%;
 }
 
@@ -75,7 +40,7 @@ div button{
     color: #eee;
     background-color: #e67e22;
     width: 100%;
-    margin : 2vh 0 0 0;
-    padding: 8px;
+    margin : 1vh 0 0 0;
+    padding: 10px;
     border-radius: 12px;
 }

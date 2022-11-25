@@ -27,3 +27,72 @@ div button{
     padding: 10px;
     border-radius: 12px;
 }
+
+/* barre mdp */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+form .indicator{
+    height: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+  }
+
+
+form .indicator span{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: lightgrey;
+    border-radius: 5px;
+}
+
+form .indicator span:nth-child(2){
+    margin: 0 3px;
+  }
+form .indicator span:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+.indicator span.active.weak:before{
+    background-color: #ff4757;
+  }
+  .indicator span.active.medium:before{
+    background-color: orange;
+  }
+  .indicator span.active.strong:before{
+    background-color: #23ad5c;
+  }
+
+form .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: -10px;
+    
+  }
+  form .text.weak{
+    color: #ff4757;
+  }
+  form .text.medium{
+    color: orange;
+  }
+  form .text.strong{
+    color: #23ad5c;
+  }
