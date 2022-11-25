@@ -28,6 +28,18 @@ require "Header.inc.php";
                 </tr>
             </table>
         </div>
+        <div>
+            <p>Différent thème</p>
+            <table>
+                <tr class="theme">
+                    <th><a href="asset/ExpertTheme1.js"></a> thème 1</th>
+                    <th><a href="asset/ExpertTheme2.js"></a> thème 2</th>
+                    <th><a href="asset/ExpertTheme3.js"></a> thème 3</th>
+
+                   
+                </tr>
+            </table>
+        </div>
 
     </article>
 
