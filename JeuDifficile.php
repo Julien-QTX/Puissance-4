@@ -57,7 +57,7 @@ require "Header.inc.php";
 				<div id="score" style="font-size:30px;"><strong>10</strong>/10</div>
 				<br />
 				<div id="temps" style="font-size:20px;"></div>
-				<input type="button" class="btn" value="Nouvelle partie" onClick="window.location.reload()"/>
+				<input type="button" class="btn" value="Nouvelle partie" onClick="window.location.reload()" href="index.php"/>
 				</span>
                 <br /><br />
 				<div id="grille">
