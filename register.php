@@ -199,6 +199,7 @@
                 const medium = document.querySelector(".medium");
                 const strong = document.querySelector(".strong");
                 const text = document.querySelector(".text");
+                
                 let regExpWeak = /[a-z]/;
                 let regExpMedium = /\d+/;
                 let regExpStrong = /.[!,@,$,^,&,*,?,_,~,‑,(,)]./;
@@ -216,6 +217,26 @@
                         text.textContent = " ton mot de passe est trop faible";
                         text.classlist.add("weak");
                        }
+                       if( no == 2){
+                        medium.classlist.add("active");
+                        text.textContent = " ton mot de passe est moyen";
+                        text.classlist.add("medium");
+                       }else{
+                        medium.classlist.remove("active");
+                        text.classlist.remove("medium");
+
+                       }
+                       if( no == 3){
+                        medium.classlist.add("active");
+                        strong.classlist.add("active");
+                        text.textContent = " ton mot de passe est fort";
+                        text.classlist.add("strong");
+                       }else{
+                        strong.classlist.remove("active");
+                        text.classlist.remove("strong");
+
+                       }
+
                     }else{
                         indicator.style.display = "none";
                         text.style.display = "none";
