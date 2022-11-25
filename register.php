@@ -140,47 +140,78 @@
             ?>
 
             
-            
-            <form method="post">
-                <?php
-
-                if (isset($er_pseudo)){
-                    ?>
-                    <div><?= $er_pseudo ?></div>
+            <div class="container">
+                <form method="post" action="#">
                     <?php
-                }
-                ?>
-                <label for="pseudo">Pseudo : </label>
-                <input class="pseudo" pattern=".{4,}" type="text" placeholder="Votre pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
-                <?php
 
-                if (isset($er_mail)){
+                    if (isset($er_pseudo)){
+                        ?>
+                        <div><?= $er_pseudo ?></div>
+                        <?php
+                    }
                     ?>
-                    <div><?= $er_mail ?></div>
+                    <label for="pseudo">Pseudo : </label>
+                    <input class="pseudo" pattern=".{4,}" type="text" placeholder="Votre pseudo" name="pseudo" value="<?php if(isset($pseudo)){ echo $pseudo; }?>" required>
                     <?php
-                }
-                ?>
-                <label for="email">Email</label>
-                <input class="email" type="email" placeholder="Adresse email" name="mail" value="<?php if(isset($email)){ echo $email; }?>" required>
-                <?php
 
-                if (isset($er_mdp)){
+                    if (isset($er_mail)){
+                        ?>
+                        <div><?= $er_mail ?></div>
+                        <?php
+                    }
                     ?>
-                    <div><?= $er_mdp ?></div>
+                    <label for="email">Email</label>
+                    <input class="email" type="email" placeholder="Adresse email" name="mail" value="<?php if(isset($email)){ echo $email; }?>" required>
                     <?php
-                }
-                ?>
-                <label for="mdp">Mot de passe : </label>
-                <input class="password" type="password"  placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
-                <label for="confmdp">Confirmer votre mot de passe : </label>
-                <input class="password" type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
-                
-                <div class="submitt">
-                    <button type="submit" name="Inscription">Envoyer</button>
-                </div>
-                
-            </form>
 
+                    if (isset($er_mdp)){
+                        ?>
+                        <div><?= $er_mdp ?></div>
+                        <?php
+                    }
+                    ?>
+
+                    <label for="mdp">Mot de passe : </label>
+                    <div class="field">
+                        <input onkeyup="trigger()" class="password" type="password"  placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+                        
+                    </div>
+                    <div class="indicator">
+                        <span class="weak"></span>
+                        <span class="medium"></span>
+                        <span class="strong"></span>
+                    </div>
+                    <div class="text"> ton password est trop faible</div>
+                    <label for="confmdp">Confirmer votre mot de passe : </label>
+                    <input class="password" type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
+                    
+                    <div class="submitt">
+                        <button type="submit" name="Inscription">Envoyer</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <script>
+                const indicator = document.querySelector(".indicator");
+                const input = document.querySelector("input");
+                const weak = document.querySelector(".weak");
+                const medium = document.querySelector(".medium");
+                const strong = document.querySelector(".strong");
+                const text = document.querySelector(".text");
+                let regExWeak = /[a-z]/;
+                let regExMedium = /\d+/;
+                let regExStrong = /.[!,@,$,^,&,*,?,_,~,‑,(,)]./;
+                function trigger(){~
+                    if(input.value != ""){
+                       indicator.style.display = "block"; 
+                       indicator.style.display = "flex";
+                    }else{
+                        indicator.style.display = "none";
+
+                    }
+                }
+            </script>
             
 
            
