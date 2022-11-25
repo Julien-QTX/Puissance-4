@@ -70,17 +70,10 @@ require "Header.inc.php";
 				<div class="case" id="case14"></div>
 				<div class="case" id="case15"></div>
 				</div>
-				
 			</div>				
-			
 		</div>
-			
-	
 	</div>
-    
-
 </div>
-
 <?php
 require 'Footer.inc.php'
 ?>
