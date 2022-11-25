@@ -132,3 +132,56 @@
 	height:auto;
 	text-align:center;
 }
+
+.messages {
+	background: rgba(28, 23, 72, 0.8);
+	border-radius: 5px;
+	padding: 1em;
+	height: 50vh;
+	overflow: auto;
+  }
+  
+  .message {
+	color: white;
+	padding: 0.3em;
+  }
+  
+  .date, .author {
+	font-weight: bold;
+  }
+  
+  form {
+	display: flex;
+	margin-top: 1em;
+	justify-content: space-between;
+  }
+  
+  input, button {
+	padding: 0.5em;
+  }
+  
+  input {
+	margin-right: 10px;
+  }
+  
+  #author {
+	width: 20%;
+  }
+  
+  #content {
+	width: 60%;
+  }
+  
+  button[type="submit"]{
+	width: 20%;
+  }
+ 
+  section.chat { 
+   width: 15%;
+   border: solid;
+   background-color: #4a10d2;
+   position: fixed;
+   margin: 25px;
+   bottom: 0%;
+   right: 0%;
+  }
