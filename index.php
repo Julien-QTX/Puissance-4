@@ -68,18 +68,18 @@ require 'HeaderIndex.php'
         <div class = "carres">
             <div class="Haut">
                 <div class = carrerouge>
-                    <h2 class="H2i">310 Parties Jouées</h2>
+                    <h2 class="H2i">21 Parties Jouées</h2>
                 </div>
                 <div class = carrevert>
-                    <h2 class="H2i">1020 Joueurs connectés</h2>
+                    <h2 class="H2i">X Joueurs connectés</h2>
                 </div>
             </div>
             <div class="Bas">
                 <div class = carreorange>
-                    <h2 class="H2i">10 sec Temps Record</h2>
+                    <h2 class="H2i">30 sec Temps Record</h2>
                 </div>
                 <div class = carrebleu>
-                    <h2 class="H2i">21 300 Joueurs inscrits</h2>
+                    <h2 class="H2i">5 Joueurs inscrits</h2>
                 </div>
             </div>
         </div>
@@ -92,7 +92,7 @@ require 'HeaderIndex.php'
     
         <div class="boxequipe">
             <div class = boxequipeT>
-                <img class = "pdp" src="./asset/images/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/Bastien.png" alt="" width="60%">
                 <h2 class="nom">Bastien</h2> 
                 <p>Games Developer</p>
                 <div class = icone>
@@ -103,7 +103,7 @@ require 'HeaderIndex.php'
             </div>    
             
             <div class = boxequipeT>
-                <img class = "pdp" src="./asset/images/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/Adam.png" alt="" width="60%">
                 <h2 class="nom">Adam</h2>
                 <p>Games Designer</p>
                 <div class="icone">
@@ -114,7 +114,7 @@ require 'HeaderIndex.php'
             </div>
 
             <div class = boxequipeT>
-                <img class = "pdp" src="./asset/images/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/Guillaume.png" alt="" width="60%">
                 <h2 class="nom">Guillaume</h2>
                 <p>Games Developer</p>
                 <div class="icone">
@@ -125,7 +125,7 @@ require 'HeaderIndex.php'
             </div>
 
             <div class = boxequipeT>
-                <img class = "pdp" src="./asset/images/photocontact.png" alt="" width="60%">
+                <img class = "pdp" src="./asset/images/Julien.png" alt="" width="60%">
                 <h2 class="nom">Julien</h2>
                 <p>Games Developer</p>
                 <div class="icone">

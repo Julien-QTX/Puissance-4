@@ -23,7 +23,7 @@
         <h1 class="H1">BIENVENUE DANS <br> NOTRE STUDIO !</h1>
         <h3 class="H3">Venez challenger les cerveaux les plus agiles !</h3>
         <br>
-        <a class="boutonjouer" href="JeuFacile.php">Jouer !</a>
+        <a class="boutonjouer" href="FacileTheme1.php">Jouer !</a>
     </div>
 
 </header>

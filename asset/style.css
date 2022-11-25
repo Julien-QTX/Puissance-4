@@ -136,6 +136,8 @@ body {
 
 .pdp {
     margin: 30px 0;
+    border-radius: 50%;
+    height: 17vh;
 }
 
 .icone {
