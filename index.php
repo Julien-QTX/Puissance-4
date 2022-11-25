@@ -68,11 +68,10 @@ require 'HeaderIndex.php'
         <div class = "carres">
             <div class="Haut">
                 <div class = carrerouge>
-                    <h2 class="H2i">Partie joué</h2>
+                    <h2 class="H2i"> 21 Partie joué</h2>
                    <div class="partiJoué">
                    <?php
                     $part = 0;
-                    echo "$part"
                     ?>
                    </div>
                   

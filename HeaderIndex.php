@@ -14,7 +14,6 @@
                 <a href="scores.php">Score</a>
                 <a href="myaccount.php">Profil</a>
                 <a href="contact.php">Contact</a>
-                <a href="/asset/socket/index.html">Chat</a>
             </ul>
         </div>
     </nav>
