@@ -7,7 +7,7 @@
         <div class="Hheader">
             <ul class="Llien">
                 <a href="index.php">Accueil</a>
-                <a href="JeuFacile.php">Jeu</a>
+                <a href="FacileTheme1.php">Jeu</a>
                 <a href="Scores.php">Score</a>
                 <a href="myaccount.php">Profil</a>
                 <a href="Contact.php">Contact</a>

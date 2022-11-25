@@ -10,7 +10,7 @@
         <div class="Hheader">
             <ul class="Llien">
                 <a href="login.php">Connexion</a>
-                <a href="JeuFacile.php">Jeu</a>
+                <a href="FacileTheme1.php">Jeu</a>
                 <a href="scores.php">Score</a>
                 <a href="myaccount.php">Profil</a>
                 <a href="contact.php">Contact</a>
