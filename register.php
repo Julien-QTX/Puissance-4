@@ -158,9 +158,12 @@
             <?php
         }
         ?>
+        <script src="register.js"></script>
         <label for="mdp">Mot de passe : </label>
-        <input class="password" type="password"  placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
-
+        <div class = "barre">
+        <input onkeyup="return passwordChanged();" class="password" type="password"  placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+        <div id="strength"></div>
+        </div>
         <label for="confmdp">Confirmer votre mot de passe : </label>
         <input class="password" type="password" placeholder="Confirmer le mot de passe" name="confmdp" required>
         <div class="submitt">
@@ -168,7 +171,7 @@
         </div>
         
     </form>
-    
+
 <?php
     require 'Footer.inc.php'
 ?>
