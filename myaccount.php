@@ -10,11 +10,7 @@
 <body>
 
 <?php
-<<<<<<< HEAD
 $titre='Profile';
-=======
-    
->>>>>>> adam
     require "Header.inc.php";
     session_start();
     include ('./asset/includes/database.inc.php');
@@ -30,11 +26,7 @@ $titre='Profile';
 
 ?>
 
-<<<<<<< HEAD
     <h1 class="Titre">Bienvenue <?php echo "." ?></h1>
-=======
-<div class="deco">
->>>>>>> adam
 
     <ul>
                     <li>
