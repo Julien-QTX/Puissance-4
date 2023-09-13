@@ -20,7 +20,7 @@
  
             <table border="3" cellpadding="25" >
                 <tr>
-                    <td>Nom du jeu</td>
+                    <td>Nom du  jeu</td>
                     <td> pseudo du joueur</td>
                     <td>score du joueur </td>
                     <td> Niveau de difficulté</td>

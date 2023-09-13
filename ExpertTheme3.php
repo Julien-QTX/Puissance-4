@@ -22,7 +22,7 @@ require "Header.inc.php";
 
             <table>
                 <tr class="NiveauJeu">
-                    <th><a href="FacileTheme3.php">Facile</a></th>
+                    <th><a href="FacileTheme3.php">FacAile</a></th>
                     <th><a href="InterTheme3.php">Intermédiaire</a></th>
                     <th><a href="DifficileTheme3.php">Difficile</a></th>
                     <th><a href="ExpertTheme3.php">Recommencer</a></th>
