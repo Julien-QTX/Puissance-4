@@ -23,7 +23,7 @@
                     <td>Nom du  jeu</td>
                     <td> pseudo du joueur</td>
                     <td>score dujoueur </td>
-                    <td> Niveau de difhficulté</td>
+                    <td> Niveau de pdifhficulté</td>
                     <td> date/heure</td>        
                 </tr>
             
